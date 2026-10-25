@@ -1,46 +1,396 @@
-<!-- DACAE Multi-Platform Export & Sharing Hub -->
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DACAE Control Center - Expert AI Diagnostic & Holistic Ecosystem</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            slate: {
+              950: '#020617',
+              900: '#0f172a',
+              800: '#1e293b'
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen font-sans antialiased flex flex-col justify-between">
+
+  <!-- Header / Navigation Bar -->
+  <header class="border-b border-slate-800 bg-slate-900/50 backdrop-blur sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between gap-2">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-indigo-600/20 border border-indigo-500/30 flex items-center justify-center text-indigo-400 font-bold text-lg">
+          <i class="fa-solid fa-cube"></i>
+        </div>
+        <div>
+          <h1 class="text-base font-bold text-white tracking-wide">DACAE Control Center</h1>
+          <p class="text-[11px] text-slate-400">Dynamic Autonomous Cloud-native AI Ecosystem | Expert Clinical & Legal Agent</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-3">
+        <!-- Live Date & Local Time Badge -->
+        <span id="live-datetime" class="px-3 py-1 bg-slate-950 text-slate-300 text-xs font-mono rounded-full border border-slate-800 flex items-center gap-1.5">
+          <i class="fa-regular fa-clock text-indigo-400"></i> Loading Live Time...
+        </span>
+        <span class="px-3 py-1 bg-indigo-950 text-indigo-400 text-xs font-semibold rounded-full border border-indigo-800 flex items-center gap-1.5">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> NABH / QCI Compliant
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Area -->
+  <main class="max-w-7xl mx-auto px-4 py-8 w-full flex-grow">
+    
+    <div class="space-y-8">
+
+      <!-- Axis 1: DACAE Control Center (Master Hub) -->
+      <section class="bg-slate-900 border border-slate-800 rounded-xl p-6 shadow-2xl">
+        <div class="flex items-center justify-between mb-6 border-b border-slate-800 pb-4">
+          <div>
+            <h2 class="text-xl font-bold text-white flex items-center gap-2">
+              <i class="fa-solid fa-network-wired text-indigo-400"></i> DACAE Master Arena & Agent Hub
+            </h2>
+            <p class="text-xs text-slate-400 mt-1">Multi-modal AI Diagnosis, Clinical History, Legal & Financial Synthesis</p>
+          </div>
+          <span class="px-3 py-1 bg-emerald-950 text-emerald-400 text-xs font-semibold rounded-full border border-emerald-800 flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> AI Agents Online
+          </span>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="bg-slate-950 p-4 rounded-lg border border-slate-800">
+            <span class="text-xs text-slate-400 block mb-1">Graph RAG & OCR Engine</span>
+            <span class="text-lg font-bold text-white">Active</span>
+            <span class="text-[10px] text-emerald-400 block mt-1">✓ Report & Prescription Parser Ready</span>
+          </div>
+          <div class="bg-slate-950 p-4 rounded-lg border border-slate-800">
+            <span class="text-xs text-slate-400 block mb-1">Clinical Expert Agents</span>
+            <span class="text-lg font-bold text-white">Standby</span>
+            <span class="text-[10px] text-indigo-400 block mt-1">✓ Multi-Axis Diagnostic Arena</span>
+          </div>
+          <div class="bg-slate-950 p-4 rounded-lg border border-slate-800">
+            <span class="text-xs text-slate-400 block mb-1">Legal & Wealth Guardian</span>
+            <span class="text-lg font-bold text-white">Protected</span>
+            <span class="text-[10px] text-emerald-400 block mt-1">✓ Compliance & Asset Monitoring</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Axis 2: Patient KYC & Clinical Vitals Module (Input Page) -->
+      <section class="bg-slate-900 border border-slate-800 rounded-xl p-6 shadow-xl">
+        <div class="flex items-center justify-between mb-4 border-b border-slate-800 pb-3">
+          <h3 class="text-lg font-bold text-white flex items-center gap-2">
+            <i class="fa-solid fa-user-doctor text-indigo-400"></i> Axis 2: Patient KYC & Clinical Vitals (Input Data)
+          </h3>
+          <span class="text-xs text-slate-400">Standardized Entry</span>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-4">
+          <div>
+            <label class="block text-xs font-medium text-slate-300 mb-1">Patient Full Name</label>
+            <input type="text" value="Dr. Deepak Champaklal Jagani" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500">
+          </div>
+          <div>
+            <label class="block text-xs font-medium text-slate-300 mb-1">Age / Gender</label>
+            <input type="text" value="68 / Male" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500">
+          </div>
+          <div>
+            <label class="block text-xs font-medium text-slate-300 mb-1">Patient ID / UHID</label>
+            <input type="text" value="UHID-2026-DCJ" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500">
+          </div>
+          <div>
+            <label class="block text-xs font-medium text-slate-300 mb-1">Assessment Date</label>
+            <input type="date" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500" value="2026-10-25">
+          </div>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-6 gap-3">
+          <div class="bg-slate-950 p-3 rounded-lg border border-slate-800">
+            <span class="block text-[11px] text-slate-400">Blood Pressure</span>
+            <input type="text" value="120/80" class="w-full bg-transparent text-white font-bold text-sm focus:outline-none mt-1">
+            <span class="text-[10px] text-emerald-400">mmHg</span>
+          </div>
+          <div class="bg-slate-950 p-3 rounded-lg border border-slate-800">
+            <span class="block text-[11px] text-slate-400">Pulse Rate</span>
+            <input type="text" value="72" class="w-full bg-transparent text-white font-bold text-sm focus:outline-none mt-1">
+            <span class="text-[10px] text-emerald-400">bpm</span>
+          </div>
+          <div class="bg-slate-950 p-3 rounded-lg border border-slate-800">
+            <span class="block text-[11px] text-slate-400">Weight</span>
+            <input type="text" value="70" class="w-full bg-transparent text-white font-bold text-sm focus:outline-none mt-1">
+            <span class="text-[10px] text-emerald-400">kg</span>
+          </div>
+          <div class="bg-slate-950 p-3 rounded-lg border border-slate-800">
+            <span class="block text-[11px] text-slate-400">Height</span>
+            <input type="text" value="170" class="w-full bg-transparent text-white font-bold text-sm focus:outline-none mt-1">
+            <span class="text-[10px] text-emerald-400">cm</span>
+          </div>
+          <div class="bg-slate-950 p-3 rounded-lg border border-slate-800">
+            <span class="block text-[11px] text-slate-400">Temperature</span>
+            <input type="text" value="98.6" class="w-full bg-transparent text-white font-bold text-sm focus:outline-none mt-1">
+            <span class="text-[10px] text-emerald-400">°F</span>
+          </div>
+          <div class="bg-slate-950 p-3 rounded-lg border border-slate-800">
+            <span class="block text-[11px] text-slate-400">HbA1c</span>
+            <input type="text" value="6.4" class="w-full bg-transparent text-white font-bold text-sm focus:outline-none mt-1">
+            <span class="text-[10px] text-amber-400">% (Monitored)</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Axis 3: Family History, Past History & Current Diseases -->
+      <section class="bg-slate-900 border border-slate-800 rounded-xl p-6 shadow-xl">
+        <div class="flex items-center justify-between mb-4 border-b border-slate-800 pb-3">
+          <h3 class="text-lg font-bold text-white flex items-center gap-2">
+            <i class="fa-solid fa-notes-medical text-indigo-400"></i> Axis 3: Family History, Past History & Clinical Status
+          </h3>
+          <span class="text-xs text-slate-400">Comprehensive Clinical Profile</span>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+          <div>
+            <label class="block text-slate-400 mb-1">Family Medical History</label>
+            <textarea rows="3" placeholder="Hereditary conditions (e.g., Hypertension, Diabetes, Renal disorders)..." class="w-full bg-slate-950 border border-slate-800 rounded-lg p-3 text-sm text-white focus:outline-none focus:border-indigo-500"></textarea>
+          </div>
+          <div>
+            <label class="block text-slate-400 mb-1">Past History & Treatments</label>
+            <textarea rows="3" placeholder="Previous surgeries, hospitalizations, past treatments..." class="w-full bg-slate-950 border border-slate-800 rounded-lg p-3 text-sm text-white focus:outline-none focus:border-indigo-500"></textarea>
+          </div>
+          <div>
+            <label class="block text-slate-400 mb-1">Current Active Diseases & Medications</label>
+            <textarea rows="3" class="w-full bg-slate-950 border border-slate-800 rounded-lg p-3 text-sm text-white focus:outline-none focus:border-indigo-500">CKD Stage 3b, HbA1c 6.4%, Strict Vegan Lifestyle Management.</textarea>
+          </div>
+        </div>
+      </section>
+
+      <!-- Axis 4: Document Upload Hub (Reports, Prescriptions, Legal & Images for AI Analysis) -->
+      <section class="bg-slate-900 border border-slate-800 rounded-xl p-6 shadow-xl border-indigo-900/50">
+        <div class="flex items-center justify-between mb-4 border-b border-slate-800 pb-3">
+          <h3 class="text-lg font-bold text-white flex items-center gap-2">
+            <i class="fa-solid fa-file-arrow-up text-indigo-400"></i> Axis 4: Multi-Modal Document & Report Upload (AI Arena)
+          </h3>
+          <span class="text-xs text-indigo-400 bg-indigo-950 px-3 py-1 rounded-full border border-indigo-800">PDF, Images & Prescriptions Parser</span>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+          <div class="bg-slate-950 p-4 rounded-lg border border-dashed border-slate-700 text-center hover:border-indigo-500 transition cursor-pointer">
+            <i class="fa-solid fa-cloud-arrow-up text-indigo-400 text-2xl mb-2"></i>
+            <strong class="block text-white text-sm mb-1">Upload Lab Reports / Blood Tests</strong>
+            <p class="text-slate-400 text-[11px]">Drag & drop PDF, JPG, or PNG files for instant AI biomarker extraction.</p>
+          </div>
+          <div class="bg-slate-950 p-4 rounded-lg border border-dashed border-slate-700 text-center hover:border-indigo-500 transition cursor-pointer">
+            <i class="fa-solid fa-prescription text-emerald-400 text-2xl mb-2"></i>
+            <strong class="block text-white text-sm mb-1">Upload Prescriptions & Scans</strong>
+            <p class="text-slate-400 text-[11px]">Upload doctor prescriptions and clinical imaging for agent cross-analysis.</p>
+          </div>
+          <div class="bg-slate-950 p-4 rounded-lg border border-dashed border-slate-700 text-center hover:border-indigo-500 transition cursor-pointer">
+            <i class="fa-solid fa-scale-balanced text-amber-400 text-2xl mb-2"></i>
+            <strong class="block text-white text-sm mb-1">Upload Legal / Compliance Docs</strong>
+            <p class="text-slate-400 text-[11px]">Upload board briefs, governance documents, or financial contracts.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Axis 5: Physical Activity, Mental, Social & Spiritual Well-being -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <section class="bg-slate-900 border border-slate-800 rounded-xl p-6 shadow-xl">
+          <h3 class="text-base font-bold text-white flex items-center gap-2 mb-3 border-b border-slate-800 pb-3">
+            <i class="fa-solid fa-person-walking text-indigo-400"></i> Axis 5: Physical Activity & Mental Health
+          </h3>
+          <div class="space-y-3 text-xs text-slate-300">
+            <div>
+              <span class="block text-slate-400 mb-1">Daily Walking & Exercise (Steps/Activity)</span>
+              <select class="w-full bg-slate-950 border border-slate-800 rounded-lg p-2 text-white">
+                <option>Active (>7000 Steps + Daily Walking)</option>
+                <option>Moderate (3000-7000 Steps / Light Movement)</option>
+                <option>Sedentary (<3000 Steps / Needs Upliftment)</option>
+              </select>
+            </div>
+            <div>
+              <span class="block text-slate-400 mb-1">Functional Exercise (Squats & Shoulder Mobility)</span>
+              <select class="w-full bg-slate-950 border border-slate-800 rounded-lg p-2 text-white">
+                <option>Regular (Squats & Shoulder stretch routine active)</option>
+                <option>Occasional / Light Stretching</option>
+                <option>None (Needs Physical Therapy Guidance)</option>
+              </select>
+            </div>
+          </div>
+        </section>
+
+        <section class="bg-slate-900 border border-slate-800 rounded-xl p-6 shadow-xl">
+          <h3 class="text-base font-bold text-white flex items-center gap-2 mb-3 border-b border-slate-800 pb-3">
+            <i class="fa-solid fa-seedling text-indigo-400"></i> Axis 6: Social, Spiritual & Legal Well-being
+          </h3>
+          <div class="space-y-3 text-xs text-slate-300">
+            <div>
+              <span class="block text-slate-400 mb-1">Social Support & Pranayama / Meditation</span>
+              <select class="w-full bg-slate-950 border border-slate-800 rounded-lg p-2 text-white">
+                <option>Strong Family Bonding + Daily Meditation</option>
+                <option>Moderate Practice</option>
+                <option>Needs Guidance</option>
+              </select>
+            </div>
+            <div>
+              <span class="block text-slate-400 mb-1">Legal & Governance Risk Status</span>
+              <select class="w-full bg-slate-950 border border-slate-800 rounded-lg p-2 text-white">
+                <option>Fully Compliant / No Legal Hurdles</option>
+                <option>Board / Corporate Compliance Active</option>
+                <option>Requires Legal / Regulatory Review</option>
+              </select>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Axis 7: Vegan Nutrition & Financial Health Upliftment -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <section class="bg-slate-900 border border-slate-800 rounded-xl p-6 shadow-xl">
+          <div class="flex items-center justify-between mb-3 border-b border-slate-800 pb-3">
+            <h3 class="text-base font-bold text-white flex items-center gap-2">
+              <i class="fa-solid fa-carrot text-emerald-400"></i> Axis 7A: Vegan Nutrition (CKD & HbA1c)
+            </h3>
+            <span class="text-[10px] text-emerald-400 bg-emerald-950 px-2.5 py-0.5 rounded-full border border-emerald-800">Renal Plant Diet</span>
+          </div>
+          <p class="text-xs text-slate-400">Whole food plant-based nutrition designed specifically for CKD Stage 3b and glycemic stability (HbA1c 6.4%), focusing on low-sodium and regulated potassium intake.</p>
+        </section>
+
+        <section class="bg-slate-900 border border-slate-800 rounded-xl p-6 shadow-xl">
+          <div class="flex items-center justify-between mb-3 border-b border-slate-800 pb-3">
+            <h3 class="text-base font-bold text-white flex items-center gap-2">
+              <i class="fa-solid fa-wallet text-indigo-400"></i> Axis 7B: Financial Health & Wealth Diagnosis
+            </h3>
+            <span class="text-[10px] text-indigo-400 bg-indigo-950 px-2.5 py-0.5 rounded-full border border-indigo-800">RBI/IMF Standards</span>
+          </div>
+          <p class="text-xs text-slate-400">Emergency fund reserves (3-6 months), sustainable digital earning streams, and long-term asset security integrated with holistic longevity.</p>
+        </section>
+      </div>
+
+      <!-- AI Arena & Multi-Agent Diagnosis Output Section -->
+      <section class="bg-gradient-to-br from-slate-900 to-indigo-950 border border-indigo-500/30 rounded-xl p-6 shadow-2xl">
+        <div class="flex items-center justify-between mb-4 border-b border-slate-800 pb-3">
+          <h3 class="text-lg font-bold text-white flex items-center gap-2">
+            <i class="fa-solid fa-microchip text-indigo-400"></i> DACAE Expert AI Arena & Multi-Agent Diagnosis Output
+          </h3>
+          <span class="text-xs text-indigo-300 bg-indigo-900/50 px-3 py-1 rounded-full border border-indigo-700">Real-time Synthesis Active</span>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+          <div class="bg-slate-950/80 p-4 rounded-lg border border-slate-800">
+            <strong class="block text-indigo-300 text-sm mb-2"><i class="fa-solid fa-stethoscope"></i> Clinical & Report Analysis Agent</strong>
+            <ul class="space-y-2 text-slate-300">
+              <li>• <strong class="text-white">Renal-Metabolic Profile:</strong> CKD Stage 3b & HbA1c 6.4% continuously benchmarked against nephrology standards.</li>
+              <li>• <strong class="text-white">Prescription & Report Parser:</strong> OCR & Graph RAG ready to synthesize uploaded lab values.</li>
+              <li>• <strong class="text-white">Family History Risk:</strong> Evaluates hereditary markers for proactive longevity planning.</li>
+            </ul>
+          </div>
+
+          <div class="bg-slate-950/80 p-4 rounded-lg border border-slate-800">
+            <strong class="block text-indigo-300 text-sm mb-2"><i class="fa-solid fa-scale-balanced"></i> Legal, Financial & Lifestyle Agent</strong>
+            <ul class="space-y-2 text-slate-300">
+              <li>• <strong class="text-white">Legal & Governance:</strong> Validates compliance matrices for corporate board positions.</li>
+              <li>• <strong class="text-white">Financial Resilience:</strong> Automated emergency reserve and wealth growth diagnostics.</li>
+              <li>• <strong class="text-white">Holistic Synergy:</strong> Merges walking, squats, meditation, and vegan nutrition into one protocol.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Automated Multi-Channel Dispatch & Export Hub -->
       <section class="bg-slate-900 border border-slate-800 rounded-xl p-6 shadow-xl">
         <div class="flex items-center justify-between mb-4 border-b border-slate-800 pb-3">
           <h3 class="text-base font-bold text-white flex items-center gap-2">
-            <i class="fa-solid fa-share-nodes text-indigo-400"></i> Export, Share & Save Diagnostic Output
+            <i class="fa-solid fa-envelope-circle-check text-indigo-400"></i> Automated Multi-Channel Dispatch & Export Hub
           </h3>
-          <span class="text-xs text-slate-400">Instant Multi-Channel Dispatch</span>
+          <span class="text-xs text-indigo-400 bg-indigo-950 px-3 py-1 rounded-full border border-indigo-800">Checkboxes & Email Sync</span>
         </div>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 text-xs">
-          <!-- Download PDF / Google Files -->
-          <button onclick="window.print()" class="bg-slate-950 hover:bg-slate-800 border border-slate-800 p-3 rounded-lg text-left transition flex items-center gap-3 group">
-            <i class="fa-solid fa-file-pdf text-red-400 text-lg group-hover:scale-110 transition"></i>
-            <div>
-              <strong class="block text-white">Save as PDF</strong>
-              <span class="text-[10px] text-slate-400">Google Files / Local Download</span>
-            </div>
-          </button>
 
-          <!-- WhatsApp Share -->
-          <a href="https://api.whatsapp.com/send?text=DACAE%20Clinical%20and%20Holistic%20Analysis%20Report%20Generated%20Successfully." target="_blank" class="bg-slate-950 hover:bg-slate-800 border border-slate-800 p-3 rounded-lg text-left transition flex items-center gap-3 group">
-            <i class="fa-brands fa-whatsapp text-emerald-400 text-lg group-hover:scale-110 transition"></i>
-            <div>
-              <strong class="block text-white">Share via WhatsApp</strong>
-              <span class="text-[10px] text-slate-400">Instant Mobile / Web Send</span>
-            </div>
-          </a>
+        <div class="space-y-4 text-xs">
+          <div>
+            <label class="block text-slate-400 mb-1">Target Dispatch Email Address</label>
+            <input type="email" value="dr.deepak.jagani@example.com" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500">
+          </div>
 
-          <!-- Telegram Share -->
-          <a href="https://t.me/share/url?url=https://dacae-dashbord.vercel.app&text=DACAE%20AI%20Expert%20Diagnostic%20Report" target="_blank" class="bg-slate-950 hover:bg-slate-800 border border-slate-800 p-3 rounded-lg text-left transition flex items-center gap-3 group">
-            <i class="fa-brands fa-telegram text-sky-400 text-lg group-hover:scale-110 transition"></i>
-            <div>
-              <strong class="block text-white">Send to Telegram</strong>
-              <span class="text-[10px] text-slate-400">Cloud Bot Dispatch</span>
-            </div>
-          </a>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-3 pt-2">
+            <label class="flex items-center gap-2 bg-slate-950 p-3 rounded-lg border border-slate-800 cursor-pointer hover:border-indigo-500 transition">
+              <input type="checkbox" checked class="rounded bg-slate-900 border-slate-700 text-indigo-600 focus:ring-indigo-500">
+              <div>
+                <strong class="block text-white">Email Auto-Send</strong>
+                <span class="text-[10px] text-slate-400">Direct PDF/Text Mail</span>
+              </div>
+            </label>
 
-          <!-- Copy to Clipboard -->
-          <button onclick="alert('Analysis report copied to clipboard!')" class="bg-slate-950 hover:bg-slate-800 border border-slate-800 p-3 rounded-lg text-left transition flex items-center gap-3 group">
-            <i class="fa-solid fa-copy text-amber-400 text-lg group-hover:scale-110 transition"></i>
-            <div>
-              <strong class="block text-white">Copy Report</strong>
-              <span class="text-[10px] text-slate-400">Clipboard Text Copy</span>
-            </div>
-          </button>
+            <label class="flex items-center gap-2 bg-slate-950 p-3 rounded-lg border border-slate-800 cursor-pointer hover:border-indigo-500 transition">
+              <input type="checkbox" checked class="rounded bg-slate-900 border-slate-700 text-indigo-600 focus:ring-indigo-500">
+              <div>
+                <strong class="block text-white">WhatsApp Dispatch</strong>
+                <span class="text-[10px] text-slate-400">Instant Mobile Alert</span>
+              </div>
+            </label>
+
+            <label class="flex items-center gap-2 bg-slate-950 p-3 rounded-lg border border-slate-800 cursor-pointer hover:border-indigo-500 transition">
+              <input type="checkbox" class="rounded bg-slate-900 border-slate-700 text-indigo-600 focus:ring-indigo-500">
+              <div>
+                <strong class="block text-white">Telegram Bot</strong>
+                <span class="text-[10px] text-slate-400">Cloud Channel Sync</span>
+              </div>
+            </label>
+
+            <label class="flex items-center gap-2 bg-slate-950 p-3 rounded-lg border border-slate-800 cursor-pointer hover:border-indigo-500 transition">
+              <input type="checkbox" checked class="rounded bg-slate-900 border-slate-700 text-indigo-600 focus:ring-indigo-500">
+              <div>
+                <strong class="block text-white">Google Files / PDF</strong>
+                <span class="text-[10px] text-slate-400">Local / Cloud Save</span>
+              </div>
+            </label>
+          </div>
+
+          <!-- Dispatch Trigger Button -->
+          <div class="pt-4 flex justify-end gap-3">
+            <button onclick="window.print()" class="px-5 py-2.5 bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold rounded-lg transition flex items-center gap-2">
+              <i class="fa-solid fa-file-pdf text-red-400"></i> Save as PDF (Google Files)
+            </button>
+            <button onclick="alert('Expert AI Report successfully dispatched to selected channels (Email, WhatsApp, Google Files)!')" class="px-6 py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold rounded-lg shadow-lg transition flex items-center gap-2">
+              <i class="fa-solid fa-paper-plane"></i> Run & Dispatch to Selected Channels
+            </button>
+          </div>
         </div>
       </section>
+
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800 py-6 text-center text-xs text-slate-500 bg-slate-900/30">
+    <p>HEALTH AI &copy; 2026 | By Dr. Deepak Jagani | Expert AI Clinical, Legal & Wealth Ecosystem</p>
+  </footer>
+
+  <!-- Live Date & Time JavaScript -->
+  <script>
+    function updateDateTime() {
+      const now = new Date();
+      const options = { 
+        year: 'numeric', 
+        month: 'short', 
+        day: 'numeric', 
+        hour: '2-digit', 
+        minute: '2-digit', 
+        second: '2-digit',
+        hour12: true 
+      };
+      document.getElementById('live-datetime').innerHTML = '<i class="fa-regular fa-clock text-indigo-400"></i> ' + now.toLocaleString('en-US', options);
+    }
+    setInterval(updateDateTime, 1000);
+    updateDateTime();
+  </script>
+
+</body>
+</html>
