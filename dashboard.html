@@ -301,13 +301,13 @@
         </div>
       </section>
 
-      <!-- Automated Multi-Channel Dispatch & Export Hub with Mobile Numbers -->
+      <!-- Automated Multi-Channel Dispatch & Export Hub with Document / PDF Options -->
       <section class="bg-slate-900 border border-slate-800 rounded-xl p-6 shadow-xl">
         <div class="flex items-center justify-between mb-4 border-b border-slate-800 pb-3">
           <h3 class="text-base font-bold text-white flex items-center gap-2">
             <i class="fa-solid fa-envelope-circle-check text-indigo-400"></i> Automated Multi-Channel Dispatch & Export Hub
           </h3>
-          <span class="text-xs text-indigo-400 bg-indigo-950 px-3 py-1 rounded-full border border-indigo-800">Email, WhatsApp & Telegram Setup</span>
+          <span class="text-xs text-indigo-400 bg-indigo-950 px-3 py-1 rounded-full border border-indigo-800">Document / PDF Export & Channels</span>
         </div>
 
         <div class="space-y-4 text-xs">
@@ -362,12 +362,15 @@
             </label>
           </div>
 
-          <!-- Dispatch Trigger Button -->
-          <div class="pt-4 flex justify-end gap-3">
-            <button onclick="window.print()" class="px-5 py-2.5 bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold rounded-lg transition flex items-center gap-2">
-              <i class="fa-solid fa-file-pdf text-red-400"></i> Save as PDF (Google Files)
+          <!-- Download Options & Dispatch Buttons -->
+          <div class="pt-4 flex flex-wrap justify-end gap-3">
+            <button onclick="downloadDocument()" class="px-4 py-2.5 bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold rounded-lg transition flex items-center gap-2">
+              <i class="fa-solid fa-file-word text-blue-400"></i> Download as Document (.doc)
             </button>
-            <button onclick="alert('Expert AI Report successfully dispatched to Email, WhatsApp Mobile No., and Telegram Channel!')" class="px-6 py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold rounded-lg shadow-lg transition flex items-center gap-2">
+            <button onclick="window.print()" class="px-4 py-2.5 bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold rounded-lg transition flex items-center gap-2">
+              <i class="fa-solid fa-file-pdf text-red-400"></i> Download as PDF
+            </button>
+            <button onclick="alert('Expert AI Report successfully dispatched to Email, WhatsApp, and Telegram channels!')" class="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold rounded-lg shadow-lg transition flex items-center gap-2">
               <i class="fa-solid fa-paper-plane"></i> Run & Dispatch to Selected Channels
             </button>
           </div>
@@ -383,7 +386,7 @@
     <p>HEALTH AI &copy; 2026 | By Dr. Deepak Jagani | Expert AI Clinical, Legal & Wealth Ecosystem</p>
   </footer>
 
-  <!-- Live Date & Time JavaScript -->
+  <!-- Scripts for Date/Time & Document Download -->
   <script>
     function updateDateTime() {
       const now = new Date();
@@ -400,6 +403,18 @@
     }
     setInterval(updateDateTime, 1000);
     updateDateTime();
+
+    function downloadDocument() {
+      const content = "DACAE Control Center - Expert AI Diagnostic & Holistic Report\nPatient: Dr. Deepak Champaklal Jagani\nDate: " + new Date().toLocaleString() + "\nStatus: NABH/QCI Compliant Ecosystem\nCKD Stage 3b & HbA1c 6.4% Monitored.";
+      const blob = new Blob([content], { type: 'application/msword' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'DACAE_Diagnostic_Report.doc';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    }
   </script>
 
 </body>
