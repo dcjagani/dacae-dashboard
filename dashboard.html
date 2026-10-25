@@ -29,11 +29,17 @@
       activeBtn.classList.add('bg-indigo-600', 'text-white', 'border-indigo-500', 'shadow-lg', 'shadow-indigo-500/25');
     }
 
-    function generateAISolutions() {
+    function generateAISolutionsAndRx() {
       const prob = document.getElementById('client-problem').value;
-      const aiBox = document.getElementById('ai-solutions-output');
-      aiBox.value = `[AI GENERATED DETAILED SOLUTIONS & PROTOCOL]\n- Analyzed Condition: ${prob}\n- KDIGO & ADA Clinical Standard: Maintain strict glycemic control (HbA1c < 6.5%) and execute quarterly eGFR / serum creatinine evaluation to safeguard renal reserve (CKD Stage 3b management).\n- Pure Vegan Nutritional Protocol: Emphasize low-potassium, plant-based organic proteins, hydration balance, and avoidance of processed sodium.\n- Psychosocial & IMF Standard: Integrate daily mindfulness to suppress cortisol release, paired with 6+ months liquid emergency financial buffering to ensure zero monetary stress.`;
-      alert('AI Detailed Solutions successfully synthesized based on client biometrics and international benchmarks!');
+      const hba1c = document.getElementById('p-hba1c').value;
+      
+      // AI Detailed Solutions Generation
+      document.getElementById('ai-solutions-output').value = `[AI GENERATED DETAILED SOLUTIONS & PROTOCOL]\n- Analyzed Condition: ${prob} (HbA1c: ${hba1c}%)\n- KDIGO & ADA Clinical Standard: Maintain strict glycemic control and execute quarterly eGFR / serum creatinine evaluation to safeguard renal reserve (CKD Stage 3b management).\n- Pure Vegan Nutritional Protocol: Emphasize low-potassium, plant-based organic proteins, hydration balance, and avoidance of processed sodium.\n- Psychosocial & IMF Standard: Integrate daily mindfulness to suppress cortisol release, paired with 6+ months liquid emergency financial buffering.`;
+
+      // AI Logic-Driven Prescriptions, Diet, Lifestyle, Yoga & Mindfulness
+      document.getElementById('ai-rx-output').value = `[AI LOGIC-DRIVEN PRESCRIPTION & HOLISTIC WELLNESS Rx]\n1. Medical & Nutritional Support:\n   - Pure Vegan organic plant protein, controlled potassium intake, and optimal daily hydration tailored for CKD Stage 3b.\n   - Glycemic Management (HbA1c 6.4%): High fiber unrefined complex carbohydrates and structured post-prandial glucose monitoring.\n2. Therapeutic Diet Blueprint:\n   - Fresh alkaline vegetables, antioxidant-rich berries, soaked organic seeds (flax/chia), and avoidance of refined sugars and excessive trans fats.\n3. Lifestyle & Restorative Sleep:\n   - Sleep Hygiene: Maintain 7-8 hours of uninterrupted restorative rest in a dark, quiet environment.\n   - Screen detox 1 hour prior to bedtime to reduce cortisol spikes.\n4. Yoga, Pranayama & Physical Vitality:\n   - Gentle therapeutic yoga: Bhujangasana, Tadasana, and Vakrasana (as per joint comfort).\n   - Pranayama: Anulom-Vilom (15 mins) and Bhramari Pranayama for nervous system calming and blood pressure stability.\n5. Mindfulness & Spiritual Grounding:\n   - Daily 20-minute silent meditation and philosophical contemplation for cognitive harmony and inner peace.`;
+
+      alert('AI Detailed Solutions, Holistic Diet, Yoga & Logic-Driven Prescriptions successfully synthesized!');
     }
   </script>
 </head>
@@ -178,7 +184,7 @@
       </section>
     </div>
 
-    <!-- TAB 4: Universal 360-Degree Initial Problem Screening Gateway (with None options) -->
+    <!-- TAB 4: Universal 360-Degree Initial Problem Screening Gateway -->
     <div id="tab-4" class="tab-content hidden space-y-6">
       <section class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 shadow-2xl text-xs space-y-4 backdrop-blur">
         <h3 class="text-lg font-bold text-white flex items-center gap-2 border-b border-slate-800 pb-3">
@@ -395,249 +401,18 @@
       </section>
     </div>
 
-    <!-- TAB 9: AI Detailed Solutions, Doctor's Advice & Prescriptions (Rx) -->
+    <!-- TAB 9: AI Solutions, Holistic Rx & Doctor's Advice -->
     <div id="tab-9" class="tab-content hidden space-y-6">
       <section class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 shadow-2xl text-xs space-y-6 backdrop-blur">
         <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b border-slate-800 pb-3">
           <h3 class="text-lg font-bold text-white flex items-center gap-2">
-            <i class="fa-solid fa-comments text-indigo-400"></i> Tab 9: AI Detailed Solutions, Doctor's Advice & Prescriptions (Rx)
+            <i class="fa-solid fa-comments text-indigo-400"></i> Tab 9: AI Solutions, Holistic Rx (Diet, Yoga, Mindfulness) & Doctor's Review
           </h3>
-          <button onclick="generateAISolutions()" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-xl shadow-md transition flex items-center gap-2">
-            <i class="fa-solid fa-wand-magic-sparkles text-amber-300"></i> Generate AI Detailed Solutions
+          <button onclick="generateAISolutionsAndRx()" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-xl shadow-md transition flex items-center gap-2">
+            <i class="fa-solid fa-wand-magic-sparkles text-amber-300"></i> Generate Holistic AI Solutions & Rx
           </button>
         </div>
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div>
-            <label class="block text-slate-300 mb-1.5 font-semibold">1. AI Generated Detailed Solutions</label>
-            <textarea id="ai-solutions-output" rows="5" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-indigo-300 font-mono focus:border-indigo-500 focus:outline-none" placeholder="Click 'Generate AI Detailed Solutions' above to automatically synthesize evidence-based protocols..."></textarea>
-          </div>
-          <div>
-            <label class="block text-slate-300 mb-1.5 font-semibold">2. Doctor's Clinical Advice & Notes</label>
-            <textarea id="doctor-advice" rows="5" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-white focus:border-indigo-500 focus:outline-none" placeholder="Enter custom clinical guidance, nephro-protective care, pure vegan diet adjustments..."></textarea>
-          </div>
-          <div>
-            <label class="block text-slate-300 mb-1.5 font-semibold">3. Medical Prescriptions & Rx</label>
-            <textarea id="doctor-rx" rows="5" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-white focus:border-indigo-500 focus:outline-none" placeholder="1. Prescribed Medications as per clinical evaluation&#10;2. Nutritional Supplements (Pure Vegan)..."></textarea>
-          </div>
-        </div>
-      </section>
-    </div>
-
-    <!-- TAB 10: Standards References & Actionable Remedies Engine -->
-    <div id="tab-10" class="tab-content hidden space-y-6">
-      <section class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 shadow-2xl text-xs space-y-6 backdrop-blur">
-        <h3 class="text-lg font-bold text-white flex items-center gap-2 border-b border-slate-800 pb-3">
-          <i class="fa-solid fa-book-medical text-amber-400"></i> Tab 10: International Standards & Problem-Remedy Mapping Engine
-        </h3>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 space-y-2">
-            <strong class="text-indigo-400 text-sm block"><i class="fa-solid fa-heart-pulse"></i> Clinical Benchmarks</strong>
-            <ul class="list-disc list-inside text-slate-300 space-y-1">
-              <li><strong>WHO & CDC:</strong> Preventive screening & vital stabilization.</li>
-              <li><strong>KDIGO:</strong> Nephro-protective monitoring (Stage 3b).</li>
-              <li><strong>ADA:</strong> Glycemic control target (HbA1c &lt; 6.5%).</li>
-            </ul>
-          </div>
-          <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 space-y-2">
-            <strong class="text-purple-400 text-sm block"><i class="fa-solid fa-brain"></i> Psychosocial Interventions</strong>
-            <ul class="list-disc list-inside text-slate-300 space-y-1">
-              <li><strong>Stress Reduction:</strong> Mindfulness & restorative sleep.</li>
-              <li><strong>Family & Social:</strong> Strong communication & support networks.</li>
-            </ul>
-          </div>
-          <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 space-y-2">
-            <strong class="text-emerald-400 text-sm block"><i class="fa-solid fa-wallet"></i> Financial Standards</strong>
-            <ul class="list-disc list-inside text-slate-300 space-y-1">
-              <li><strong>IMF Benchmark:</strong> 6+ months liquid emergency reserve.</li>
-              <li><strong>RBI Framework:</strong> Asset & liability security.</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-    </div>
-
-    <!-- TAB 11: Client Feedback, Further Discussion & Standard Client Downloads -->
-    <div id="tab-11" class="tab-content hidden space-y-6">
-      <section class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 shadow-2xl text-xs space-y-6 backdrop-blur">
-        <h3 class="text-lg font-bold text-white flex items-center gap-2 border-b border-slate-800 pb-3">
-          <i class="fa-solid fa-download text-blue-400"></i> Tab 11: Client Feedback, Further Discussion & Dispatch Hub
-        </h3>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div>
-            <label class="block text-slate-300 mb-1.5 font-semibold">Client Feedback & Experience</label>
-            <textarea id="client-feedback" rows="3" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-white focus:border-indigo-500 focus:outline-none" placeholder="Enter client feedback regarding consultation usefulness..."></textarea>
-          </div>
-          <div>
-            <label class="block text-slate-300 mb-1.5 font-semibold">Further Consultation Discussion Points</label>
-            <textarea id="further-discussion" rows="3" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-white focus:border-indigo-500 focus:outline-none" placeholder="Enter notes for next follow-up appointment..."></textarea>
-          </div>
-        </div>
-        <div class="p-5 bg-slate-950 rounded-xl border border-slate-800 space-y-3">
-          <label class="block text-slate-300 font-semibold">Target Dispatch Email</label>
-          <input type="email" id="target-email" value="findcjom@gmail.com" class="w-full max-w-md bg-slate-900 border border-slate-700 rounded-xl p-3 text-white focus:border-indigo-500 focus:outline-none">
-          <div class="pt-2 flex flex-wrap gap-3">
-            <button onclick="downloadOfficialDoc()" class="px-4 py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold rounded-xl shadow-lg transition flex items-center gap-2"><i class="fa-solid fa-file-word text-white"></i> Download Official Report (.doc)</button>
-            <button onclick="printOrSavePDF()" class="px-4 py-3 bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold rounded-xl transition flex items-center gap-2"><i class="fa-solid fa-file-pdf text-red-400"></i> Print / Save as PDF</button>
-            <button onclick="copyToClipboard()" class="px-4 py-3 bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold rounded-xl transition flex items-center gap-2"><i class="fa-solid fa-copy text-amber-400"></i> Copy to Clipboard</button>
-            <button onclick="dispatchWebGmail()" class="px-5 py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold rounded-xl shadow-lg transition flex items-center gap-2"><i class="fa-solid fa-paper-plane"></i> Send via Web Gmail</button>
-          </div>
-        </div>
-      </section>
-    </div>
-
-    <!-- TAB 12: Sovereign Owner Portal, GPay QR Hub & Non-GST Vouchers -->
-    <div id="tab-12" class="tab-content hidden space-y-6">
-      <section class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 shadow-2xl text-xs space-y-6 backdrop-blur">
-        <h3 class="text-lg font-bold text-white flex items-center gap-2 border-b border-slate-800 pb-3">
-          <i class="fa-solid fa-shield-halved text-emerald-400"></i> Tab 12: Sovereign Owner Portal, GPay QR & Non-GST Fee Vouchers
-        </h3>
-
-        <!-- Owner Secure 2FA Login -->
-        <div class="bg-slate-950 p-5 rounded-xl border border-indigo-500/40 space-y-3">
-          <strong class="text-white text-sm block"><i class="fa-solid fa-key text-amber-400"></i> Separate Owner Portal (2FA Protected)</strong>
-          <p class="text-slate-400">Sovereign administrative login for Dr. Deepak C. Jagani (`findcjom@gmail.com`).</p>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-            <div><label class="block text-slate-300 mb-1">Owner Email</label><input type="email" id="owner-email-input" value="findcjom@gmail.com" class="w-full bg-slate-900 border border-slate-700 p-2.5 rounded-xl text-white"></div>
-            <div><label class="block text-slate-300 mb-1">Secure Password</label><input type="password" id="owner-pass-input" placeholder="Enter Owner Password" class="w-full bg-slate-900 border border-slate-700 p-2.5 rounded-xl text-white"></div>
-          </div>
-          <button onclick="authenticateOwner()" class="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-xl">Authenticate Owner Session</button>
-        </div>
-
-        <!-- Google Pay QR & Non-GST Voucher Hub -->
-        <div class="bg-slate-950 p-5 rounded-xl border border-amber-500/40 space-y-4">
-          <strong class="text-amber-400 text-sm block"><i class="fa-solid fa-qrcode"></i> Google Pay / UPI QR Code & Non-GST Fee Voucher Hub</strong>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 bg-slate-900 p-4 rounded-xl border border-slate-800 items-center">
-            <div class="space-y-2">
-              <span class="block text-white font-bold text-sm">Official Consultant UPI ID:</span>
-              <span class="px-3 py-1 bg-slate-950 text-indigo-400 font-mono rounded-lg border border-slate-700 inline-block text-sm">findcjom@okaxis</span>
-              <p class="text-[11px] text-slate-400">Name: DR. DEEPAK C. JAGANI (Axis Bank)</p>
-              <p class="text-[10px] text-emerald-400 font-semibold">✓ Non-GST Professional Advisory Fee Voucher Issued.</p>
-            </div>
-            <div class="flex flex-col items-center justify-center bg-white p-3 rounded-xl w-36 h-36 mx-auto shadow-md">
-              <i class="fa-solid fa-qrcode text-slate-900 text-6xl mb-1"></i>
-              <span class="text-[9px] text-slate-800 font-bold">Scan & Pay via GPay</span>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-
-  </main>
-
-  <!-- Footer -->
-  <footer class="border-t border-slate-800 py-6 text-center text-xs text-slate-500 bg-slate-900/40">
-    <p>DACAE GLOBAL AI &copy; 2026 | By Dr. Deepak C. Jagani | WHO, KDIGO, ADA, CDC, RBI & IMF Compliant Ecosystem</p>
-  </footer>
-
-  <!-- Scripts -->
-  <script>
-    const OWNER_EMAIL = "findcjom@gmail.com"; 
-
-    function simulateGmailLogin() {
-      const email = document.getElementById('client-email').value.trim();
-      alert('Google Gmail Authentication Successful for: ' + email);
-      document.getElementById('auth-indicator').className = "px-3 py-1.5 bg-emerald-950 text-emerald-400 text-xs font-semibold rounded-full border border-emerald-800 flex items-center gap-1.5 shadow-sm";
-      document.getElementById('auth-indicator').innerHTML = '<i class="fa-brands fa-google text-emerald-400"></i> Authenticated (' + email + ')';
-      switchTab('tab-2');
-    }
-
-    function authenticateOwner() {
-      const email = document.getElementById('owner-email-input').value.trim().toLowerCase();
-      const pass = document.getElementById('owner-pass-input').value.trim();
-      if (email === OWNER_EMAIL && pass === "Deepak2026#") {
-        localStorage.setItem('dacae_owner_authenticated', 'true');
-        document.getElementById('auth-indicator').className = "px-3 py-1.5 bg-emerald-950 text-emerald-400 text-xs font-semibold rounded-full border border-emerald-800 flex items-center gap-1.5 shadow-sm";
-        document.getElementById('auth-indicator').innerHTML = '<i class="fa-solid fa-shield-halved"></i> Sovereign Owner Active';
-        alert('Owner Authentication Successful! Full Sovereign Access Granted.');
-      } else {
-        alert('Authentication Failed: Invalid Owner Email or Password.');
-      }
-    }
-
-    function updateDateTime() {
-      document.getElementById('live-datetime').innerHTML = '<i class="fa-regular fa-clock text-indigo-400"></i> ' + new Date().toLocaleString();
-    }
-    setInterval(updateDateTime, 1000);
-    updateDateTime();
-
-    function getReportText() {
-      return `=== DACAE GLOBAL COMPREHENSIVE EXPERT CLINICAL & HOLISTIC CONSULTATION REPORT ===
-Generated On: ${new Date().toLocaleString()}
-Client Name: ${document.getElementById('p-name').value} (${document.getElementById('client-age').value} Yrs / ${document.getElementById('client-gender').value})
-UHID: ${document.getElementById('p-uhid').value} | Mobile: ${document.getElementById('country-code').value} ${document.getElementById('mobile-no').value}
-Email: ${document.getElementById('client-email').value}
-Compliance Standards: WHO, KDIGO, ADA, CDC, RBI & IMF
-
-1. BASIC VITALS & BIOMETRIC TELEMETRY:
-- Height: ${document.getElementById('p-height').value} cm | Weight: ${document.getElementById('p-weight').value} kg
-- Temp: ${document.getElementById('p-temp').value} °F | Pulse: ${document.getElementById('p-pulse').value} bpm
-- BP: ${document.getElementById('p-bp').value} mmHg | HbA1c: ${document.getElementById('p-hba1c').value}%
-- Other Vitals / CKD Marker: ${document.getElementById('other-vitals').value || 'CKD Stage 3b monitoring active'}
-
-2. UNIVERSAL 360-DEGREE PROBLEMS & CERTIFIED REMEDIES ANALYSIS:
-- Physical Problem: ${document.getElementById('client-problem').value}
-  * Certified Remedy (KDIGO & ADA): Nephro-protective monitoring, eGFR checks, and strict pure vegan glycemic control (Target HbA1c < 6.5%).
-- Psychological / Mental Status: ${document.getElementById('scr-mental').value}
-  * Certified Remedy (CDC Standard): Mindfulness meditation, structured relaxation, and restorative sleep protocols (7-8 hours).
-- Social & Family Dynamics: ${document.getElementById('scr-social').value}
-  * Certified Remedy: Strengthening support networks and proactive family caregiver alignment.
-- Spiritual Well-being: ${document.getElementById('scr-spiritual').value}
-  * Certified Remedy: Daily philosophical contemplation and meditative grounding practices.
-- Transport & Commute: ${document.getElementById('scr-transport').value}
-  * Certified Remedy: Tele-consultation routing and localized digital healthcare access.
-- Climatic Adaptation: ${document.getElementById('scr-climatic').value}
-  * Certified Remedy: Optimum daily hydration and climate-adaptive environmental management.
-- Communication Barrier: ${document.getElementById('scr-comm').value}
-  * Certified Remedy: Multilingual voice/text routing in preferred mother tongue.
-- Financial Health & Wealth Stability: ${document.getElementById('fin-emergency').value}, ${document.getElementById('fin-debt').value}
-  * Certified Remedy (RBI & IMF Benchmark): Maintaining 6+ months liquid emergency reserve and zero unsecured debt restructuring to suppress cortisol spikes and protect renal function.
-
-3. AI DETAILED SOLUTIONS & HOLISTIC PROTOCOL:
-${document.getElementById('ai-solutions-output').value || 'AI Detailed Solutions generated per clinical protocols.'}
-
-4. DOCTOR'S CLINICAL ADVICE & RECOMMENDATIONS:
-${document.getElementById('doctor-advice').value || 'Comprehensive holistic lifestyle and clinical counseling provided.'}
-
-5. MEDICAL PRESCRIPTIONS (Rx):
-${document.getElementById('doctor-rx').value || 'No acute prescription required; lifestyle & pure vegan nutritional guidance active.'}
-
-6. CLIENT FEEDBACK & FURTHER DISCUSSION:
-- Feedback: ${document.getElementById('client-feedback').value || 'Pending'}
-- Further Discussion: ${document.getElementById('further-discussion').value || 'None'}
-
-7. MANDATORY CLINICAL & FINANCIAL DISCLAIMER:
-This AI-generated preliminary advice is for educational and consultation purposes only. Consult your primary physician and financial advisor before making any medical or monetary changes.`;
-    }
-
-    function downloadOfficialDoc() {
-      const textContent = getReportText();
-      const htmlContent = `<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40"><head><meta charset="utf-8"><title>DACAE Report</title></head><body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;"><h2 style="color: #4f46e5;">DACAE Comprehensive Consultation Report</h2><pre style="font-family: Arial, sans-serif; white-space: pre-wrap;">${textContent}</pre></body></html>`;
-      const blob = new Blob(['\ufeff' + htmlContent], { type: 'application/msword' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = 'DACAE_Official_Consultation_Report.doc';
-      document.body.appendChild(a);
-      a.click();
-    }
-
-    function printOrSavePDF() {
-      window.print();
-    }
-
-    function copyToClipboard() {
-      navigator.clipboard.writeText(getReportText()).then(() => {
-        alert('Consultation Report copied to clipboard successfully!');
-      });
-    }
-
-    function dispatchWebGmail() {
-      const email = document.getElementById('target-email').value;
-      const reportText = getReportText();
-      window.open(`https://mail.google.com/mail/?view=cm&to=${email}&su=${encodeURIComponent("DACAE Comprehensive Consultation Report")}&body=${encodeURIComponent(reportText)}`, '_blank');
-    }
-  </script>
-
-</body>
-</html>
+            <label class="block text-slate-3
