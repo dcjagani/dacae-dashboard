@@ -68,23 +68,26 @@
     
     <!-- Tab Navigation Buttons Bar -->
     <div class="flex flex-wrap gap-2 mb-6 border-b border-slate-800 pb-4">
-      <button onclick="switchTab('tab-hub')" id="btn-tab-hub" class="tab-btn px-4 py-2 text-xs font-semibold rounded-lg border bg-indigo-600 text-white border-indigo-500 transition flex items-center gap-2">
-        <i class="fa-solid fa-network-wired"></i> 1. Master Hub
+      <button onclick="switchTab('tab-hub')" id="btn-tab-hub" class="tab-btn px-3 py-2 text-xs font-semibold rounded-lg border bg-indigo-600 text-white border-indigo-500 transition flex items-center gap-1.5">
+        <i class="fa-solid fa-network-wired"></i> 1. Hub
       </button>
-      <button onclick="switchTab('tab-vitals')" id="btn-tab-vitals" class="tab-btn px-4 py-2 text-xs font-semibold rounded-lg border bg-slate-900 text-slate-300 border-slate-800 hover:border-slate-700 transition flex items-center gap-2">
-        <i class="fa-solid fa-user-doctor"></i> 2. KYC & Vitals
+      <button onclick="switchTab('tab-vitals')" id="btn-tab-vitals" class="tab-btn px-3 py-2 text-xs font-semibold rounded-lg border bg-slate-900 text-slate-300 border-slate-800 hover:border-slate-700 transition flex items-center gap-1.5">
+        <i class="fa-solid fa-user-doctor"></i> 2. Vitals & KYC
       </button>
-      <button onclick="switchTab('tab-labs')" id="btn-tab-labs" class="tab-btn px-4 py-2 text-xs font-semibold rounded-lg border bg-slate-900 text-slate-300 border-slate-800 hover:border-slate-700 transition flex items-center gap-2">
-        <i class="fa-solid fa-flask-vial"></i> 3. Lab Investigations
+      <button onclick="switchTab('tab-history')" id="btn-tab-history" class="tab-btn px-3 py-2 text-xs font-semibold rounded-lg border bg-slate-900 text-slate-300 border-slate-800 hover:border-slate-700 transition flex items-center gap-1.5">
+        <i class="fa-solid fa-notes-medical"></i> 3. History & Past
       </button>
-      <button onclick="switchTab('tab-address-lang')" id="btn-tab-address-lang" class="tab-btn px-4 py-2 text-xs font-semibold rounded-lg border bg-slate-900 text-slate-300 border-slate-800 hover:border-slate-700 transition flex items-center gap-2">
-        <i class="fa-solid fa-language"></i> 4. Address & Language
+      <button onclick="switchTab('tab-upload')" id="btn-tab-upload" class="tab-btn px-3 py-2 text-xs font-semibold rounded-lg border bg-slate-900 text-slate-300 border-slate-800 hover:border-slate-700 transition flex items-center gap-1.5">
+        <i class="fa-solid fa-file-arrow-up"></i> 4. Reports & Rx Upload
       </button>
-      <button onclick="switchTab('tab-5pillars')" id="btn-tab-5pillars" class="tab-btn px-4 py-2 text-xs font-semibold rounded-lg border bg-slate-900 text-slate-300 border-slate-800 hover:border-slate-700 transition flex items-center gap-2">
-        <i class="fa-solid fa-shield-heart"></i> 5. 5-Pillar Health Goals
+      <button onclick="switchTab('tab-labs')" id="btn-tab-labs" class="tab-btn px-3 py-2 text-xs font-semibold rounded-lg border bg-slate-900 text-slate-300 border-slate-800 hover:border-slate-700 transition flex items-center gap-1.5">
+        <i class="fa-solid fa-flask-vial"></i> 5. Labs & Recs
       </button>
-      <button onclick="switchTab('tab-dispatch')" id="btn-tab-dispatch" class="tab-btn px-4 py-2 text-xs font-semibold rounded-lg border bg-slate-900 text-slate-300 border-slate-800 hover:border-slate-700 transition flex items-center gap-2">
-        <i class="fa-solid fa-paper-plane"></i> 6. Export & AI Arena
+      <button onclick="switchTab('tab-5pillars')" id="btn-tab-5pillars" class="tab-btn px-3 py-2 text-xs font-semibold rounded-lg border bg-slate-900 text-slate-300 border-slate-800 hover:border-slate-700 transition flex items-center gap-1.5">
+        <i class="fa-solid fa-shield-heart"></i> 6. 5-Pillar Goals
+      </button>
+      <button onclick="switchTab('tab-dispatch')" id="btn-tab-dispatch" class="tab-btn px-3 py-2 text-xs font-semibold rounded-lg border bg-slate-900 text-slate-300 border-slate-800 hover:border-slate-700 transition flex items-center gap-1.5">
+        <i class="fa-solid fa-paper-plane"></i> 7. Export & Email
       </button>
     </div>
 
@@ -92,13 +95,13 @@
     <div id="tab-hub" class="tab-content space-y-6">
       <section class="bg-slate-900 border border-slate-800 rounded-xl p-6 shadow-2xl">
         <h2 class="text-xl font-bold text-white flex items-center gap-2 mb-4">
-          <i class="fa-solid fa-network-wired text-indigo-400"></i> DACAE Master Arena & 5-Star Clinical Governance
+          <i class="fa-solid fa-network-wired text-indigo-400"></i> DACAE Master Arena & Clinical Governance
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div class="bg-slate-950 p-4 rounded-lg border border-slate-800">
-            <span class="text-xs text-slate-400 block mb-1">5-Pillar Holistic Goals</span>
-            <span class="text-lg font-bold text-white">Physical to Wealth</span>
-            <span class="text-[10px] text-emerald-400 block mt-1">✓ Common man's language integration</span>
+            <span class="text-xs text-slate-400 block mb-1">Complete Medical Record</span>
+            <span class="text-lg font-bold text-white">Family & Past History</span>
+            <span class="text-[10px] text-emerald-400 block mt-1">✓ Integrated with uploads & labs</span>
           </div>
           <div class="bg-slate-950 p-4 rounded-lg border border-slate-800">
             <span class="text-xs text-slate-400 block mb-1">NABH & QCI Standards</span>
@@ -106,9 +109,9 @@
             <span class="text-[10px] text-indigo-400 block mt-1">✓ Rigorous clinical protocols</span>
           </div>
           <div class="bg-slate-950 p-4 rounded-lg border border-slate-800">
-            <span class="text-xs text-slate-400 block mb-1">Regional Language Routing</span>
-            <span class="text-lg font-bold text-white">Dynamic</span>
-            <span class="text-[10px] text-emerald-400 block mt-1">✓ Gujarati / English support</span>
+            <span class="text-xs text-slate-400 block mb-1">Email Dispatch Optimizer</span>
+            <span class="text-lg font-bold text-white">Secured</span>
+            <span class="text-[10px] text-emerald-400 block mt-1">✓ Direct Web Mail & Clipboard Sync</span>
           </div>
         </div>
       </section>
@@ -173,24 +176,68 @@
       </section>
     </div>
 
-    <!-- TAB 3: Relevant Laboratory Investigations & Recommendations -->
+    <!-- TAB 3: Family History, Past History & Treatments -->
+    <div id="tab-history" class="tab-content hidden space-y-6">
+      <section class="bg-slate-900 border border-slate-800 rounded-xl p-6 shadow-xl">
+        <h3 class="text-lg font-bold text-white flex items-center gap-2 mb-4 border-b border-slate-800 pb-3">
+          <i class="fa-solid fa-notes-medical text-indigo-400"></i> Axis 3: Family History, Past History & Treatments Taken
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+          <div>
+            <label class="block text-slate-400 mb-1 font-bold">Family History (વારસાગત ઇતિહાસ)</label>
+            <textarea id="p-family" rows="4" class="w-full bg-slate-950 border border-slate-800 rounded-lg p-3 text-sm text-white focus:outline-none focus:border-indigo-500">No major hereditary renal or cardiac conditions reported in immediate family.</textarea>
+          </div>
+          <div>
+            <label class="block text-slate-400 mb-1 font-bold">Past History & Treatments Taken (જૂની બીમારીઓ અને સારવાર)</label>
+            <textarea id="p-past" rows="4" class="w-full bg-slate-950 border border-slate-800 rounded-lg p-3 text-sm text-white focus:outline-none focus:border-indigo-500">Type-2 Diabetes Mellitus, CKD Stage 3b. Regular nephrology and glycemic monitoring under strict vegan lifestyle management.</textarea>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- TAB 4: Reports, Prescriptions & Document Uploads -->
+    <div id="tab-upload" class="tab-content hidden space-y-6">
+      <section class="bg-slate-900 border border-slate-800 rounded-xl p-6 shadow-xl border-indigo-900/50">
+        <h3 class="text-lg font-bold text-white flex items-center gap-2 mb-4 border-b border-slate-800 pb-3">
+          <i class="fa-solid fa-file-arrow-up text-indigo-400"></i> Axis 4: Lab Reports, Prescriptions & Scans Upload
+        </h3>
+        <p class="text-xs text-slate-400 mb-4">Upload previous lab reports, doctor prescriptions, and medical scans for AI OCR and cross-analysis:</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+          <div class="bg-slate-950 p-4 rounded-lg border border-dashed border-slate-700 text-center hover:border-indigo-500 transition cursor-pointer">
+            <i class="fa-solid fa-cloud-arrow-up text-indigo-400 text-2xl mb-2"></i>
+            <strong class="block text-white text-sm mb-1">Upload Lab Reports</strong>
+            <p class="text-slate-400 text-[11px]">PDF, JPG, PNG blood test reports.</p>
+          </div>
+          <div class="bg-slate-950 p-4 rounded-lg border border-dashed border-slate-700 text-center hover:border-indigo-500 transition cursor-pointer">
+            <i class="fa-solid fa-prescription text-emerald-400 text-2xl mb-2"></i>
+            <strong class="block text-white text-sm mb-1">Upload Prescriptions</strong>
+            <p class="text-slate-400 text-[11px]">Doctor prescriptions and medications.</p>
+          </div>
+          <div class="bg-slate-950 p-4 rounded-lg border border-dashed border-slate-700 text-center hover:border-indigo-500 transition cursor-pointer">
+            <i class="fa-solid fa-file-medical text-amber-400 text-2xl mb-2"></i>
+            <strong class="block text-white text-sm mb-1">Upload Scans & X-Rays</strong>
+            <p class="text-slate-400 text-[11px]">Sonography, Imaging & Clinical Scans.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- TAB 5: Labs & Recommendations -->
     <div id="tab-labs" class="tab-content hidden space-y-6">
       <section class="bg-slate-900 border border-slate-800 rounded-xl p-6 shadow-xl">
         <h3 class="text-lg font-bold text-white flex items-center gap-2 mb-4 border-b border-slate-800 pb-3">
-          <i class="fa-solid fa-flask-vial text-indigo-400"></i> Axis 3: Relevant Laboratory Investigations & Recommendations
+          <i class="fa-solid fa-flask-vial text-indigo-400"></i> Axis 5: Relevant Laboratory Investigations & Recommendations
         </h3>
-        <p class="text-xs text-slate-400 mb-4">Select required laboratory investigations and analytical recommendations for CKD Stage 3b & HbA1c 6.4% management:</p>
-        
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
           <div class="bg-slate-950 p-4 rounded-lg border border-slate-800 space-y-3">
-            <strong class="text-white text-sm block mb-2"><i class="fa-solid fa-droplet text-indigo-400"></i> Renal & Metabolic Panel (KDIGO Guidelines)</strong>
+            <strong class="text-white text-sm block mb-2"><i class="fa-solid fa-droplet text-indigo-400"></i> Renal Panel (KDIGO)</strong>
             <label class="flex items-center gap-2 cursor-pointer">
               <input type="checkbox" id="lab-egfr" checked class="rounded bg-slate-900 border-slate-700 text-indigo-600">
-              <span class="text-slate-300">Serum Creatinine & eGFR Calculation (Target monitoring for CKD 3b)</span>
+              <span class="text-slate-300">Serum Creatinine & eGFR Calculation</span>
             </label>
             <label class="flex items-center gap-2 cursor-pointer">
               <input type="checkbox" id="lab-electrolyte" checked class="rounded bg-slate-900 border-slate-700 text-indigo-600">
-              <span class="text-slate-300">Serum Electrolytes (Sodium, Potassium, Bicarbonate)</span>
+              <span class="text-slate-300">Serum Electrolytes (Sodium, Potassium)</span>
             </label>
             <label class="flex items-center gap-2 cursor-pointer">
               <input type="checkbox" id="lab-acr" checked class="rounded bg-slate-900 border-slate-700 text-indigo-600">
@@ -199,129 +246,94 @@
           </div>
 
           <div class="bg-slate-950 p-4 rounded-lg border border-slate-800 space-y-3">
-            <strong class="text-white text-sm block mb-2"><i class="fa-solid fa-heart-pulse text-emerald-400"></i> Glycemic & General Health Panel</strong>
+            <strong class="text-white text-sm block mb-2"><i class="fa-solid fa-heart-pulse text-emerald-400"></i> Glycemic & General Panel</strong>
             <label class="flex items-center gap-2 cursor-pointer">
               <input type="checkbox" id="lab-hba1c" checked class="rounded bg-slate-900 border-slate-700 text-indigo-600">
-              <span class="text-slate-300">HbA1c & Fasting Blood Glucose (Target < 6.5%)</span>
+              <span class="text-slate-300">HbA1c & Fasting Glucose (Target < 6.5%)</span>
             </label>
             <label class="flex items-center gap-2 cursor-pointer">
               <input type="checkbox" id="lab-lipid" checked class="rounded bg-slate-900 border-slate-700 text-indigo-600">
-              <span class="text-slate-300">Lipid Profile (Cardiovascular Risk Assessment)</span>
+              <span class="text-slate-300">Lipid Profile</span>
             </label>
             <label class="flex items-center gap-2 cursor-pointer">
               <input type="checkbox" id="lab-cbc" checked class="rounded bg-slate-900 border-slate-700 text-indigo-600">
-              <span class="text-slate-300">Complete Blood Count (CBC & Hemoglobin for Renal Anemia)</span>
+              <span class="text-slate-300">Complete Blood Count (CBC & Hemoglobin)</span>
             </label>
           </div>
         </div>
       </section>
     </div>
 
-    <!-- TAB 4: Address & Dynamic Language Routing -->
-    <div id="tab-address-lang" class="tab-content hidden space-y-6">
-      <section class="bg-slate-900 border border-slate-800 rounded-xl p-6 shadow-xl">
-        <h3 class="text-lg font-bold text-white flex items-center gap-2 mb-4 border-b border-slate-800 pb-3">
-          <i class="fa-solid fa-language text-indigo-400"></i> Axis 4: Address & Dynamic Report Language Routing
-        </h3>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs mb-4">
-          <div>
-            <label class="block text-slate-400 mb-1">Current Residential Address</label>
-            <input type="text" id="curr-address" value="Ahmedabad, Gujarat, India (PIN: 380014)" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500">
-          </div>
-          <div>
-            <label class="block text-slate-400 mb-1">Permanent Address</label>
-            <input type="text" id="perm-address" value="Ahmedabad, Gujarat, India" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500">
-          </div>
-        </div>
-        <div class="bg-slate-950 p-4 rounded-lg border border-slate-800">
-          <label class="block text-slate-300 font-bold mb-2">Report Required Language:</label>
-          <select id="report-lang" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-white text-xs">
-            <option value="gu" selected>ગુજરાતી (Gujarati - Regional Preference based on Gujarat Address)</option>
-            <option value="en">English (International Clinical Standard)</option>
-          </select>
-        </div>
-      </section>
-    </div>
-
-    <!-- TAB 5: 5-Pillar Holistic Health Goals (Physical, Mental, Social, Spiritual, Financial) -->
+    <!-- TAB 6: 5-Pillar Health Goals -->
     <div id="tab-5pillars" class="tab-content hidden space-y-6">
       <section class="bg-slate-900 border border-slate-800 rounded-xl p-6 shadow-xl">
         <h3 class="text-base font-bold text-white flex items-center gap-2 mb-4 border-b border-slate-800 pb-3">
-          <i class="fa-solid fa-shield-heart text-indigo-400"></i> Axis 5: 5-Pillar Holistic Health Advices & Goals (Common Man's Language)
+          <i class="fa-solid fa-shield-heart text-indigo-400"></i> Axis 6: 5-Pillar Holistic Health Advices & Goals (Common Man's Language)
         </h3>
-        <p class="text-xs text-slate-400 mb-4">Select or customize goals for complete wellbeing as per NABH/QCI/IMF 5-star standards:</p>
-
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
-          <!-- Physical Health -->
           <div class="bg-slate-950 p-4 rounded-lg border border-slate-800 space-y-2">
             <strong class="text-emerald-400 text-sm block"><i class="fa-solid fa-person-walking"></i> 1. શારીરિક સ્વાસ્થ્ય (Physical Health)</strong>
-            <p class="text-slate-300"><strong>सामान्य लक्ष्य (Normalcy Goal):</strong> BP 120/80, બ્લડ શુગર નિયંત્રણ, રોજ ૩૦-૪૦ મિનિટ હળવી કસરત/વૉકિંગ.</p>
-            <p class="text-slate-400"><strong>કેવી રીતે પ્રાપ્ત કરવું (How to Achieve):</strong> રોજ સવારે કે સાંજ ખુલ્લા વાતાવરણમાં ચાલવું. મીઠું અને ગળતર ઓછું કરવું, પૂરતું પાણી પીવું.</p>
+            <p class="text-slate-300"><strong>सामान्य लक्ष्य (Goal):</strong> BP 120/80, બ્લડ શુગર નિયંત્રણ, રોજ ૩૦ મિનિટ વૉકિંગ.</p>
+            <p class="text-slate-400"><strong>કેવી રીતે પ્રાપ્ત કરવું:</strong> નિયમિત ચાલવું, ઓછું મીઠું અને શુદ્ધ વેગન ખોરાક.</p>
           </div>
-
-          <!-- Mental Health -->
           <div class="bg-slate-950 p-4 rounded-lg border border-slate-800 space-y-2">
             <strong class="text-indigo-400 text-sm block"><i class="fa-solid fa-brain"></i> 2. માનસિક સ્વાસ્થ્ય (Mental Health)</strong>
-            <p class="text-slate-300"><strong>सामान्य लक्ष्य (Normalcy Goal):</strong> તણાવ મુક્ત મન, સંતોષકારક ઊંઘ (૭-૮ કલાક), શાંત સ્વભાવ.</p>
-            <p class="text-slate-400"><strong>કેવી રીતે પ્રાપ્ત કરવું (How to Achieve):</strong> ચિંતા છોડીને વર્તમાનમાં જીવવું. ગમતી પ્રવૃત્તિઓ કરવી અને નકારાત્મક વિચારોથી દૂર રહેવું.</p>
+            <p class="text-slate-300"><strong>सामान्य लक्ष्य (Goal):</strong> તણાવ મુક્ત મન, ૭-૮ કલાક ગાઢ ઊંઘ.</p>
+            <p class="text-slate-400"><strong>કેવી રીતે પ્રાપ્ત કરવું:</strong> ચિંતા છોડી વર્તમાનમાં જીવવું અને સકારાત્મક રહેવું.</p>
           </div>
-
-          <!-- Social Health -->
           <div class="bg-slate-950 p-4 rounded-lg border border-slate-800 space-y-2">
             <strong class="text-sky-400 text-sm block"><i class="fa-solid fa-users"></i> 3. સામાજિક સ્વાસ્થ્ય (Social Health)</strong>
-            <p class="text-slate-300"><strong>सामान्य लक्ष्य (Normalcy Goal):</strong> પરિવાર અને મિત્રો સાથે મધુર સંબંધો, સામાજિક હકારાત્મક સહભાગિતા.</p>
-            <p class="text-slate-400"><strong>કેવી રીતે પ્રાપ્ત કરવું (How to Achieve):</strong> પરિવાર સાથે રોજ સમય વિતાવવો, મિત્રોને મળવું અને સમાજસેવા કે સારા કાર્યોમાં જોડાવવું.</p>
+            <p class="text-slate-300"><strong>सामान्य लक्ष्य (Goal):</strong> પરિવાર અને મિત્રો સાથે મધુર સંબંધો.</p>
+            <p class="text-slate-400"><strong>કેવી રીતે પ્રાપ્ત કરવું:</strong> પરિવાર સાથે સમય વિતાવવો અને સામાજિક સહભાગિતા.</p>
           </div>
-
-          <!-- Spiritual Health -->
           <div class="bg-slate-950 p-4 rounded-lg border border-slate-800 space-y-2">
             <strong class="text-amber-400 text-sm block"><i class="fa-solid fa-spa"></i> 4. આધ્યાત્મિક સ્વાસ્થ્ય (Spiritual Health)</strong>
-            <p class="text-slate-300"><strong>सामान्य लक्ष्य (Normalcy Goal):</strong> આંતરિક શાંતિ, સકારાત્મક ઉર્જા અને ઈશ્વર કે પ્રકૃતિ પ્રત્યે કૃતજ્ઞતા.</p>
-            <p class="text-slate-400"><strong>કેવી રીતે પ્રાપ્ત કરવું (How to Achieve):</strong> રોજ સવારે ૧૫-૨૦ મિનિટ ધ્યાન (Pranayama/Meditation) કરવું, પ્રાર્થના કરવી.</p>
+            <p class="text-slate-300"><strong>सामान्य लक्ष्य (Goal):</strong> આંતરિક શાંતિ અને કૃતજ્ઞતા.</p>
+            <p class="text-slate-400"><strong>કેવી રીતે પ્રાપ્ત કરવું:</strong> રોજ ૧૫ મિનિટ ધ્યાન (Meditation) અને પ્રાર્થના.</p>
           </div>
-
-          <!-- Financial Health -->
           <div class="bg-slate-950 p-4 rounded-lg border border-slate-800 space-y-2 md:col-span-2">
-            <strong class="text-purple-400 text-sm block"><i class="fa-solid fa-wallet"></i> 5. નાણાકીય સ્વાસ્થ્ય (Financial Health - RBI/IMF Standard)</strong>
-            <p class="text-slate-300"><strong>सामान्य लक्ष्य (Normalcy Goal):</strong> દેવામુક્ત સ્થિતિ, ૩ થી ૬ મહિનાનું ઇમરજન્સી ફંડ અને સુરક્ષિત રોકાણ.</p>
-            <p class="text-slate-400"><strong>કેવી રીતે પ્રાપ્ત કરવું (How to Achieve):</strong> બિનજરૂરી ખર્ચ ટાળવા, બચત કરવાની ટેવ રાખવી અને નાણાકીય નિયમોનું પાલન કરવું.</p>
+            <strong class="text-purple-400 text-sm block"><i class="fa-solid fa-wallet"></i> 5. નાણાકીય સ્વાસ્થ્ય (Financial Health - RBI/IMF)</strong>
+            <p class="text-slate-300"><strong>सामान्य लक्ष्य (Goal):</strong> ૩ થી ૬ મહિનાનું ઇમરજન્સી ફંડ અને દેવામુક્ત સ્થિતિ.</p>
+            <p class="text-slate-400"><strong>કેવી રીતે પ્રાપ્ત કરવું:</strong> બિનજરૂરી ખર્ચ ટાળવા અને યોગ્ય બચત કરવી.</p>
           </div>
         </div>
       </section>
     </div>
 
-    <!-- TAB 6: Export & AI Arena Dispatch Hub -->
+    <!-- TAB 7: Export & Email Dispatch Hub -->
     <div id="tab-dispatch" class="tab-content hidden space-y-6">
       <section class="bg-slate-900 border border-slate-800 rounded-xl p-6 shadow-xl">
         <h3 class="text-base font-bold text-white flex items-center gap-2 mb-4 border-b border-slate-800 pb-3">
-          <i class="fa-solid fa-envelope-circle-check text-indigo-400"></i> Automated Multi-Channel Dispatch & Comprehensive AI Arena
+          <i class="fa-solid fa-envelope-circle-check text-indigo-400"></i> Axis 7: Automated Multi-Channel Dispatch & Export Hub
         </h3>
 
         <div class="space-y-4 text-xs">
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <label class="block text-slate-400 mb-1"><i class="fa-solid fa-envelope text-indigo-400"></i> Target Email Address</label>
+              <label class="block text-slate-400 mb-1">Target Email Address</label>
               <input type="email" id="target-email" value="dr.deepak.jagani@example.com" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500">
             </div>
             <div>
-              <label class="block text-slate-400 mb-1"><i class="fa-brands fa-whatsapp text-emerald-400"></i> WhatsApp Mobile No.</label>
-              <input type="text" id="target-wa" placeholder="+91 XXXXX XXXXX" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500">
-            </div>
-            <div>
-              <label class="block text-slate-400 mb-1"><i class="fa-brands fa-telegram text-sky-400"></i> Telegram Chat / Bot ID</label>
-              <input type="text" id="target-tg" placeholder="@username or Chat ID" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500">
+              <label class="block text-slate-400 mb-1">Report Language Preference</label>
+              <select id="report-lang" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-2.5 py-2 text-sm text-white">
+                <option value="gu" selected>ગુજરાતી (Gujarati)</option>
+                <option value="en">English</option>
+              </select>
             </div>
           </div>
 
           <div class="pt-4 flex flex-wrap justify-end gap-3">
             <button onclick="downloadTrueWordDocument()" class="px-4 py-2.5 bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold rounded-lg transition flex items-center gap-2">
-              <i class="fa-solid fa-file-word text-blue-400"></i> Download True .doc (Word)
+              <i class="fa-solid fa-file-word text-blue-400"></i> Download True .doc
             </button>
             <button onclick="window.print()" class="px-4 py-2.5 bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold rounded-lg transition flex items-center gap-2">
               <i class="fa-solid fa-file-pdf text-red-400"></i> Download as PDF
             </button>
             <button onclick="dispatchWebGmail()" class="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold rounded-lg shadow-lg transition flex items-center gap-2">
-              <i class="fa-solid fa-paper-plane"></i> Run AI Arena & Open Web Gmail
+              <i class="fa-solid fa-paper-plane"></i> Send Email via Web Gmail
+            </button>
+            <button onclick="copyReportToClipboard()" class="px-5 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold rounded-lg shadow-lg transition flex items-center gap-2">
+              <i class="fa-solid fa-copy"></i> Copy Report to Clipboard
             </button>
           </div>
         </div>
@@ -335,19 +347,11 @@
     <p>HEALTH AI &copy; 2026 | By Dr. Deepak Jagani | 5-Star NABH, QCI & IMF Compliant Ecosystem</p>
   </footer>
 
-  <!-- Scripts for 5-Pillar Report Generation -->
+  <!-- Scripts -->
   <script>
     function updateDateTime() {
       const now = new Date();
-      const options = { 
-        year: 'numeric', 
-        month: 'short', 
-        day: 'numeric', 
-        hour: '2-digit', 
-        minute: '2-digit', 
-        second: '2-digit',
-        hour12: true 
-      };
+      const options = { year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true };
       document.getElementById('live-datetime').innerHTML = '<i class="fa-regular fa-clock text-indigo-400"></i> ' + now.toLocaleString('en-US', options);
     }
     setInterval(updateDateTime, 1000);
@@ -357,18 +361,20 @@
       const lang = document.getElementById('report-lang').value;
       const isGujarati = (lang === 'gu');
 
-      const lab1 = document.getElementById('lab-egfr').checked ? (isGujarati ? "- સીરમ ક્રિએટિનાઇન અને ઇજીએફઆർ (CKD 3b મોનિટરિંગ)" : "- Serum Creatinine & eGFR (CKD 3b Monitoring)") : "";
-      const lab2 = document.getElementById('lab-electrolyte').checked ? (isGujarati ? "- ઇલેક્ટ્રોલાઇટ્સ (સોડિયમ અને પોટેશિયમ)" : "- Serum Electrolytes (Sodium & Potassium)") : "";
-      const lab3 = document.getElementById('lab-acr').checked ? (isGujarati ? "- યુરિન આલ્બુમિન-ટુ-ક્રિએટિનાઇન રેશિયો (ACR)" : "- Urine Albumin-to-Creatinine Ratio (ACR)") : "";
-      const lab4 = document.getElementById('lab-hba1c').checked ? (isGujarati ? "- એચબીએવનસી (HbA1c લક્ષ્યાંક < 6.5%)" : "- HbA1c & Fasting Glucose (Target < 6.5%)") : "";
-      const lab5 = document.getElementById('lab-lipid').checked ? (isGujarati ? "- લિપિડ પ્રોફાઇલ (હાર્ટ રિસ્ક એસેસમેન્ટ)" : "- Lipid Profile (Cardiovascular Risk)") : "";
-      const lab6 = document.getElementById('lab-cbc').checked ? (isGujarati ? "- સીબીસી અને હિમોગ્લોબિન (રેનલ એનીમિયા તપાસ)" : "- CBC & Hemoglobin (Renal Anemia Check)") : "";
+      const familyHistory = document.getElementById('p-family').value;
+      const pastHistory = document.getElementById('p-past').value;
+
+      const lab1 = document.getElementById('lab-egfr').checked ? (isGujarati ? "- સીરમ ક્રિએટિનાઇન અને ઇજીએફઆർ (CKD 3b)" : "- Serum Creatinine & eGFR (CKD 3b)") : "";
+      const lab2 = document.getElementById('lab-electrolyte').checked ? (isGujarati ? "- ઇલેક્ટ્રોલાઇટ્સ (સોડિયમ, પોટેશિયમ)" : "- Electrolytes (Sodium, Potassium)") : "";
+      const lab3 = document.getElementById('lab-acr').checked ? (isGujarati ? "- યુરિન ACR ટેસ્ટ" : "- Urine ACR Test") : "";
+      const lab4 = document.getElementById('lab-hba1c').checked ? (isGujarati ? "- HbA1c (લક્ષ્યાંક < 6.5%)" : "- HbA1c (Target < 6.5%)") : "";
+      const lab5 = document.getElementById('lab-lipid').checked ? (isGujarati ? "- લિપિડ પ્રોફાઇલ" : "- Lipid Profile") : "";
+      const lab6 = document.getElementById('lab-cbc').checked ? (isGujarati ? "- સીબીસી અને હિમોગ્લોબિન" : "- CBC & Hemoglobin") : "";
 
       if (isGujarati) {
-        return `=== DACAE સર્વાંગી એક્સપર્ટ એઆઈ ડાયગ્નોસ્ટિક રિપોર્ટ (NABH & QCI 5-Star Compliant) ===
+        return `=== DACAE સર્વાંગી એક્સપર્ટ એઆઈ ડાયગ્નોસ્ટિક રિપોર્ટ (NABH & QCI 5-Star) ===
 તારીખ: ${new Date().toLocaleString()}
 સ્થિતિ: 5-સ્ટાર NABH, QCI & IMF કમ્પ્લાયન્ટ ઇકોસિસ્ટમ
-ભાષા: ગુજરાતી (સરનામું: અમદાવાદ, ગુજરાત)
 
 ૧. પેશન્ટ કેવાયસી અને વાઇટલ્સ:
 - નામ: ${document.getElementById('p-name').value}
@@ -376,9 +382,14 @@
 - UHID: ${document.getElementById('p-uhid').value}
 - બ્લડ પ્રેશર: ${document.getElementById('p-bp').value} mmHg | પલ્સ: ${document.getElementById('p-pulse').value} bpm
 - વજન: ${document.getElementById('p-weight').value} kg | ઊંચાઈ: ${document.getElementById('p-height').value} cm
-- HbA1c: ${document.getElementById('p-hba1c').value}% (મોનિટર થયેલ)
+- HbA1c: ${document.getElementById('p-hba1c').value}%
 
-૨. જરૂરી લેબ ઇન્વેસ્ટિગેશન્સ:
+૨. પરિવારનો ઇતિહાસ અને જૂની બીમારીઓ (Family & Past History):
+- વારસાગત ઇતિહાસ: ${familyHistory}
+- જૂની બીમારીઓ અને સારવાર: ${pastHistory}
+- લેબ અને પ્રિસ્ક્રિપ્શન અપલોડ્સ: સક્રિય (ડિજિટલ ઓસીઆર સિંક)
+
+૩. જરૂરી લેબ ઇન્વેસ્ટિગેશન્સ:
 ${lab1}
 ${lab2}
 ${lab3}
@@ -386,24 +397,23 @@ ${lab4}
 ${lab5}
 ${lab6}
 
-૩. ૫-પિલર સ્વાસ્થ્ય સલાહ અને લક્ષ્યાંકો (સામાન્ય માણસની ભાષામાં):
-- શારીરિક સ્વાસ્થ્ય: લક્ષ્યાંક (BP 120/80, HbA1c < 6.5%). નિયમિત વૉકિંગ, હળવો ખોરાક અને પૂરતું પાણી પીવું.
-- માનસિક સ્વાસ્થ્ય: લક્ષ્યાંક (તણાવ મુક્ત મન અને ૭-૮ કલાક ગાઢ ઊંઘ). ચિંતામુક્ત રહી સકારાત્મક વિચારવું.
-- સામાજિક સ્વાસ્થ્ય: લક્ષ્યાંક (પરિવાર અને મિત્રો સાથે ઉત્તમ સંબંધો). રોજ પરિવાર સાથે સમય વિતાવવો.
-- આધ્યાત્મિક સ્વાસ્થ્ય: લક્ષ્યાંક (આંતરિક શાંતિ). રોજ ૧૫ મિનિટ ધ્યાન અને પ્રકૃતિ સાથે જોડાણ.
-- નાણાકીય સ્વાસ્થ્ય (RBI/IMF ધોરણ): લક્ષ્યાંક (૩-૬ મહિનાનું ઇમરજન્સી ફંડ અને દેવામુક્ત સ્થિતિ).
+૪. ૫-પિલર સ્વાસ્થ્ય સલાહ અને લક્ષ્યાંકો:
+- શારીરિક સ્વાસ્થ્ય: લક્ષ્યાંક (BP 120/80, HbA1c < 6.5%). નિયમિત વૉકિંગ અને શુદ્ધ વેગન ખોરાક.
+- માનસિક સ્વાસ્થ્ય: લક્ષ્યાંક (તણાવ મુક્ત મન અને ૭-૮ કલાક ગાઢ ઊંઘ).
+- સામાજિક સ્વાસ્થ્ય: લક્ષ્યાંક (પરિવાર અને મિત્રો સાથે ઉત્તમ સંબંધો).
+- આધ્યાત્મિક સ્વાસ્થ્ય: લક્ષ્યાંક (આંતરિક શાંતિ અને ધ્યાન).
+- નાણાકીય સ્વાસ્થ્ય (RBI/IMF ધોરણ): લક્ષ્યાંક (૩-૬ મહિનાનું ઇમરજન્સી ફંડ).
 
-૪. વૈજ્ઞાનિક અને તબીબી સંદર્ભો (References):
-- KDIGO 2024 Clinical Practice Guideline for CKD Management.
-- ADA Standards of Care in Diabetes Management.
-- RBI/IMF Framework for Financial Health & Wealth Longevity.
+૫. સંદર્ભો (References):
+- KDIGO 2024 Clinical Practice Guideline.
+- ADA Standards of Care.
+- RBI/IMF Guidelines.
 
 === રિપોર્ટ સમાપ્ત ===`;
       } else {
         return `=== DACAE COMPREHENSIVE EXPERT AI DIAGNOSTIC REPORT (NABH & QCI 5-Star) ===
 Generated On: ${new Date().toLocaleString()}
 Status: 5-Star NABH, QCI & IMF Compliant Ecosystem
-Language: English
 
 1. PATIENT KYC & CLINICAL VITALS:
 - Name: ${document.getElementById('p-name').value}
@@ -411,9 +421,14 @@ Language: English
 - UHID: ${document.getElementById('p-uhid').value}
 - Blood Pressure: ${document.getElementById('p-bp').value} mmHg | Pulse: ${document.getElementById('p-pulse').value} bpm
 - Weight: ${document.getElementById('p-weight').value} kg | Height: ${document.getElementById('p-height').value} cm
-- HbA1c: ${document.getElementById('p-hba1c').value}% (Monitored)
+- HbA1c: ${document.getElementById('p-hba1c').value}%
 
-2. SELECTED LABORATORY INVESTIGATIONS:
+2. FAMILY & PAST MEDICAL HISTORY:
+- Family History: ${familyHistory}
+- Past Treatments & Conditions: ${pastHistory}
+- Lab Reports & Prescriptions: Active Upload Sync
+
+3. SELECTED LABORATORY INVESTIGATIONS:
 ${lab1}
 ${lab2}
 ${lab3}
@@ -421,17 +436,17 @@ ${lab4}
 ${lab5}
 ${lab6}
 
-3. 5-PILLAR HEALTH GOALS & ADVICES (Common Man's Language):
-- Physical Health: Target (BP 120/80, HbA1c < 6.5%). Daily walking, light balanced vegan diet, and hydration.
-- Mental Health: Target (Stress-free mind & 7-8 hours sleep). Positive thinking and relaxation.
-- Social Health: Target (Strong family bonding). Spending quality time with loved ones.
-- Spiritual Health: Target (Inner peace). 15 minutes daily meditation and gratitude.
-- Financial Health (RBI/IMF Standard): Target (3-6 months emergency reserve and zero bad debt).
+4. 5-PILLAR HEALTH GOALS & ADVICES:
+- Physical Health: Target (BP 120/80, HbA1c < 6.5%). Daily walking & vegan diet.
+- Mental Health: Target (Stress-free mind & 7-8 hours sleep).
+- Social Health: Target (Strong family bonding).
+- Spiritual Health: Target (Inner peace & meditation).
+- Financial Health (RBI/IMF Standard): Target (3-6 months emergency reserve).
 
-4. REFERENCES & GUIDELINES:
-- KDIGO 2024 Clinical Practice Guideline for Chronic Kidney Disease.
-- ADA Standards of Care in Diabetes Management.
-- RBI/IMF Guidelines for Financial Resilience & Longevity.
+5. REFERENCES:
+- KDIGO 2024 Clinical Practice Guideline.
+- ADA Standards of Care.
+- RBI/IMF Guidelines.
 
 === END OF DACAE AI ARENA REPORT ===`;
       }
@@ -452,7 +467,7 @@ ${lab6}
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = 'DACAE_5Star_NABH_Comprehensive_Report.doc';
+      a.download = 'DACAE_5Star_Comprehensive_Report.doc';
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
@@ -461,14 +476,19 @@ ${lab6}
     function dispatchWebGmail() {
       const emailInput = document.getElementById('target-email').value;
       const reportText = getReportText();
-      
       const subject = encodeURIComponent("DACAE 5-Star NABH & QCI Comprehensive Diagnostic Report");
       const body = encodeURIComponent(reportText);
-      
       const gmailUrl = `https://mail.google.com/mail/?view=cm&to=${emailInput}&su=${subject}&body=${body}`;
       window.open(gmailUrl, '_blank');
-      
-      alert(`Web Gmail compose window successfully opened for: ${emailInput}\n(Zero load on local machine, processed instantly in browser)`);
+    }
+
+    function copyReportToClipboard() {
+      const reportText = getReportText();
+      navigator.clipboard.writeText(reportText).then(() => {
+        alert('Comprehensive report copied successfully to clipboard! You can paste it anywhere.');
+      }).catch(err => {
+        alert('Failed to copy text: ' + err);
+      });
     }
   </script>
 
