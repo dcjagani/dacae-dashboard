@@ -165,26 +165,34 @@
         </div>
       </section>
 
-      <!-- Axis 4 & 5: Physical, Mental, Social & Spiritual Well-being -->
+      <!-- Axis 4 & 5: Physical Activity, Mental, Social & Spiritual Well-being -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <section class="bg-slate-900 border border-slate-800 rounded-xl p-6 shadow-xl">
           <h3 class="text-base font-bold text-white flex items-center gap-2 mb-3 border-b border-slate-800 pb-3">
-            <i class="fa-solid fa-brain text-indigo-400"></i> Axis 4: Physical & Mental Well-being
+            <i class="fa-solid fa-person-walking text-indigo-400"></i> Axis 4: Physical Activity & Mental Health
           </h3>
           <div class="space-y-3 text-xs text-slate-300">
             <div>
-              <span class="block text-slate-400 mb-1">Sleep & Energy Level</span>
+              <span class="block text-slate-400 mb-1">Daily Walking & Exercise (Steps/Activity)</span>
               <select class="w-full bg-slate-950 border border-slate-800 rounded-lg p-2 text-white">
-                <option>Optimal (7-8 hours sleep, high energy)</option>
-                <option>Moderate (Restless sleep, mild fatigue)</option>
-                <option>Low (Insomnia or chronic fatigue)</option>
+                <option>Active (>7000 Steps + Daily Walking)</option>
+                <option>Moderate (3000-7000 Steps / Light Movement)</option>
+                <option>Sedentary (<3000 Steps / Needs Upliftment)</option>
               </select>
             </div>
             <div>
-              <span class="block text-slate-400 mb-1">Stress & Anxiety Assessment</span>
+              <span class="block text-slate-400 mb-1">Functional Exercise (Squats & Shoulder Mobility)</span>
+              <select class="w-full bg-slate-950 border border-slate-800 rounded-lg p-2 text-white">
+                <option>Regular (Squats & Shoulder stretch routine active)</option>
+                <option>Occasional / Light Stretching</option>
+                <option>None (Needs Physical Therapy Guidance)</option>
+              </select>
+            </div>
+            <div>
+              <span class="block text-slate-400 mb-1">Stress & Mental Well-being</span>
               <select class="w-full bg-slate-950 border border-slate-800 rounded-lg p-2 text-white">
                 <option>Low Stress / Calm State</option>
-                <option>Moderate Work/Life Stress</option>
+                <option>Moderate Daily Stress</option>
                 <option>High Stress / Requires Intervention</option>
               </select>
             </div>
@@ -240,26 +248,56 @@
         </div>
       </section>
 
-      <!-- Axis 7: Financial Health & Wealth Earning Module -->
+      <!-- Axis 7: Financial Health Diagnosis & Wealth Upliftment Module -->
       <section class="bg-slate-900 border border-slate-800 rounded-xl p-6 shadow-xl border-indigo-900/50">
         <div class="flex items-center justify-between mb-4 border-b border-slate-800 pb-3">
           <h3 class="text-lg font-bold text-white flex items-center gap-2">
-            <i class="fa-solid fa-wallet text-indigo-400"></i> Axis 7: Financial Health & Wealth Earning Module
+            <i class="fa-solid fa-wallet text-indigo-400"></i> Axis 7: Financial Health Diagnosis & Wealth Upliftment
           </h3>
-          <span class="text-xs text-indigo-400 bg-indigo-950 px-3 py-1 rounded-full border border-indigo-800">Empowerment & Asset Creation</span>
+          <span class="text-xs text-indigo-400 bg-indigo-950 px-3 py-1 rounded-full border border-indigo-800">Global Financial Standards (RBI/IMF Framework)</span>
         </div>
+        
+        <!-- Financial Situation Diagnostic Selectors -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4 text-xs">
+          <div>
+            <label class="block text-slate-400 mb-1">Emergency Fund Reserve (3-6 Months)</label>
+            <select class="w-full bg-slate-950 border border-slate-800 rounded-lg p-2 text-white">
+              <option>Fully Secure (6+ Months Backup)</option>
+              <option>Moderate (3-5 Months Backup)</option>
+              <option>Critical (<3 Months / Needs Building)</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-slate-400 mb-1">Debt-to-Income Health Status</label>
+            <select class="w-full bg-slate-950 border border-slate-800 rounded-lg p-2 text-white">
+              <option>Debt-Free / Low Liability</option>
+              <option>Manageable EMI / Structured Repayment</option>
+              <option>High Liability / Requires Restructuring</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-slate-400 mb-1">Investment & Asset Growth Status</label>
+            <select class="w-full bg-slate-950 border border-slate-800 rounded-lg p-2 text-white">
+              <option>Diversified (Equities, Gold, Fixed Income)</option>
+              <option>Conservative (Fixed Deposits / PPF only)</option>
+              <option>Needs Strategic Portfolio Expansion</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Strategy Cards -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
           <div class="bg-slate-950 p-4 rounded-lg border border-slate-800">
-            <strong class="block text-white text-sm mb-1"><i class="fa-solid fa-chart-line text-indigo-400"></i> Smart Asset Planning</strong>
-            <p class="text-slate-400">Sustainable financial health metrics and medical security budgeting for peace of mind.</p>
+            <strong class="block text-white text-sm mb-1"><i class="fa-solid fa-chart-line text-indigo-400"></i> Macro Situational Analysis</strong>
+            <p class="text-slate-400">Assessing national and global economic parameters to align personal financial security and medical budgeting.</p>
           </div>
           <div class="bg-slate-950 p-4 rounded-lg border border-slate-800">
             <strong class="block text-white text-sm mb-1"><i class="fa-solid fa-coins text-indigo-400"></i> Digital Earning Streams</strong>
-            <p class="text-slate-400">Guidance on modern digital asset creation, automated workflows, and micro-entrepreneurship.</p>
+            <p class="text-slate-400">Building scalable micro-ventures, digital asset creation, and automated workflows for sustainable wealth upliftment.</p>
           </div>
           <div class="bg-slate-950 p-4 rounded-lg border border-slate-800">
-            <strong class="block text-white text-sm mb-1"><i class="fa-solid fa-shield-halved text-indigo-400"></i> Wealth Sustainability</strong>
-            <p class="text-slate-400">Long-term financial stability index integrated with overall holistic well-being.</p>
+            <strong class="block text-white text-sm mb-1"><i class="fa-solid fa-shield-halved text-indigo-400"></i> Long-term Wealth Sustainability</strong>
+            <p class="text-slate-400">Integrating financial resilience with holistic longevity for absolute peace of mind.</p>
           </div>
         </div>
       </section>
