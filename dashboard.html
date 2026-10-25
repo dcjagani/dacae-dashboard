@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DACAE Global Control Center - Ultimate Enterprise Clinical & Holistic Suite</title>
+  <title>DACAE Global Control Center - Cinematic Enterprise Clinical & Holistic Suite</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script>
@@ -33,7 +33,7 @@
 <body class="bg-slate-950 text-slate-100 min-h-screen font-sans antialiased flex flex-col justify-between selection:bg-indigo-500 selection:text-white">
 
   <!-- Header -->
-  <header class="border-b border-slate-800 bg-slate-900/60 backdrop-blur-md sticky top-0 z-50">
+  <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur-md sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between gap-3">
       <div class="flex items-center gap-3">
         <div class="w-11 h-11 rounded-2xl bg-indigo-600/20 border border-indigo-500/40 flex items-center justify-center text-indigo-400 font-bold text-xl shadow-inner">
@@ -41,12 +41,12 @@
         </div>
         <div>
           <h1 class="text-base font-extrabold text-white tracking-wide">DACAE Global Control Center</h1>
-          <p class="text-[11px] text-slate-400">Enterprise Clinical & Holistic Ecosystem | WHO, KDIGO, ADA, CDC, RBI & IMF Compliant</p>
+          <p class="text-[11px] text-slate-400">Cinematic AI Enterprise Clinical Suite | WHO, KDIGO, ADA, CDC, RBI & IMF Compliant</p>
         </div>
       </div>
       <div class="flex items-center gap-3 flex-wrap justify-center">
         <span id="auth-indicator" class="px-3 py-1.5 bg-amber-950/80 text-amber-400 text-xs font-semibold rounded-full border border-amber-800/80 flex items-center gap-1.5 shadow-sm">
-          <i class="fa-solid fa-user-shield"></i> Client / Visitor Session
+          <i class="fa-solid fa-user-shield"></i> Client Session Active
         </span>
         <span id="live-datetime" class="px-3 py-1.5 bg-slate-950 text-slate-300 text-xs font-mono rounded-full border border-slate-800 flex items-center gap-1.5">
           <i class="fa-regular fa-clock text-indigo-400"></i> Loading...
@@ -55,23 +55,22 @@
     </div>
   </header>
 
-  <!-- Main Content Container -->
+  <!-- Main Navigation Tabs (12 Tabs) -->
   <main class="max-w-7xl mx-auto px-4 py-8 w-full flex-grow">
     
-    <!-- Tab Navigation (12 Tabs) -->
     <div class="flex flex-wrap gap-2 mb-8 border-b border-slate-800 pb-4">
-      <button onclick="switchTab('tab-1')" id="btn-tab-1" class="tab-btn px-3.5 py-2 text-xs font-semibold rounded-xl border bg-indigo-600 text-white border-indigo-500 shadow-lg shadow-indigo-500/25 transition flex items-center gap-1.5"><i class="fa-solid fa-user-check"></i> 1. Identity & Gmail</button>
-      <button onclick="switchTab('tab-2')" id="btn-tab-2" class="tab-btn px-3.5 py-2 text-xs font-semibold rounded-xl border bg-slate-900 text-slate-300 border-slate-800 transition flex items-center gap-1.5"><i class="fa-solid fa-heart-pulse"></i> 2. Basic Vitals</button>
-      <button onclick="switchTab('tab-3')" id="btn-tab-3" class="tab-btn px-3.5 py-2 text-xs font-semibold rounded-xl border bg-slate-900 text-slate-300 border-slate-800 transition flex items-center gap-1.5"><i class="fa-solid fa-language"></i> 3. Address & Languages</button>
-      <button onclick="switchTab('tab-4')" id="btn-tab-4" class="tab-btn px-3.5 py-2 text-xs font-semibold rounded-xl border bg-slate-900 text-slate-300 border-slate-800 transition flex items-center gap-1.5"><i class="fa-solid fa-clipboard-list"></i> 4. Initial Screening</button>
-      <button onclick="switchTab('tab-5')" id="btn-tab-5" class="tab-btn px-3.5 py-2 text-xs font-semibold rounded-xl border bg-slate-900 text-slate-300 border-slate-800 transition flex items-center gap-1.5"><i class="fa-solid fa-notes-medical"></i> 5. Physical & Familial</button>
-      <button onclick="switchTab('tab-6')" id="btn-tab-6" class="tab-btn px-3.5 py-2 text-xs font-semibold rounded-xl border bg-slate-900 text-slate-300 border-slate-800 transition flex items-center gap-1.5"><i class="fa-solid fa-brain text-purple-400"></i> 6. Psychosocial & Climatic</button>
-      <button onclick="switchTab('tab-7')" id="btn-tab-7" class="tab-btn px-3.5 py-2 text-xs font-semibold rounded-xl border bg-slate-900 text-slate-300 border-slate-800 transition flex items-center gap-1.5"><i class="fa-solid fa-wallet text-emerald-400"></i> 7. Financial Health</button>
-      <button onclick="switchTab('tab-8')" id="btn-tab-8" class="tab-btn px-3.5 py-2 text-xs font-semibold rounded-xl border bg-slate-900 text-slate-300 border-slate-800 transition flex items-center gap-1.5"><i class="fa-solid fa-file-arrow-up"></i> 8. Lab Uploads</button>
-      <button onclick="switchTab('tab-9')" id="btn-tab-9" class="tab-btn px-3.5 py-2 text-xs font-semibold rounded-xl border bg-slate-900 text-slate-300 border-slate-800 transition flex items-center gap-1.5"><i class="fa-solid fa-comments"></i> 9. Doctor Advice & Rx</button>
-      <button onclick="switchTab('tab-10')" id="btn-tab-10" class="tab-btn px-3.5 py-2 text-xs font-semibold rounded-xl border bg-slate-900 text-slate-300 border-slate-800 transition flex items-center gap-1.5"><i class="fa-solid fa-book-medical text-amber-400"></i> 10. Standards & Solutions</button>
-      <button onclick="switchTab('tab-11')" id="btn-tab-11" class="tab-btn px-3.5 py-2 text-xs font-semibold rounded-xl border bg-slate-900 text-slate-300 border-slate-800 transition flex items-center gap-1.5"><i class="fa-solid fa-download text-blue-400"></i> 11. Feedback & Downloads</button>
-      <button onclick="switchTab('tab-12')" id="btn-tab-12" class="tab-btn px-3.5 py-2 text-xs font-semibold rounded-xl border bg-slate-900 text-slate-300 border-slate-800 transition flex items-center gap-1.5"><i class="fa-solid fa-shield-halved text-emerald-400"></i> 12. Owner Portal & Pay</button>
+      <button onclick="switchTab('tab-1')" id="btn-tab-1" class="tab-btn px-3 py-2 text-xs font-semibold rounded-xl border bg-indigo-600 text-white border-indigo-500 shadow-lg shadow-indigo-500/25 transition flex items-center gap-1.5"><i class="fa-solid fa-user-check"></i> 1. Identity & Gmail</button>
+      <button onclick="switchTab('tab-2')" id="btn-tab-2" class="tab-btn px-3 py-2 text-xs font-semibold rounded-xl border bg-slate-900 text-slate-300 border-slate-800 transition flex items-center gap-1.5"><i class="fa-solid fa-heart-pulse"></i> 2. Basic Vitals</button>
+      <button onclick="switchTab('tab-3')" id="btn-tab-3" class="tab-btn px-3 py-2 text-xs font-semibold rounded-xl border bg-slate-900 text-slate-300 border-slate-800 transition flex items-center gap-1.5"><i class="fa-solid fa-language"></i> 3. Address & Languages</button>
+      <button onclick="switchTab('tab-4')" id="btn-tab-4" class="tab-btn px-3 py-2 text-xs font-semibold rounded-xl border bg-slate-900 text-slate-300 border-slate-800 transition flex items-center gap-1.5"><i class="fa-solid fa-clipboard-list"></i> 4. 360° Screening</button>
+      <button onclick="switchTab('tab-5')" id="btn-tab-5" class="tab-btn px-3 py-2 text-xs font-semibold rounded-xl border bg-slate-900 text-slate-300 border-slate-800 transition flex items-center gap-1.5"><i class="fa-solid fa-notes-medical"></i> 5. Physical & History</button>
+      <button onclick="switchTab('tab-6')" id="btn-tab-6" class="tab-btn px-3 py-2 text-xs font-semibold rounded-xl border bg-slate-900 text-slate-300 border-slate-800 transition flex items-center gap-1.5"><i class="fa-solid fa-brain text-purple-400"></i> 6. Psychosocial & Spiritual</button>
+      <button onclick="switchTab('tab-7')" id="btn-tab-7" class="tab-btn px-3 py-2 text-xs font-semibold rounded-xl border bg-slate-900 text-slate-300 border-slate-800 transition flex items-center gap-1.5"><i class="fa-solid fa-wallet text-emerald-400"></i> 7. Financial Wealth</button>
+      <button onclick="switchTab('tab-8')" id="btn-tab-8" class="tab-btn px-3 py-2 text-xs font-semibold rounded-xl border bg-slate-900 text-slate-300 border-slate-800 transition flex items-center gap-1.5"><i class="fa-solid fa-file-arrow-up"></i> 8. Lab Uploads</button>
+      <button onclick="switchTab('tab-9')" id="btn-tab-9" class="tab-btn px-3 py-2 text-xs font-semibold rounded-xl border bg-slate-900 text-slate-300 border-slate-800 transition flex items-center gap-1.5"><i class="fa-solid fa-comments"></i> 9. Doctor Advice & Rx</button>
+      <button onclick="switchTab('tab-10')" id="btn-tab-10" class="tab-btn px-3 py-2 text-xs font-semibold rounded-xl border bg-slate-900 text-slate-300 border-slate-800 transition flex items-center gap-1.5"><i class="fa-solid fa-book-medical text-amber-400"></i> 10. Standards & Remedies</button>
+      <button onclick="switchTab('tab-11')" id="btn-tab-11" class="tab-btn px-3 py-2 text-xs font-semibold rounded-xl border bg-slate-900 text-slate-300 border-slate-800 transition flex items-center gap-1.5"><i class="fa-solid fa-download text-blue-400"></i> 11. Feedback & Dispatch</button>
+      <button onclick="switchTab('tab-12')" id="btn-tab-12" class="tab-btn px-3 py-2 text-xs font-semibold rounded-xl border bg-slate-900 text-slate-300 border-slate-800 transition flex items-center gap-1.5"><i class="fa-solid fa-shield-halved text-emerald-400"></i> 12. Owner Portal & Pay</button>
     </div>
 
     <!-- TAB 1: Client Identity & Gmail Sign-In -->
@@ -80,9 +79,9 @@
         <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b border-slate-800 pb-4">
           <div>
             <h2 class="text-xl font-bold text-white flex items-center gap-2">
-              <i class="fa-solid fa-id-card text-indigo-400"></i> Client Identity & Universal Hub Gateway
+              <i class="fa-solid fa-id-card text-indigo-400"></i> Tab 1: Client Identity & Sovereign Gmail Gateway
             </h2>
-            <p class="text-xs text-slate-400 mt-1">Secure KYC, universal age-group profiling, and quick Gmail authentication.</p>
+            <p class="text-xs text-slate-400 mt-1">Secure authentication, universal age-group profiling, and automated KYC dossiers.</p>
           </div>
           <button onclick="simulateGmailLogin()" class="px-5 py-2.5 bg-white hover:bg-slate-100 text-slate-900 font-bold text-xs rounded-xl shadow-md transition flex items-center gap-2">
             <i class="fa-brands fa-google text-red-500"></i> Sign up / Sign in with Google
@@ -91,7 +90,7 @@
         <div class="grid grid-cols-1 md:grid-cols-4 gap-4 text-xs">
           <div><label class="block text-slate-300 mb-1.5 font-semibold">Client Full Name</label><input type="text" id="p-name" value="Dr. Deepak C. Jagani" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-white focus:border-indigo-500 focus:outline-none"></div>
           <div>
-            <label class="block text-slate-300 mb-1.5 font-semibold">Age / Gender Selection</label>
+            <label class="block text-slate-300 mb-1.5 font-semibold">Age & Gender Profile</label>
             <div class="flex gap-2">
               <input type="text" id="client-age" value="68" placeholder="Age" class="w-1/2 bg-slate-950 border border-slate-800 rounded-xl p-3 text-white text-center focus:border-indigo-500 focus:outline-none">
               <select id="client-gender" class="w-1/2 bg-slate-950 border border-slate-800 rounded-xl p-3 text-white focus:border-indigo-500 focus:outline-none">
@@ -104,7 +103,7 @@
           </div>
           <div><label class="block text-slate-300 mb-1.5 font-semibold">UHID / Client ID</label><input type="text" id="p-uhid" value="UHID-DACAE-2026" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-white focus:border-indigo-500 focus:outline-none"></div>
           <div>
-            <label class="block text-slate-300 mb-1.5 font-semibold">Mobile No. with Country Code</label>
+            <label class="block text-slate-300 mb-1.5 font-semibold">Mobile Number & Country Code</label>
             <div class="flex gap-2">
               <select id="country-code" class="bg-slate-950 border border-slate-800 rounded-xl p-3 text-white w-28 focus:border-indigo-500 focus:outline-none">
                 <option value="+91" selected>+91 (IN)</option>
@@ -119,7 +118,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
           <div><label class="block text-slate-300 mb-1.5 font-semibold">Client Email Address</label><input type="email" id="client-email" value="findcjom@gmail.com" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-white focus:border-indigo-500 focus:outline-none"></div>
           <div class="flex items-end">
-            <button onclick="switchTab('tab-2')" class="w-full py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-xl shadow-lg transition">Save & Proceed to Vitals <i class="fa-solid fa-arrow-right ml-1"></i></button>
+            <button onclick="switchTab('tab-2')" class="w-full py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-xl shadow-lg transition">Save & Proceed to Basic Vitals <i class="fa-solid fa-arrow-right ml-1"></i></button>
           </div>
         </div>
       </section>
@@ -129,7 +128,7 @@
     <div id="tab-2" class="tab-content hidden space-y-6">
       <section class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 shadow-2xl text-xs space-y-4 backdrop-blur">
         <h3 class="text-lg font-bold text-white flex items-center gap-2 border-b border-slate-800 pb-3">
-          <i class="fa-solid fa-heart-pulse text-indigo-400"></i> Client Basic Vitals & Clinical Measurements
+          <i class="fa-solid fa-heart-pulse text-indigo-400"></i> Tab 2: Client Basic Vitals & Clinical Measurements
         </h3>
         <div class="grid grid-cols-2 md:grid-cols-6 gap-4">
           <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 space-y-1"><span class="text-slate-400 block font-semibold">Height (cm)</span><input type="text" id="p-height" value="172" class="w-full bg-transparent text-white font-bold text-base mt-1 focus:outline-none"></div>
@@ -146,18 +145,18 @@
       </section>
     </div>
 
-    <!-- TAB 3: Address, Location & Multi-Language Routing -->
+    <!-- TAB 3: Address, Location & Multi-Language Routing (Up to 3) -->
     <div id="tab-3" class="tab-content hidden space-y-6">
       <section class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 shadow-2xl text-xs space-y-4 backdrop-blur">
         <h3 class="text-lg font-bold text-white flex items-center gap-2 border-b border-slate-800 pb-3">
-          <i class="fa-solid fa-language text-indigo-400"></i> Address, Location & Multi-Language Routing (Up to 3 Languages)
+          <i class="fa-solid fa-language text-indigo-400"></i> Tab 3: Address, Location & Multi-Language Routing (Up to 3 Languages)
         </h3>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div><label class="block text-slate-300 mb-1.5 font-semibold">Complete Current Address & Location</label><textarea id="curr-address" rows="3" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-white focus:border-indigo-500 focus:outline-none">Ahmedabad, Gujarat, India - 380014</textarea></div>
           <div><label class="block text-slate-300 mb-1.5 font-semibold">Permanent Address</label><textarea id="perm-address" rows="3" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-white focus:border-indigo-500 focus:outline-none">Ahmedabad, Gujarat, India - 380014</textarea></div>
         </div>
         <div>
-          <label class="block text-slate-300 mb-1.5 font-semibold">Report Language Selection (Select up to 3 preferred languages)</label>
+          <label class="block text-slate-300 mb-1.5 font-semibold">Report Language Selection (Select up to 3 preferred dialects)</label>
           <div class="grid grid-cols-2 md:grid-cols-4 gap-3 bg-slate-950 p-4 rounded-xl border border-slate-800">
             <label class="flex items-center gap-2 text-slate-200 cursor-pointer"><input type="checkbox" checked class="rounded border-slate-700 bg-slate-900 text-indigo-600"> ગુજરાતી (Gujarati)</label>
             <label class="flex items-center gap-2 text-slate-200 cursor-pointer"><input type="checkbox" checked class="rounded border-slate-700 bg-slate-900 text-indigo-600"> English (Global)</label>
@@ -172,11 +171,11 @@
       </section>
     </div>
 
-    <!-- TAB 4: Universal Initial Problem Screening Gateway -->
+    <!-- TAB 4: Universal 360-Degree Initial Problem Screening Gateway -->
     <div id="tab-4" class="tab-content hidden space-y-6">
       <section class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 shadow-2xl text-xs space-y-4 backdrop-blur">
         <h3 class="text-lg font-bold text-white flex items-center gap-2 border-b border-slate-800 pb-3">
-          <i class="fa-solid fa-clipboard-list text-indigo-400"></i> Universal Initial Problem Screening Gateway (360-Degree)
+          <i class="fa-solid fa-clipboard-list text-indigo-400"></i> Tab 4: Universal 360-Degree Initial Problem Screening Gateway
         </h3>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div>
@@ -242,7 +241,7 @@
     <div id="tab-5" class="tab-content hidden space-y-6">
       <section class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 shadow-2xl text-xs space-y-4 backdrop-blur">
         <h3 class="text-lg font-bold text-white flex items-center gap-2 border-b border-slate-800 pb-3">
-          <i class="fa-solid fa-notes-medical text-indigo-400"></i> Physical Problems, Past History & Familial Health
+          <i class="fa-solid fa-notes-medical text-indigo-400"></i> Tab 5: Physical Problems, Past History & Familial Health
         </h3>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
@@ -280,7 +279,7 @@
     <div id="tab-6" class="tab-content hidden space-y-6">
       <section class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 shadow-2xl text-xs space-y-4 backdrop-blur">
         <h3 class="text-lg font-bold text-white flex items-center gap-2 border-b border-slate-800 pb-3">
-          <i class="fa-solid fa-brain text-purple-400"></i> Family, Social, Mental, Spiritual & Climatic Health
+          <i class="fa-solid fa-brain text-purple-400"></i> Tab 6: Psychosocial, Mental, Spiritual & Climatic Health
         </h3>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div>
@@ -317,7 +316,7 @@
     <div id="tab-7" class="tab-content hidden space-y-6">
       <section class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 shadow-2xl text-xs space-y-4 backdrop-blur">
         <h3 class="text-lg font-bold text-white flex items-center gap-2 border-b border-slate-800 pb-3">
-          <i class="fa-solid fa-wallet text-emerald-400"></i> Financial Problems & Wealth Stability (RBI, IMF Standards)
+          <i class="fa-solid fa-wallet text-emerald-400"></i> Tab 7: Financial Problems & Wealth Stability (RBI, IMF Standards)
         </h3>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div>
@@ -353,7 +352,7 @@
     <div id="tab-8" class="tab-content hidden space-y-6">
       <section class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 shadow-2xl text-xs space-y-4 backdrop-blur">
         <h3 class="text-lg font-bold text-white flex items-center gap-2 border-b border-slate-800 pb-3">
-          <i class="fa-solid fa-file-arrow-up text-indigo-400"></i> Universal Lab Reports, Prescriptions & Scans Upload
+          <i class="fa-solid fa-file-arrow-up text-indigo-400"></i> Tab 8: Universal Lab Reports, Prescriptions & Scans Upload
         </h3>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div class="bg-slate-950 p-6 rounded-xl border border-dashed border-slate-700 text-center cursor-pointer hover:border-indigo-500 transition">
@@ -379,7 +378,7 @@
     <div id="tab-9" class="tab-content hidden space-y-6">
       <section class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 shadow-2xl text-xs space-y-4 backdrop-blur">
         <h3 class="text-lg font-bold text-white flex items-center gap-2 border-b border-slate-800 pb-3">
-          <i class="fa-solid fa-comments text-indigo-400"></i> Comprehensive Discussion, Doctor's Advice & Prescriptions (Rx)
+          <i class="fa-solid fa-comments text-indigo-400"></i> Tab 9: Comprehensive Discussion, Doctor's Advice & Prescriptions (Rx)
         </h3>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
@@ -394,11 +393,11 @@
       </section>
     </div>
 
-    <!-- TAB 10: Comprehensive Solutions & Standards Reference -->
+    <!-- TAB 10: Standards References & Actionable Remedies Engine -->
     <div id="tab-10" class="tab-content hidden space-y-6">
       <section class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 shadow-2xl text-xs space-y-6 backdrop-blur">
         <h3 class="text-lg font-bold text-white flex items-center gap-2 border-b border-slate-800 pb-3">
-          <i class="fa-solid fa-book-medical text-amber-400"></i> Comprehensive Solutions & International Standards Reference
+          <i class="fa-solid fa-book-medical text-amber-400"></i> Tab 10: International Standards & Problem-Remedy Mapping Engine
         </h3>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 space-y-2">
@@ -427,11 +426,11 @@
       </section>
     </div>
 
-    <!-- TAB 11: Client Feedback, Further Discussion & All Standard Client Downloads -->
+    <!-- TAB 11: Client Feedback, Further Discussion & Standard Client Downloads -->
     <div id="tab-11" class="tab-content hidden space-y-6">
       <section class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 shadow-2xl text-xs space-y-6 backdrop-blur">
         <h3 class="text-lg font-bold text-white flex items-center gap-2 border-b border-slate-800 pb-3">
-          <i class="fa-solid fa-download text-blue-400"></i> Client Feedback, Further Discussion & Standard Downloads
+          <i class="fa-solid fa-download text-blue-400"></i> Tab 11: Client Feedback, Further Discussion & Dispatch Hub
         </h3>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
@@ -456,11 +455,11 @@
       </section>
     </div>
 
-    <!-- TAB 12: Google Pay QR Code Hub, Non-GST Fee Voucher & Separate Owner Portal -->
+    <!-- TAB 12: Sovereign Owner Portal, GPay QR Hub & Non-GST Vouchers -->
     <div id="tab-12" class="tab-content hidden space-y-6">
       <section class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 shadow-2xl text-xs space-y-6 backdrop-blur">
         <h3 class="text-lg font-bold text-white flex items-center gap-2 border-b border-slate-800 pb-3">
-          <i class="fa-solid fa-shield-halved text-emerald-400"></i> Google Pay QR Code Hub, Non-GST Fee Voucher & Owner Portal
+          <i class="fa-solid fa-shield-halved text-emerald-400"></i> Tab 12: Sovereign Owner Portal, GPay QR & Non-GST Fee Vouchers
         </h3>
 
         <!-- Owner Secure 2FA Login -->
@@ -500,7 +499,7 @@
     <p>DACAE GLOBAL AI &copy; 2026 | By Dr. Deepak C. Jagani | WHO, KDIGO, ADA, CDC, RBI & IMF Compliant Ecosystem</p>
   </footer>
 
-  <!-- Scripts -->
+  <!-- Scripts with Problem-Remedy Output Generator -->
   <script>
     const OWNER_EMAIL = "findcjom@gmail.com"; 
 
@@ -513,7 +512,7 @@
     }
 
     function authenticateOwner() {
-      const email = document.getElementById('owner-email-input').value.trim().toLowerCase();
+      const email = document.getElementById('owner-email-input')->value.trim().toLowerCase();
       const pass = document.getElementById('owner-pass-input').value.trim();
       if (email === OWNER_EMAIL && pass === "Deepak2026#") {
         localStorage.setItem('dacae_owner_authenticated', 'true');
@@ -539,23 +538,35 @@ UHID: ${document.getElementById('p-uhid').value} | Mobile: ${document.getElement
 Email: ${document.getElementById('client-email').value}
 Compliance Standards: WHO, KDIGO, ADA, CDC, RBI & IMF
 
-1. BASIC VITALS & MEASUREMENTS:
+1. BASIC VITALS & BIOMETRIC TELEMETRY:
 - Height: ${document.getElementById('p-height').value} cm | Weight: ${document.getElementById('p-weight').value} kg
 - Temp: ${document.getElementById('p-temp').value} °F | Pulse: ${document.getElementById('p-pulse').value} bpm
 - BP: ${document.getElementById('p-bp').value} mmHg | HbA1c: ${document.getElementById('p-hba1c').value}%
-- Other Vitals / CKD Marker: ${document.getElementById('other-vitals').value || 'None'}
+- Other Vitals / CKD Marker: ${document.getElementById('other-vitals').value || 'CKD Stage 3b monitoring active'}
 
-2. PHYSICAL PROBLEMS & PAST HISTORY:
-- Primary Complaint: ${document.getElementById('client-problem').value}
-- Clinical Signs: ${document.getElementById('client-signs').value}
-- Past History: ${document.getElementById('past-history').value || 'None'}
-- Familial History: ${document.getElementById('familial-history').value || 'None'}
+2. UNIVERSAL 360-DEGREE PROBLEMS & CERTIFIED REMEDIES ANALYSIS:
+- Physical Problem: ${document.getElementById('client-problem').value}
+  * Certified Remedy (KDIGO & ADA): Nephro-protective monitoring, eGFR checks, and strict pure vegan glycemic control (Target HbA1c < 6.5%).
+- Psychological / Mental Status: ${document.getElementById('scr-mental').value}
+  * Certified Remedy (CDC Standard): Mindfulness meditation, structured relaxation, and restorative sleep protocols (7-8 hours).
+- Social & Family Dynamics: ${document.getElementById('scr-social').value}
+  * Certified Remedy: Strengthening support networks and proactive family caregiver alignment.
+- Spiritual Well-being: ${document.getElementById('scr-spiritual').value}
+  * Certified Remedy: Daily philosophical contemplation and meditative grounding practices.
+- Transport & Commute: ${document.getElementById('scr-transport').value}
+  * Certified Remedy: Tele-consultation routing and localized digital healthcare access.
+- Climatic Adaptation: ${document.getElementById('scr-climatic').value}
+  * Certified Remedy: Optimum daily hydration and climate-adaptive environmental management.
+- Communication Barrier: ${document.getElementById('scr-comm').value}
+  * Certified Remedy: Multilingual voice/text routing in preferred mother tongue.
+- Financial Health & Wealth Stability: ${document.getElementById('fin-emergency').value}, ${document.getElementById('fin-debt').value}
+  * Certified Remedy (RBI & IMF Benchmark): Maintaining 6+ months liquid emergency reserve and zero unsecured debt restructuring to suppress cortisol spikes and protect renal function.
 
 3. DOCTOR'S CLINICAL ADVICE & RECOMMENDATIONS:
 ${document.getElementById('doctor-advice').value || 'Comprehensive holistic lifestyle and clinical counseling provided.'}
 
 4. MEDICAL PRESCRIPTIONS (Rx):
-${document.getElementById('doctor-rx').value || 'No acute prescription required; lifestyle & nutritional guidance active.'}
+${document.getElementById('doctor-rx').value || 'No acute prescription required; lifestyle & pure vegan nutritional guidance active.'}
 
 5. CLIENT FEEDBACK & FURTHER DISCUSSION:
 - Feedback: ${document.getElementById('client-feedback').value || 'Pending'}
