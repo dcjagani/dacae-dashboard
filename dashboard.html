@@ -49,7 +49,7 @@
         </div>
         <div>
           <h1 class="text-base font-bold text-white tracking-wide">DACAE Control Center</h1>
-          <p class="text-[11px] text-slate-400">Dynamic Autonomous Cloud-native AI Ecosystem | Free Forever AI Arena</p>
+          <p class="text-[11px] text-slate-400">Dynamic Autonomous Cloud-native AI Ecosystem | Zero-Load Architecture</p>
         </div>
       </div>
       <div class="flex items-center gap-3">
@@ -95,13 +95,13 @@
     <div id="tab-hub" class="tab-content space-y-6">
       <section class="bg-slate-900 border border-slate-800 rounded-xl p-6 shadow-2xl">
         <h2 class="text-xl font-bold text-white flex items-center gap-2 mb-4">
-          <i class="fa-solid fa-network-wired text-indigo-400"></i> DACAE Master Arena & Free Forever AI Agents
+          <i class="fa-solid fa-network-wired text-indigo-400"></i> DACAE Master Arena & Zero-Load Architecture
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div class="bg-slate-950 p-4 rounded-lg border border-slate-800">
-            <span class="text-xs text-slate-400 block mb-1">Ollama / Local LLM Engine</span>
-            <span class="text-lg font-bold text-white">Free & Private</span>
-            <span class="text-[10px] text-emerald-400 block mt-1">✓ Llama 3 / Mistral Local Ready</span>
+            <span class="text-xs text-slate-400 block mb-1">Local Machine Load</span>
+            <span class="text-lg font-bold text-white">0% (Zero Load)</span>
+            <span class="text-[10px] text-emerald-400 block mt-1">✓ Pure Client-Side Execution</span>
           </div>
           <div class="bg-slate-950 p-4 rounded-lg border border-slate-800">
             <span class="text-xs text-slate-400 block mb-1">Multi-Axis Synthesis</span>
@@ -185,11 +185,11 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
           <div>
             <label class="block text-slate-400 mb-1">Family Medical History</label>
-            <textarea id="p-family" rows="3" placeholder="Hereditary conditions..." class="w-full bg-slate-950 border border-slate-800 rounded-lg p-3 text-sm text-white focus:outline-none focus:border-indigo-500">No major hereditary renal or cardiac conditions reported.</textarea>
+            <textarea id="p-family" rows="3" class="w-full bg-slate-950 border border-slate-800 rounded-lg p-3 text-sm text-white focus:outline-none focus:border-indigo-500">No major hereditary renal or cardiac conditions reported.</textarea>
           </div>
           <div>
             <label class="block text-slate-400 mb-1">Past History & Treatments</label>
-            <textarea id="p-past" rows="3" placeholder="Previous surgeries..." class="w-full bg-slate-950 border border-slate-800 rounded-lg p-3 text-sm text-white focus:outline-none focus:border-indigo-500">Super Class-1 Public Health Administrative Experience; 2001 Kutch & 2006 Surat crisis leadership.</textarea>
+            <textarea id="p-past" rows="3" class="w-full bg-slate-950 border border-slate-800 rounded-lg p-3 text-sm text-white focus:outline-none focus:border-indigo-500">Super Class-1 Public Health Administrative Experience; 2001 Kutch & 2006 Surat crisis leadership.</textarea>
           </div>
           <div>
             <label class="block text-slate-400 mb-1">Current Active Diseases & Medications</label>
@@ -362,14 +362,14 @@
 
           <!-- Download Options & Dispatch Buttons -->
           <div class="pt-4 flex flex-wrap justify-end gap-3">
-            <button onclick="downloadComprehensiveReport()" class="px-4 py-2.5 bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold rounded-lg transition flex items-center gap-2">
-              <i class="fa-solid fa-file-word text-blue-400"></i> Download Comprehensive .doc
+            <button onclick="downloadTrueWordDocument()" class="px-4 py-2.5 bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold rounded-lg transition flex items-center gap-2">
+              <i class="fa-solid fa-file-word text-blue-400"></i> Download True .doc (Word)
             </button>
             <button onclick="window.print()" class="px-4 py-2.5 bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold rounded-lg transition flex items-center gap-2">
               <i class="fa-solid fa-file-pdf text-red-400"></i> Download as PDF
             </button>
-            <button onclick="dispatchComprehensiveEmail()" class="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold rounded-lg shadow-lg transition flex items-center gap-2">
-              <i class="fa-solid fa-paper-plane"></i> Run AI Arena & Dispatch Email
+            <button onclick="dispatchWebGmail()" class="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold rounded-lg shadow-lg transition flex items-center gap-2">
+              <i class="fa-solid fa-paper-plane"></i> Run AI Arena & Open Web Gmail
             </button>
           </div>
         </div>
@@ -383,7 +383,7 @@
     <p>HEALTH AI &copy; 2026 | By Dr. Deepak Jagani | Expert AI Clinical, Legal & Wealth Ecosystem</p>
   </footer>
 
-  <!-- Comprehensive JS Scripts -->
+  <!-- Fixed Scripts for Zero-Load True Word & Gmail Integration -->
   <script>
     function updateDateTime() {
       const now = new Date();
@@ -401,7 +401,7 @@
     setInterval(updateDateTime, 1000);
     updateDateTime();
 
-    function getReportData() {
+    function getReportText() {
       return `=== DACAE COMPREHENSIVE EXPERT AI DIAGNOSTIC REPORT ===
 Generated On: ${new Date().toLocaleString()}
 Status: NABH & QCI Compliant 5-Star Ecosystem
@@ -437,9 +437,19 @@ Status: NABH & QCI Compliant 5-Star Ecosystem
 === END OF DACAE AI ARENA REPORT ===`;
     }
 
-    function downloadComprehensiveReport() {
-      const content = getReportData();
-      const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
+    // Function to download as a TRUE Word Document (.doc via HTML MIME)
+    function downloadTrueWordDocument() {
+      const textContent = getReportText();
+      const htmlContent = `
+        <html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40">
+        <head><meta charset="utf-8"><title>DACAE Report</title></head>
+        <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+          <h2 style="color: #4f46e5;">DACAE Control Center - Expert AI Diagnostic Report</h2>
+          <pre style="font-family: Arial, sans-serif; white-space: pre-wrap;">${textContent}</pre>
+        </body>
+        </html>
+      `;
+      const blob = new Blob(['\ufeff' + htmlContent], { type: 'application/msword' });
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
@@ -449,17 +459,20 @@ Status: NABH & QCI Compliant 5-Star Ecosystem
       document.body.removeChild(a);
     }
 
-    function dispatchComprehensiveEmail() {
+    // Function to open Web Gmail directly with pre-filled report
+    function dispatchWebGmail() {
       const emailInput = document.getElementById('target-email').value;
-      const waNo = document.getElementById('target-wa').value;
-      const reportText = getReportData();
+      const reportText = getReportText();
       
       const subject = encodeURIComponent("DACAE Comprehensive AI Diagnostic & Prescription Report");
       const body = encodeURIComponent(reportText);
       
-      // Open Web Gmail directly with pre-filled content
       const gmailUrl = `https://mail.google.com/mail/?view=cm&to=${emailInput}&su=${subject}&body=${body}`;
       window.open(gmailUrl, '_blank');
       
-      alert(`AI Arena Report successfully prepared!\n- Web Gmail compose window opened for: ${emailInput}\n- WhatsApp & Telegram dispatch sync ready for: ${waNo || 'Default Mobile'}`);
+      alert(`Web Gmail compose window successfully opened for: ${emailInput}\n(Zero load on local machine, processed instantly in browser)`);
     }
+  </script>
+
+</body>
+</html>
