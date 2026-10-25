@@ -74,4 +74,403 @@
       <button onclick="switchTab('tab-vitals')" id="btn-tab-vitals" class="tab-btn px-4 py-2 text-xs font-semibold rounded-lg border bg-slate-900 text-slate-300 border-slate-800 hover:border-slate-700 transition flex items-center gap-2">
         <i class="fa-solid fa-user-doctor"></i> 2. KYC & Vitals
       </button>
-      <button onclick="switchTab('tab-labs')" id="btn-tab-labs" class="tab-btn px-4 py-2 text-xs font-semibold rounded-lg border bg-slate-900 text-slate-300
+      <button onclick="switchTab('tab-labs')" id="btn-tab-labs" class="tab-btn px-4 py-2 text-xs font-semibold rounded-lg border bg-slate-900 text-slate-300 border-slate-800 hover:border-slate-700 transition flex items-center gap-2">
+        <i class="fa-solid fa-flask-vial"></i> 3. Lab Investigations
+      </button>
+      <button onclick="switchTab('tab-address-lang')" id="btn-tab-address-lang" class="tab-btn px-4 py-2 text-xs font-semibold rounded-lg border bg-slate-900 text-slate-300 border-slate-800 hover:border-slate-700 transition flex items-center gap-2">
+        <i class="fa-solid fa-language"></i> 4. Address & Language
+      </button>
+      <button onclick="switchTab('tab-5pillars')" id="btn-tab-5pillars" class="tab-btn px-4 py-2 text-xs font-semibold rounded-lg border bg-slate-900 text-slate-300 border-slate-800 hover:border-slate-700 transition flex items-center gap-2">
+        <i class="fa-solid fa-shield-heart"></i> 5. 5-Pillar Health Goals
+      </button>
+      <button onclick="switchTab('tab-dispatch')" id="btn-tab-dispatch" class="tab-btn px-4 py-2 text-xs font-semibold rounded-lg border bg-slate-900 text-slate-300 border-slate-800 hover:border-slate-700 transition flex items-center gap-2">
+        <i class="fa-solid fa-paper-plane"></i> 6. Export & AI Arena
+      </button>
+    </div>
+
+    <!-- TAB 1: Master Hub -->
+    <div id="tab-hub" class="tab-content space-y-6">
+      <section class="bg-slate-900 border border-slate-800 rounded-xl p-6 shadow-2xl">
+        <h2 class="text-xl font-bold text-white flex items-center gap-2 mb-4">
+          <i class="fa-solid fa-network-wired text-indigo-400"></i> DACAE Master Arena & 5-Star Clinical Governance
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="bg-slate-950 p-4 rounded-lg border border-slate-800">
+            <span class="text-xs text-slate-400 block mb-1">5-Pillar Holistic Goals</span>
+            <span class="text-lg font-bold text-white">Physical to Wealth</span>
+            <span class="text-[10px] text-emerald-400 block mt-1">✓ Common man's language integration</span>
+          </div>
+          <div class="bg-slate-950 p-4 rounded-lg border border-slate-800">
+            <span class="text-xs text-slate-400 block mb-1">NABH & QCI Standards</span>
+            <span class="text-lg font-bold text-white">Active</span>
+            <span class="text-[10px] text-indigo-400 block mt-1">✓ Rigorous clinical protocols</span>
+          </div>
+          <div class="bg-slate-950 p-4 rounded-lg border border-slate-800">
+            <span class="text-xs text-slate-400 block mb-1">Regional Language Routing</span>
+            <span class="text-lg font-bold text-white">Dynamic</span>
+            <span class="text-[10px] text-emerald-400 block mt-1">✓ Gujarati / English support</span>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- TAB 2: Patient KYC & Vitals -->
+    <div id="tab-vitals" class="tab-content hidden space-y-6">
+      <section class="bg-slate-900 border border-slate-800 rounded-xl p-6 shadow-xl">
+        <h3 class="text-lg font-bold text-white flex items-center gap-2 mb-4">
+          <i class="fa-solid fa-user-doctor text-indigo-400"></i> Axis 2: Patient KYC & Clinical Vitals
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-4">
+          <div>
+            <label class="block text-xs font-medium text-slate-300 mb-1">Patient Full Name</label>
+            <input type="text" id="p-name" value="Dr. Deepak Champaklal Jagani" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500">
+          </div>
+          <div>
+            <label class="block text-xs font-medium text-slate-300 mb-1">Age / Gender</label>
+            <input type="text" id="p-age" value="68 / Male" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500">
+          </div>
+          <div>
+            <label class="block text-xs font-medium text-slate-300 mb-1">Patient ID / UHID</label>
+            <input type="text" id="p-uhid" value="UHID-2026-DCJ" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500">
+          </div>
+          <div>
+            <label class="block text-xs font-medium text-slate-300 mb-1">Assessment Date</label>
+            <input type="date" id="p-date" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500" value="2026-10-25">
+          </div>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-6 gap-3">
+          <div class="bg-slate-950 p-3 rounded-lg border border-slate-800">
+            <span class="block text-[11px] text-slate-400">Blood Pressure</span>
+            <input type="text" id="p-bp" value="120/80" class="w-full bg-transparent text-white font-bold text-sm focus:outline-none mt-1">
+            <span class="text-[10px] text-emerald-400">mmHg</span>
+          </div>
+          <div class="bg-slate-950 p-3 rounded-lg border border-slate-800">
+            <span class="block text-[11px] text-slate-400">Pulse Rate</span>
+            <input type="text" id="p-pulse" value="72" class="w-full bg-transparent text-white font-bold text-sm focus:outline-none mt-1">
+            <span class="text-[10px] text-emerald-400">bpm</span>
+          </div>
+          <div class="bg-slate-950 p-3 rounded-lg border border-slate-800">
+            <span class="block text-[11px] text-slate-400">Weight</span>
+            <input type="text" id="p-weight" value="75" class="w-full bg-transparent text-white font-bold text-sm focus:outline-none mt-1">
+            <span class="text-[10px] text-emerald-400">kg</span>
+          </div>
+          <div class="bg-slate-950 p-3 rounded-lg border border-slate-800">
+            <span class="block text-[11px] text-slate-400">Height</span>
+            <input type="text" id="p-height" value="170" class="w-full bg-transparent text-white font-bold text-sm focus:outline-none mt-1">
+            <span class="text-[10px] text-emerald-400">cm</span>
+          </div>
+          <div class="bg-slate-950 p-3 rounded-lg border border-slate-800">
+            <span class="block text-[11px] text-slate-400">Temperature</span>
+            <input type="text" id="p-temp" value="98.6" class="w-full bg-transparent text-white font-bold text-sm focus:outline-none mt-1">
+            <span class="text-[10px] text-emerald-400">°F</span>
+          </div>
+          <div class="bg-slate-950 p-3 rounded-lg border border-slate-800">
+            <span class="block text-[11px] text-slate-400">HbA1c</span>
+            <input type="text" id="p-hba1c" value="6.4" class="w-full bg-transparent text-white font-bold text-sm focus:outline-none mt-1">
+            <span class="text-[10px] text-amber-400">% (Monitored)</span>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- TAB 3: Relevant Laboratory Investigations & Recommendations -->
+    <div id="tab-labs" class="tab-content hidden space-y-6">
+      <section class="bg-slate-900 border border-slate-800 rounded-xl p-6 shadow-xl">
+        <h3 class="text-lg font-bold text-white flex items-center gap-2 mb-4 border-b border-slate-800 pb-3">
+          <i class="fa-solid fa-flask-vial text-indigo-400"></i> Axis 3: Relevant Laboratory Investigations & Recommendations
+        </h3>
+        <p class="text-xs text-slate-400 mb-4">Select required laboratory investigations and analytical recommendations for CKD Stage 3b & HbA1c 6.4% management:</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+          <div class="bg-slate-950 p-4 rounded-lg border border-slate-800 space-y-3">
+            <strong class="text-white text-sm block mb-2"><i class="fa-solid fa-droplet text-indigo-400"></i> Renal & Metabolic Panel (KDIGO Guidelines)</strong>
+            <label class="flex items-center gap-2 cursor-pointer">
+              <input type="checkbox" id="lab-egfr" checked class="rounded bg-slate-900 border-slate-700 text-indigo-600">
+              <span class="text-slate-300">Serum Creatinine & eGFR Calculation (Target monitoring for CKD 3b)</span>
+            </label>
+            <label class="flex items-center gap-2 cursor-pointer">
+              <input type="checkbox" id="lab-electrolyte" checked class="rounded bg-slate-900 border-slate-700 text-indigo-600">
+              <span class="text-slate-300">Serum Electrolytes (Sodium, Potassium, Bicarbonate)</span>
+            </label>
+            <label class="flex items-center gap-2 cursor-pointer">
+              <input type="checkbox" id="lab-acr" checked class="rounded bg-slate-900 border-slate-700 text-indigo-600">
+              <span class="text-slate-300">Urine Albumin-to-Creatinine Ratio (ACR)</span>
+            </label>
+          </div>
+
+          <div class="bg-slate-950 p-4 rounded-lg border border-slate-800 space-y-3">
+            <strong class="text-white text-sm block mb-2"><i class="fa-solid fa-heart-pulse text-emerald-400"></i> Glycemic & General Health Panel</strong>
+            <label class="flex items-center gap-2 cursor-pointer">
+              <input type="checkbox" id="lab-hba1c" checked class="rounded bg-slate-900 border-slate-700 text-indigo-600">
+              <span class="text-slate-300">HbA1c & Fasting Blood Glucose (Target < 6.5%)</span>
+            </label>
+            <label class="flex items-center gap-2 cursor-pointer">
+              <input type="checkbox" id="lab-lipid" checked class="rounded bg-slate-900 border-slate-700 text-indigo-600">
+              <span class="text-slate-300">Lipid Profile (Cardiovascular Risk Assessment)</span>
+            </label>
+            <label class="flex items-center gap-2 cursor-pointer">
+              <input type="checkbox" id="lab-cbc" checked class="rounded bg-slate-900 border-slate-700 text-indigo-600">
+              <span class="text-slate-300">Complete Blood Count (CBC & Hemoglobin for Renal Anemia)</span>
+            </label>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- TAB 4: Address & Dynamic Language Routing -->
+    <div id="tab-address-lang" class="tab-content hidden space-y-6">
+      <section class="bg-slate-900 border border-slate-800 rounded-xl p-6 shadow-xl">
+        <h3 class="text-lg font-bold text-white flex items-center gap-2 mb-4 border-b border-slate-800 pb-3">
+          <i class="fa-solid fa-language text-indigo-400"></i> Axis 4: Address & Dynamic Report Language Routing
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs mb-4">
+          <div>
+            <label class="block text-slate-400 mb-1">Current Residential Address</label>
+            <input type="text" id="curr-address" value="Ahmedabad, Gujarat, India (PIN: 380014)" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500">
+          </div>
+          <div>
+            <label class="block text-slate-400 mb-1">Permanent Address</label>
+            <input type="text" id="perm-address" value="Ahmedabad, Gujarat, India" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500">
+          </div>
+        </div>
+        <div class="bg-slate-950 p-4 rounded-lg border border-slate-800">
+          <label class="block text-slate-300 font-bold mb-2">Report Required Language:</label>
+          <select id="report-lang" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-white text-xs">
+            <option value="gu" selected>ગુજરાતી (Gujarati - Regional Preference based on Gujarat Address)</option>
+            <option value="en">English (International Clinical Standard)</option>
+          </select>
+        </div>
+      </section>
+    </div>
+
+    <!-- TAB 5: 5-Pillar Holistic Health Goals (Physical, Mental, Social, Spiritual, Financial) -->
+    <div id="tab-5pillars" class="tab-content hidden space-y-6">
+      <section class="bg-slate-900 border border-slate-800 rounded-xl p-6 shadow-xl">
+        <h3 class="text-base font-bold text-white flex items-center gap-2 mb-4 border-b border-slate-800 pb-3">
+          <i class="fa-solid fa-shield-heart text-indigo-400"></i> Axis 5: 5-Pillar Holistic Health Advices & Goals (Common Man's Language)
+        </h3>
+        <p class="text-xs text-slate-400 mb-4">Select or customize goals for complete wellbeing as per NABH/QCI/IMF 5-star standards:</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+          <!-- Physical Health -->
+          <div class="bg-slate-950 p-4 rounded-lg border border-slate-800 space-y-2">
+            <strong class="text-emerald-400 text-sm block"><i class="fa-solid fa-person-walking"></i> 1. શારીરિક સ્વાસ્થ્ય (Physical Health)</strong>
+            <p class="text-slate-300"><strong>सामान्य लक्ष्य (Normalcy Goal):</strong> BP 120/80, બ્લડ શુગર નિયંત્રણ, રોજ ૩૦-૪૦ મિનિટ હળવી કસરત/વૉકિંગ.</p>
+            <p class="text-slate-400"><strong>કેવી રીતે પ્રાપ્ત કરવું (How to Achieve):</strong> રોજ સવારે કે સાંજ ખુલ્લા વાતાવરણમાં ચાલવું. મીઠું અને ગળતર ઓછું કરવું, પૂરતું પાણી પીવું.</p>
+          </div>
+
+          <!-- Mental Health -->
+          <div class="bg-slate-950 p-4 rounded-lg border border-slate-800 space-y-2">
+            <strong class="text-indigo-400 text-sm block"><i class="fa-solid fa-brain"></i> 2. માનસિક સ્વાસ્થ્ય (Mental Health)</strong>
+            <p class="text-slate-300"><strong>सामान्य लक्ष्य (Normalcy Goal):</strong> તણાવ મુક્ત મન, સંતોષકારક ઊંઘ (૭-૮ કલાક), શાંત સ્વભાવ.</p>
+            <p class="text-slate-400"><strong>કેવી રીતે પ્રાપ્ત કરવું (How to Achieve):</strong> ચિંતા છોડીને વર્તમાનમાં જીવવું. ગમતી પ્રવૃત્તિઓ કરવી અને નકારાત્મક વિચારોથી દૂર રહેવું.</p>
+          </div>
+
+          <!-- Social Health -->
+          <div class="bg-slate-950 p-4 rounded-lg border border-slate-800 space-y-2">
+            <strong class="text-sky-400 text-sm block"><i class="fa-solid fa-users"></i> 3. સામાજિક સ્વાસ્થ્ય (Social Health)</strong>
+            <p class="text-slate-300"><strong>सामान्य लक्ष्य (Normalcy Goal):</strong> પરિવાર અને મિત્રો સાથે મધુર સંબંધો, સામાજિક હકારાત્મક સહભાગિતા.</p>
+            <p class="text-slate-400"><strong>કેવી રીતે પ્રાપ્ત કરવું (How to Achieve):</strong> પરિવાર સાથે રોજ સમય વિતાવવો, મિત્રોને મળવું અને સમાજસેવા કે સારા કાર્યોમાં જોડાવવું.</p>
+          </div>
+
+          <!-- Spiritual Health -->
+          <div class="bg-slate-950 p-4 rounded-lg border border-slate-800 space-y-2">
+            <strong class="text-amber-400 text-sm block"><i class="fa-solid fa-spa"></i> 4. આધ્યાત્મિક સ્વાસ્થ્ય (Spiritual Health)</strong>
+            <p class="text-slate-300"><strong>सामान्य लक्ष्य (Normalcy Goal):</strong> આંતરિક શાંતિ, સકારાત્મક ઉર્જા અને ઈશ્વર કે પ્રકૃતિ પ્રત્યે કૃતજ્ઞતા.</p>
+            <p class="text-slate-400"><strong>કેવી રીતે પ્રાપ્ત કરવું (How to Achieve):</strong> રોજ સવારે ૧૫-૨૦ મિનિટ ધ્યાન (Pranayama/Meditation) કરવું, પ્રાર્થના કરવી.</p>
+          </div>
+
+          <!-- Financial Health -->
+          <div class="bg-slate-950 p-4 rounded-lg border border-slate-800 space-y-2 md:col-span-2">
+            <strong class="text-purple-400 text-sm block"><i class="fa-solid fa-wallet"></i> 5. નાણાકીય સ્વાસ્થ્ય (Financial Health - RBI/IMF Standard)</strong>
+            <p class="text-slate-300"><strong>सामान्य लक्ष्य (Normalcy Goal):</strong> દેવામુક્ત સ્થિતિ, ૩ થી ૬ મહિનાનું ઇમરજન્સી ફંડ અને સુરક્ષિત રોકાણ.</p>
+            <p class="text-slate-400"><strong>કેવી રીતે પ્રાપ્ત કરવું (How to Achieve):</strong> બિનજરૂરી ખર્ચ ટાળવા, બચત કરવાની ટેવ રાખવી અને નાણાકીય નિયમોનું પાલન કરવું.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- TAB 6: Export & AI Arena Dispatch Hub -->
+    <div id="tab-dispatch" class="tab-content hidden space-y-6">
+      <section class="bg-slate-900 border border-slate-800 rounded-xl p-6 shadow-xl">
+        <h3 class="text-base font-bold text-white flex items-center gap-2 mb-4 border-b border-slate-800 pb-3">
+          <i class="fa-solid fa-envelope-circle-check text-indigo-400"></i> Automated Multi-Channel Dispatch & Comprehensive AI Arena
+        </h3>
+
+        <div class="space-y-4 text-xs">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div>
+              <label class="block text-slate-400 mb-1"><i class="fa-solid fa-envelope text-indigo-400"></i> Target Email Address</label>
+              <input type="email" id="target-email" value="dr.deepak.jagani@example.com" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500">
+            </div>
+            <div>
+              <label class="block text-slate-400 mb-1"><i class="fa-brands fa-whatsapp text-emerald-400"></i> WhatsApp Mobile No.</label>
+              <input type="text" id="target-wa" placeholder="+91 XXXXX XXXXX" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500">
+            </div>
+            <div>
+              <label class="block text-slate-400 mb-1"><i class="fa-brands fa-telegram text-sky-400"></i> Telegram Chat / Bot ID</label>
+              <input type="text" id="target-tg" placeholder="@username or Chat ID" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500">
+            </div>
+          </div>
+
+          <div class="pt-4 flex flex-wrap justify-end gap-3">
+            <button onclick="downloadTrueWordDocument()" class="px-4 py-2.5 bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold rounded-lg transition flex items-center gap-2">
+              <i class="fa-solid fa-file-word text-blue-400"></i> Download True .doc (Word)
+            </button>
+            <button onclick="window.print()" class="px-4 py-2.5 bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold rounded-lg transition flex items-center gap-2">
+              <i class="fa-solid fa-file-pdf text-red-400"></i> Download as PDF
+            </button>
+            <button onclick="dispatchWebGmail()" class="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold rounded-lg shadow-lg transition flex items-center gap-2">
+              <i class="fa-solid fa-paper-plane"></i> Run AI Arena & Open Web Gmail
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800 py-6 text-center text-xs text-slate-500 bg-slate-900/30">
+    <p>HEALTH AI &copy; 2026 | By Dr. Deepak Jagani | 5-Star NABH, QCI & IMF Compliant Ecosystem</p>
+  </footer>
+
+  <!-- Scripts for 5-Pillar Report Generation -->
+  <script>
+    function updateDateTime() {
+      const now = new Date();
+      const options = { 
+        year: 'numeric', 
+        month: 'short', 
+        day: 'numeric', 
+        hour: '2-digit', 
+        minute: '2-digit', 
+        second: '2-digit',
+        hour12: true 
+      };
+      document.getElementById('live-datetime').innerHTML = '<i class="fa-regular fa-clock text-indigo-400"></i> ' + now.toLocaleString('en-US', options);
+    }
+    setInterval(updateDateTime, 1000);
+    updateDateTime();
+
+    function getReportText() {
+      const lang = document.getElementById('report-lang').value;
+      const isGujarati = (lang === 'gu');
+
+      const lab1 = document.getElementById('lab-egfr').checked ? (isGujarati ? "- સીરમ ક્રિએટિનાઇન અને ઇજીએફઆർ (CKD 3b મોનિટરિંગ)" : "- Serum Creatinine & eGFR (CKD 3b Monitoring)") : "";
+      const lab2 = document.getElementById('lab-electrolyte').checked ? (isGujarati ? "- ઇલેક્ટ્રોલાઇટ્સ (સોડિયમ અને પોટેશિયમ)" : "- Serum Electrolytes (Sodium & Potassium)") : "";
+      const lab3 = document.getElementById('lab-acr').checked ? (isGujarati ? "- યુરિન આલ્બુમિન-ટુ-ક્રિએટિનાઇન રેશિયો (ACR)" : "- Urine Albumin-to-Creatinine Ratio (ACR)") : "";
+      const lab4 = document.getElementById('lab-hba1c').checked ? (isGujarati ? "- એચબીએવનસી (HbA1c લક્ષ્યાંક < 6.5%)" : "- HbA1c & Fasting Glucose (Target < 6.5%)") : "";
+      const lab5 = document.getElementById('lab-lipid').checked ? (isGujarati ? "- લિપિડ પ્રોફાઇલ (હાર્ટ રિસ્ક એસેસમેન્ટ)" : "- Lipid Profile (Cardiovascular Risk)") : "";
+      const lab6 = document.getElementById('lab-cbc').checked ? (isGujarati ? "- સીબીસી અને હિમોગ્લોબિન (રેનલ એનીમિયા તપાસ)" : "- CBC & Hemoglobin (Renal Anemia Check)") : "";
+
+      if (isGujarati) {
+        return `=== DACAE સર્વાંગી એક્સપર્ટ એઆઈ ડાયગ્નોસ્ટિક રિપોર્ટ (NABH & QCI 5-Star Compliant) ===
+તારીખ: ${new Date().toLocaleString()}
+સ્થિતિ: 5-સ્ટાર NABH, QCI & IMF કમ્પ્લાયન્ટ ઇકોસિસ્ટમ
+ભાષા: ગુજરાતી (સરનામું: અમદાવાદ, ગુજરાત)
+
+૧. પેશન્ટ કેવાયસી અને વાઇટલ્સ:
+- નામ: ${document.getElementById('p-name').value}
+- ઉંમર/લિંગ: ${document.getElementById('p-age').value}
+- UHID: ${document.getElementById('p-uhid').value}
+- બ્લડ પ્રેશર: ${document.getElementById('p-bp').value} mmHg | પલ્સ: ${document.getElementById('p-pulse').value} bpm
+- વજન: ${document.getElementById('p-weight').value} kg | ઊંચાઈ: ${document.getElementById('p-height').value} cm
+- HbA1c: ${document.getElementById('p-hba1c').value}% (મોનિટર થયેલ)
+
+૨. જરૂરી લેબ ઇન્વેસ્ટિગેશન્સ:
+${lab1}
+${lab2}
+${lab3}
+${lab4}
+${lab5}
+${lab6}
+
+૩. ૫-પિલર સ્વાસ્થ્ય સલાહ અને લક્ષ્યાંકો (સામાન્ય માણસની ભાષામાં):
+- શારીરિક સ્વાસ્થ્ય: લક્ષ્યાંક (BP 120/80, HbA1c < 6.5%). નિયમિત વૉકિંગ, હળવો ખોરાક અને પૂરતું પાણી પીવું.
+- માનસિક સ્વાસ્થ્ય: લક્ષ્યાંક (તણાવ મુક્ત મન અને ૭-૮ કલાક ગાઢ ઊંઘ). ચિંતામુક્ત રહી સકારાત્મક વિચારવું.
+- સામાજિક સ્વાસ્થ્ય: લક્ષ્યાંક (પરિવાર અને મિત્રો સાથે ઉત્તમ સંબંધો). રોજ પરિવાર સાથે સમય વિતાવવો.
+- આધ્યાત્મિક સ્વાસ્થ્ય: લક્ષ્યાંક (આંતરિક શાંતિ). રોજ ૧૫ મિનિટ ધ્યાન અને પ્રકૃતિ સાથે જોડાણ.
+- નાણાકીય સ્વાસ્થ્ય (RBI/IMF ધોરણ): લક્ષ્યાંક (૩-૬ મહિનાનું ઇમરજન્સી ફંડ અને દેવામુક્ત સ્થિતિ).
+
+૪. વૈજ્ઞાનિક અને તબીબી સંદર્ભો (References):
+- KDIGO 2024 Clinical Practice Guideline for CKD Management.
+- ADA Standards of Care in Diabetes Management.
+- RBI/IMF Framework for Financial Health & Wealth Longevity.
+
+=== રિપોર્ટ સમાપ્ત ===`;
+      } else {
+        return `=== DACAE COMPREHENSIVE EXPERT AI DIAGNOSTIC REPORT (NABH & QCI 5-Star) ===
+Generated On: ${new Date().toLocaleString()}
+Status: 5-Star NABH, QCI & IMF Compliant Ecosystem
+Language: English
+
+1. PATIENT KYC & CLINICAL VITALS:
+- Name: ${document.getElementById('p-name').value}
+- Age/Gender: ${document.getElementById('p-age').value}
+- UHID: ${document.getElementById('p-uhid').value}
+- Blood Pressure: ${document.getElementById('p-bp').value} mmHg | Pulse: ${document.getElementById('p-pulse').value} bpm
+- Weight: ${document.getElementById('p-weight').value} kg | Height: ${document.getElementById('p-height').value} cm
+- HbA1c: ${document.getElementById('p-hba1c').value}% (Monitored)
+
+2. SELECTED LABORATORY INVESTIGATIONS:
+${lab1}
+${lab2}
+${lab3}
+${lab4}
+${lab5}
+${lab6}
+
+3. 5-PILLAR HEALTH GOALS & ADVICES (Common Man's Language):
+- Physical Health: Target (BP 120/80, HbA1c < 6.5%). Daily walking, light balanced vegan diet, and hydration.
+- Mental Health: Target (Stress-free mind & 7-8 hours sleep). Positive thinking and relaxation.
+- Social Health: Target (Strong family bonding). Spending quality time with loved ones.
+- Spiritual Health: Target (Inner peace). 15 minutes daily meditation and gratitude.
+- Financial Health (RBI/IMF Standard): Target (3-6 months emergency reserve and zero bad debt).
+
+4. REFERENCES & GUIDELINES:
+- KDIGO 2024 Clinical Practice Guideline for Chronic Kidney Disease.
+- ADA Standards of Care in Diabetes Management.
+- RBI/IMF Guidelines for Financial Resilience & Longevity.
+
+=== END OF DACAE AI ARENA REPORT ===`;
+      }
+    }
+
+    function downloadTrueWordDocument() {
+      const textContent = getReportText();
+      const htmlContent = `
+        <html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40">
+        <head><meta charset="utf-8"><title>DACAE Report</title></head>
+        <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+          <h2 style="color: #4f46e5;">DACAE Control Center - 5-Star NABH & QCI Report</h2>
+          <pre style="font-family: Arial, sans-serif; white-space: pre-wrap;">${textContent}</pre>
+        </body>
+        </html>
+      `;
+      const blob = new Blob(['\ufeff' + htmlContent], { type: 'application/msword' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'DACAE_5Star_NABH_Comprehensive_Report.doc';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    }
+
+    function dispatchWebGmail() {
+      const emailInput = document.getElementById('target-email').value;
+      const reportText = getReportText();
+      
+      const subject = encodeURIComponent("DACAE 5-Star NABH & QCI Comprehensive Diagnostic Report");
+      const body = encodeURIComponent(reportText);
+      
+      const gmailUrl = `https://mail.google.com/mail/?view=cm&to=${emailInput}&su=${subject}&body=${body}`;
+      window.open(gmailUrl, '_blank');
+      
+      alert(`Web Gmail compose window successfully opened for: ${emailInput}\n(Zero load on local machine, processed instantly in browser)`);
+    }
+  </script>
+
+</body>
+</html>
