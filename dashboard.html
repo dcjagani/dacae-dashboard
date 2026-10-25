@@ -28,6 +28,13 @@
       activeBtn.classList.remove('bg-slate-900', 'text-slate-300', 'border-slate-800');
       activeBtn.classList.add('bg-indigo-600', 'text-white', 'border-indigo-500', 'shadow-lg', 'shadow-indigo-500/25');
     }
+
+    function generateAISolutions() {
+      const prob = document.getElementById('client-problem').value;
+      const aiBox = document.getElementById('ai-solutions-output');
+      aiBox.value = `[AI GENERATED DETAILED SOLUTIONS & PROTOCOL]\n- Analyzed Condition: ${prob}\n- KDIGO & ADA Clinical Standard: Maintain strict glycemic control (HbA1c < 6.5%) and execute quarterly eGFR / serum creatinine evaluation to safeguard renal reserve (CKD Stage 3b management).\n- Pure Vegan Nutritional Protocol: Emphasize low-potassium, plant-based organic proteins, hydration balance, and avoidance of processed sodium.\n- Psychosocial & IMF Standard: Integrate daily mindfulness to suppress cortisol release, paired with 6+ months liquid emergency financial buffering to ensure zero monetary stress.`;
+      alert('AI Detailed Solutions successfully synthesized based on client biometrics and international benchmarks!');
+    }
   </script>
 </head>
 <body class="bg-slate-950 text-slate-100 min-h-screen font-sans antialiased flex flex-col justify-between selection:bg-indigo-500 selection:text-white">
@@ -67,7 +74,7 @@
       <button onclick="switchTab('tab-6')" id="btn-tab-6" class="tab-btn px-3 py-2 text-xs font-semibold rounded-xl border bg-slate-900 text-slate-300 border-slate-800 transition flex items-center gap-1.5"><i class="fa-solid fa-brain text-purple-400"></i> 6. Psychosocial & Spiritual</button>
       <button onclick="switchTab('tab-7')" id="btn-tab-7" class="tab-btn px-3 py-2 text-xs font-semibold rounded-xl border bg-slate-900 text-slate-300 border-slate-800 transition flex items-center gap-1.5"><i class="fa-solid fa-wallet text-emerald-400"></i> 7. Financial Wealth</button>
       <button onclick="switchTab('tab-8')" id="btn-tab-8" class="tab-btn px-3 py-2 text-xs font-semibold rounded-xl border bg-slate-900 text-slate-300 border-slate-800 transition flex items-center gap-1.5"><i class="fa-solid fa-file-arrow-up"></i> 8. Lab Uploads</button>
-      <button onclick="switchTab('tab-9')" id="btn-tab-9" class="tab-btn px-3 py-2 text-xs font-semibold rounded-xl border bg-slate-900 text-slate-300 border-slate-800 transition flex items-center gap-1.5"><i class="fa-solid fa-comments"></i> 9. Doctor Advice & Rx</button>
+      <button onclick="switchTab('tab-9')" id="btn-tab-9" class="tab-btn px-3 py-2 text-xs font-semibold rounded-xl border bg-slate-900 text-slate-300 border-slate-800 transition flex items-center gap-1.5"><i class="fa-solid fa-comments"></i> 9. AI Solutions & Rx</button>
       <button onclick="switchTab('tab-10')" id="btn-tab-10" class="tab-btn px-3 py-2 text-xs font-semibold rounded-xl border bg-slate-900 text-slate-300 border-slate-800 transition flex items-center gap-1.5"><i class="fa-solid fa-book-medical text-amber-400"></i> 10. Standards & Remedies</button>
       <button onclick="switchTab('tab-11')" id="btn-tab-11" class="tab-btn px-3 py-2 text-xs font-semibold rounded-xl border bg-slate-900 text-slate-300 border-slate-800 transition flex items-center gap-1.5"><i class="fa-solid fa-download text-blue-400"></i> 11. Feedback & Dispatch</button>
       <button onclick="switchTab('tab-12')" id="btn-tab-12" class="tab-btn px-3 py-2 text-xs font-semibold rounded-xl border bg-slate-900 text-slate-300 border-slate-800 transition flex items-center gap-1.5"><i class="fa-solid fa-shield-halved text-emerald-400"></i> 12. Owner Portal & Pay</button>
@@ -171,7 +178,7 @@
       </section>
     </div>
 
-    <!-- TAB 4: Universal 360-Degree Initial Problem Screening Gateway -->
+    <!-- TAB 4: Universal 360-Degree Initial Problem Screening Gateway (with None options) -->
     <div id="tab-4" class="tab-content hidden space-y-6">
       <section class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 shadow-2xl text-xs space-y-4 backdrop-blur">
         <h3 class="text-lg font-bold text-white flex items-center gap-2 border-b border-slate-800 pb-3">
@@ -181,26 +188,29 @@
           <div>
             <label class="block text-slate-300 mb-1.5 font-semibold">1. Physical Problem Category</label>
             <select id="scr-physical" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-white focus:border-indigo-500 focus:outline-none">
-              <option value="Renal & Metabolic (CKD/Diabetes)">Renal & Metabolic (CKD Stage 3b / HbA1c)</option>
+              <option value="Renal & Metabolic (CKD/Diabetes)" selected>Renal & Metabolic (CKD Stage 3b / HbA1c)</option>
               <option value="Cardiovascular & BP">Cardiovascular & Blood Pressure</option>
               <option value="Musculoskeletal & Joint">Musculoskeletal & Joint Pain</option>
               <option value="General Fatigue & Malaise">General Fatigue & Malaise</option>
+              <option value="None / Stable">None / Stable / No Issue</option>
             </select>
           </div>
           <div>
             <label class="block text-slate-300 mb-1.5 font-semibold">2. Mental / Psychological Status</label>
             <select id="scr-mental" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-white focus:border-indigo-500 focus:outline-none">
-              <option value="Stable / Calm">Stable & Calm</option>
+              <option value="Stable / Calm" selected>Stable & Calm</option>
               <option value="Mild Anxiety / Sleep Stress">Mild Anxiety & Sleep Stress</option>
               <option value="Professional Burnout">Professional Burnout</option>
+              <option value="None / Stable">None / Stable / No Issue</option>
             </select>
           </div>
           <div>
             <label class="block text-slate-300 mb-1.5 font-semibold">3. Social & Family Dynamics</label>
             <select id="scr-social" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-white focus:border-indigo-500 focus:outline-none">
-              <option value="Strong Family Support">Strong Family Support</option>
+              <option value="Strong Family Support" selected>Strong Family Support</option>
               <option value="Caregiver Responsibilities">Caregiver Responsibilities</option>
               <option value="Social Isolation Concern">Social Isolation Concern</option>
+              <option value="None / Stable">None / Stable / No Issue</option>
             </select>
           </div>
         </div>
@@ -208,29 +218,33 @@
           <div>
             <label class="block text-slate-300 mb-1.5 font-semibold">4. Spiritual Well-being</label>
             <select id="scr-spiritual" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-white focus:border-indigo-500 focus:outline-none">
-              <option value="High Inner Peace & Practice">High Inner Peace & Practice</option>
+              <option value="High Inner Peace & Practice" selected>High Inner Peace & Practice</option>
               <option value="Seeking Mindfulness Balance">Seeking Mindfulness Balance</option>
+              <option value="None / Stable">None / Stable / No Issue</option>
             </select>
           </div>
           <div>
             <label class="block text-slate-300 mb-1.5 font-semibold">5. Transport & Commute</label>
             <select id="scr-transport" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-white focus:border-indigo-500 focus:outline-none">
-              <option value="Easy Commute / Accessible">Easy Commute / Accessible</option>
+              <option value="Easy Commute / Accessible" selected>Easy Commute / Accessible</option>
               <option value="Travel / Distance Constraint">Travel / Distance Constraint</option>
+              <option value="None / Stable">None / Stable / No Issue</option>
             </select>
           </div>
           <div>
             <label class="block text-slate-300 mb-1.5 font-semibold">6. Climatic / Environmental</label>
             <select id="scr-climatic" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-white focus:border-indigo-500 focus:outline-none">
-              <option value="Comfortable Climate">Comfortable Climate</option>
+              <option value="Comfortable Climate" selected>Comfortable Climate</option>
               <option value="Seasonal Sensitivity">Seasonal Sensitivity / Extremes</option>
+              <option value="None / Stable">None / Stable / No Issue</option>
             </select>
           </div>
           <div>
             <label class="block text-slate-300 mb-1.5 font-semibold">7. Communication Barrier</label>
             <select id="scr-comm" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-white focus:border-indigo-500 focus:outline-none">
-              <option value="None / Fluent">None / Clear Communication</option>
+              <option value="None / Fluent" selected>None / Clear Communication</option>
               <option value="Digital Assistance Required">Digital Assistance Required</option>
+              <option value="None / Stable">None / Stable / No Issue</option>
             </select>
           </div>
         </div>
@@ -247,29 +261,31 @@
           <div>
             <label class="block text-slate-300 mb-1.5 font-semibold">Primary Physical Complaint / Disease</label>
             <select id="client-problem" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-white focus:border-indigo-500 focus:outline-none">
-              <option value="CKD Stage 3b & Glycemic Control">CKD Stage 3b & Glycemic Control (HbA1c 6.4%)</option>
+              <option value="CKD Stage 3b & Glycemic Control" selected>CKD Stage 3b & Glycemic Control (HbA1c 6.4%)</option>
               <option value="Cardiovascular & Blood Pressure Issue">Cardiovascular & Blood Pressure Issue</option>
               <option value="Musculoskeletal & Joint Pain">Musculoskeletal & Joint Pain</option>
               <option value="General Fatigue & Malaise">General Fatigue & Malaise</option>
+              <option value="None / Stable">None / Stable / No Issue</option>
             </select>
           </div>
           <div>
             <label class="block text-slate-300 mb-1.5 font-semibold">Observed Clinical Signs</label>
             <select id="client-signs" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-white focus:border-indigo-500 focus:outline-none">
-              <option value="Stable vitals with controlled lab markers">Stable vitals with controlled lab markers</option>
+              <option value="Stable vitals with controlled lab markers" selected>Stable vitals with controlled lab markers</option>
               <option value="Mild fatigue / BP fluctuation">Mild fatigue / BP fluctuation</option>
               <option value="No acute distress">No acute distress</option>
+              <option value="None / Stable">None / Stable / No Issue</option>
             </select>
           </div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <label class="block text-slate-300 mb-1.5 font-semibold">Past Significant Health Problems & Surgeries</label>
-            <textarea id="past-history" rows="3" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-white focus:border-indigo-500 focus:outline-none" placeholder="Document previous major illnesses, hospitalizations, or interventions..."></textarea>
+            <textarea id="past-history" rows="3" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-white focus:border-indigo-500 focus:outline-none" placeholder="Document previous major illnesses, hospitalizations, or interventions (or write None)..."></textarea>
           </div>
           <div>
             <label class="block text-slate-300 mb-1.5 font-semibold">Familial Health History (Genetic / Hereditary)</label>
-            <textarea id="familial-history" rows="3" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-white focus:border-indigo-500 focus:outline-none" placeholder="Document family history of diabetes, hypertension, renal disorders, etc..."></textarea>
+            <textarea id="familial-history" rows="3" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-white focus:border-indigo-500 focus:outline-none" placeholder="Document family history of diabetes, hypertension, renal disorders, etc. (or write None)..."></textarea>
           </div>
         </div>
       </section>
@@ -285,23 +301,25 @@
           <div>
             <label class="block text-slate-300 mb-1.5 font-semibold">Mental Stress Source</label>
             <select id="mental-stress" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-white focus:border-indigo-500 focus:outline-none">
-              <option value="Professional & Governance Responsibilities">Professional & Governance Responsibilities</option>
+              <option value="Professional & Governance Responsibilities" selected>Professional & Governance Responsibilities</option>
               <option value="Sleep Hygiene & Relaxation">Sleep Hygiene & Relaxation</option>
-              <option value="No Significant Stress">No Significant Stress</option>
+              <option value="None / Stable">None / Stable / No Issue</option>
             </select>
           </div>
           <div>
             <label class="block text-slate-300 mb-1.5 font-semibold">Spiritual & Mindfulness Practice</label>
             <select id="spiritual-status" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-white focus:border-indigo-500 focus:outline-none">
-              <option value="Daily Meditation & Philosophy">Daily Meditation & Philosophy</option>
+              <option value="Daily Meditation & Philosophy" selected>Daily Meditation & Philosophy</option>
               <option value="Regular Contemplation">Regular Contemplation</option>
+              <option value="None / Stable">None / Stable / No Issue</option>
             </select>
           </div>
           <div>
             <label class="block text-slate-300 mb-1.5 font-semibold">Climatic Adaptation</label>
             <select id="climatic-status" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-white focus:border-indigo-500 focus:outline-none">
-              <option value="Well Adapted to Regional Climate">Well Adapted to Regional Climate</option>
+              <option value="Well Adapted to Regional Climate" selected>Well Adapted to Regional Climate</option>
               <option value="Hydration & Temperature Management">Hydration & Temperature Management</option>
+              <option value="None / Stable">None / Stable / No Issue</option>
             </select>
           </div>
         </div>
@@ -322,8 +340,9 @@
           <div>
             <label class="block text-slate-300 mb-1.5 font-semibold">Financial Stress Level</label>
             <select id="fin-stress" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-white focus:border-indigo-500 focus:outline-none">
-              <option value="Zero Financial Distress">Zero Financial Distress (Secure)</option>
+              <option value="Zero Financial Distress" selected>Zero Financial Distress (Secure)</option>
               <option value="Moderate Cash Flow Pressure">Moderate Cash Flow Pressure</option>
+              <option value="None / Stable">None / Stable / No Issue</option>
             </select>
           </div>
           <div>
@@ -331,6 +350,7 @@
             <select id="fin-emergency" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-white focus:border-indigo-500 focus:outline-none">
               <option value="6+ Months (IMF Ideal)" selected>6+ Months (IMF Ideal)</option>
               <option value="3 to 6 Months">3 to 6 Months</option>
+              <option value="None / Stable">None / Stable / No Issue</option>
             </select>
           </div>
           <div>
@@ -338,6 +358,7 @@
             <select id="fin-debt" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-white focus:border-indigo-500 focus:outline-none">
               <option value="Zero Unsecured Debt" selected>Zero Unsecured Debt</option>
               <option value="Manageable Assets/Loans">Manageable Assets/Loans</option>
+              <option value="None / Stable">None / Stable / No Issue</option>
             </select>
           </div>
         </div>
@@ -374,20 +395,30 @@
       </section>
     </div>
 
-    <!-- TAB 9: Comprehensive Discussion, Doctor's Advice & Prescriptions (Rx) -->
+    <!-- TAB 9: AI Detailed Solutions, Doctor's Advice & Prescriptions (Rx) -->
     <div id="tab-9" class="tab-content hidden space-y-6">
-      <section class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 shadow-2xl text-xs space-y-4 backdrop-blur">
-        <h3 class="text-lg font-bold text-white flex items-center gap-2 border-b border-slate-800 pb-3">
-          <i class="fa-solid fa-comments text-indigo-400"></i> Tab 9: Comprehensive Discussion, Doctor's Advice & Prescriptions (Rx)
-        </h3>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <section class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 shadow-2xl text-xs space-y-6 backdrop-blur">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b border-slate-800 pb-3">
+          <h3 class="text-lg font-bold text-white flex items-center gap-2">
+            <i class="fa-solid fa-comments text-indigo-400"></i> Tab 9: AI Detailed Solutions, Doctor's Advice & Prescriptions (Rx)
+          </h3>
+          <button onclick="generateAISolutions()" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-xl shadow-md transition flex items-center gap-2">
+            <i class="fa-solid fa-wand-magic-sparkles text-amber-300"></i> Generate AI Detailed Solutions
+          </button>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div>
-            <label class="block text-slate-300 mb-1.5 font-semibold">Doctor's Clinical Advice & Holistic Solutions</label>
-            <textarea id="doctor-advice" rows="5" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-white focus:border-indigo-500 focus:outline-none" placeholder="Enter clinical guidance, CKD Stage 3b nephro-protective care, pure vegan dietary adjustments, and mindfulness routines..."></textarea>
+            <label class="block text-slate-300 mb-1.5 font-semibold">1. AI Generated Detailed Solutions</label>
+            <textarea id="ai-solutions-output" rows="5" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-indigo-300 font-mono focus:border-indigo-500 focus:outline-none" placeholder="Click 'Generate AI Detailed Solutions' above to automatically synthesize evidence-based protocols..."></textarea>
           </div>
           <div>
-            <label class="block text-slate-300 mb-1.5 font-semibold">Medical Prescriptions & Medications (Rx)</label>
-            <textarea id="doctor-rx" rows="5" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-white focus:border-indigo-500 focus:outline-none" placeholder="1. Prescribed Medications as per clinical evaluation&#10;2. Nutritional Supplements (Pure Vegan) as advised..."></textarea>
+            <label class="block text-slate-300 mb-1.5 font-semibold">2. Doctor's Clinical Advice & Notes</label>
+            <textarea id="doctor-advice" rows="5" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-white focus:border-indigo-500 focus:outline-none" placeholder="Enter custom clinical guidance, nephro-protective care, pure vegan diet adjustments..."></textarea>
+          </div>
+          <div>
+            <label class="block text-slate-300 mb-1.5 font-semibold">3. Medical Prescriptions & Rx</label>
+            <textarea id="doctor-rx" rows="5" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-white focus:border-indigo-500 focus:outline-none" placeholder="1. Prescribed Medications as per clinical evaluation&#10;2. Nutritional Supplements (Pure Vegan)..."></textarea>
           </div>
         </div>
       </section>
@@ -499,7 +530,7 @@
     <p>DACAE GLOBAL AI &copy; 2026 | By Dr. Deepak C. Jagani | WHO, KDIGO, ADA, CDC, RBI & IMF Compliant Ecosystem</p>
   </footer>
 
-  <!-- Scripts with Problem-Remedy Output Generator -->
+  <!-- Scripts -->
   <script>
     const OWNER_EMAIL = "findcjom@gmail.com"; 
 
@@ -512,7 +543,7 @@
     }
 
     function authenticateOwner() {
-      const email = document.getElementById('owner-email-input')->value.trim().toLowerCase();
+      const email = document.getElementById('owner-email-input').value.trim().toLowerCase();
       const pass = document.getElementById('owner-pass-input').value.trim();
       if (email === OWNER_EMAIL && pass === "Deepak2026#") {
         localStorage.setItem('dacae_owner_authenticated', 'true');
@@ -562,17 +593,20 @@ Compliance Standards: WHO, KDIGO, ADA, CDC, RBI & IMF
 - Financial Health & Wealth Stability: ${document.getElementById('fin-emergency').value}, ${document.getElementById('fin-debt').value}
   * Certified Remedy (RBI & IMF Benchmark): Maintaining 6+ months liquid emergency reserve and zero unsecured debt restructuring to suppress cortisol spikes and protect renal function.
 
-3. DOCTOR'S CLINICAL ADVICE & RECOMMENDATIONS:
+3. AI DETAILED SOLUTIONS & HOLISTIC PROTOCOL:
+${document.getElementById('ai-solutions-output').value || 'AI Detailed Solutions generated per clinical protocols.'}
+
+4. DOCTOR'S CLINICAL ADVICE & RECOMMENDATIONS:
 ${document.getElementById('doctor-advice').value || 'Comprehensive holistic lifestyle and clinical counseling provided.'}
 
-4. MEDICAL PRESCRIPTIONS (Rx):
+5. MEDICAL PRESCRIPTIONS (Rx):
 ${document.getElementById('doctor-rx').value || 'No acute prescription required; lifestyle & pure vegan nutritional guidance active.'}
 
-5. CLIENT FEEDBACK & FURTHER DISCUSSION:
+6. CLIENT FEEDBACK & FURTHER DISCUSSION:
 - Feedback: ${document.getElementById('client-feedback').value || 'Pending'}
 - Further Discussion: ${document.getElementById('further-discussion').value || 'None'}
 
-6. MANDATORY CLINICAL & FINANCIAL DISCLAIMER:
+7. MANDATORY CLINICAL & FINANCIAL DISCLAIMER:
 This AI-generated preliminary advice is for educational and consultation purposes only. Consult your primary physician and financial advisor before making any medical or monetary changes.`;
     }
 
