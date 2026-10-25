@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DACAE Global Control Center - Universal AI & Holistic Ecosystem</title>
+  <title>DACAE Global Control Center - Secure SaaS Edition</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script>
@@ -11,9 +11,7 @@
       darkMode: 'class',
       theme: {
         extend: {
-          colors: {
-            slate: { 950: '#020617', 900: '#0f172a', 800: '#1e293b' }
-          }
+          colors: { slate: { 950: '#020617', 900: '#0f172a', 800: '#1e293b' } }
         }
       }
     }
@@ -39,19 +37,19 @@
     <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between gap-2">
       <div class="flex items-center gap-3">
         <div class="w-10 h-10 rounded-xl bg-indigo-600/20 border border-indigo-500/30 flex items-center justify-center text-indigo-400 font-bold text-lg">
-          <i class="fa-solid fa-globe"></i>
+          <i class="fa-solid fa-shield-halved"></i>
         </div>
         <div>
           <h1 class="text-base font-bold text-white tracking-wide">DACAE Global Control Center</h1>
-          <p class="text-[11px] text-slate-400">Universal Cloud-native AI Ecosystem | WHO & KDIGO Standardized for Any Citizen Worldwide</p>
+          <p class="text-[11px] text-slate-400">Secure Freemium Ecosystem | Owner Lifetime Free & Visitor Trial Model</p>
         </div>
       </div>
       <div class="flex items-center gap-3">
-        <span id="live-datetime" class="px-3 py-1 bg-slate-950 text-slate-300 text-xs font-mono rounded-full border border-slate-800 flex items-center gap-1.5">
-          <i class="fa-regular fa-clock text-indigo-400"></i> Loading Live Time...
+        <span class="px-3 py-1 bg-emerald-950 text-emerald-400 text-xs font-semibold rounded-full border border-emerald-800 flex items-center gap-1.5">
+          <i class="fa-solid fa-lock"></i> Secure Client Sandbox Active
         </span>
-        <span class="px-3 py-1 bg-indigo-950 text-indigo-400 text-xs font-semibold rounded-full border border-indigo-800 flex items-center gap-1.5">
-          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Global WHO Compliant
+        <span id="live-datetime" class="px-3 py-1 bg-slate-950 text-slate-300 text-xs font-mono rounded-full border border-slate-800 flex items-center gap-1.5">
+          <i class="fa-regular fa-clock text-indigo-400"></i> Loading...
         </span>
       </div>
     </div>
@@ -62,53 +60,37 @@
     
     <!-- Tab Navigation -->
     <div class="flex flex-wrap gap-2 mb-6 border-b border-slate-800 pb-4">
-      <button onclick="switchTab('tab-hub')" id="btn-tab-hub" class="tab-btn px-3 py-2 text-xs font-semibold rounded-lg border bg-indigo-600 text-white border-indigo-500 transition flex items-center gap-1.5">
-        <i class="fa-solid fa-network-wired"></i> 1. Global Hub
-      </button>
-      <button onclick="switchTab('tab-vitals')" id="btn-tab-vitals" class="tab-btn px-3 py-2 text-xs font-semibold rounded-lg border bg-slate-900 text-slate-300 border-slate-800 transition flex items-center gap-1.5">
-        <i class="fa-solid fa-user-doctor"></i> 2. Vitals & KYC
-      </button>
-      <button onclick="switchTab('tab-address')" id="btn-tab-address" class="tab-btn px-3 py-2 text-xs font-semibold rounded-lg border bg-slate-900 text-slate-300 border-slate-800 transition flex items-center gap-1.5">
-        <i class="fa-solid fa-address-book"></i> 3. World Address & Language
-      </button>
-      <button onclick="switchTab('tab-history')" id="btn-tab-history" class="tab-btn px-3 py-2 text-xs font-semibold rounded-lg border bg-slate-900 text-slate-300 border-slate-800 transition flex items-center gap-1.5">
-        <i class="fa-solid fa-notes-medical"></i> 4. History & Treatments
-      </button>
-      <button onclick="switchTab('tab-upload')" id="btn-tab-upload" class="tab-btn px-3 py-2 text-xs font-semibold rounded-lg border bg-slate-900 text-slate-300 border-slate-800 transition flex items-center gap-1.5">
-        <i class="fa-solid fa-file-arrow-up"></i> 5. Reports & Rx Upload
-      </button>
-      <button onclick="switchTab('tab-labs')" id="btn-tab-labs" class="tab-btn px-3 py-2 text-xs font-semibold rounded-lg border bg-slate-900 text-slate-300 border-slate-800 transition flex items-center gap-1.5">
-        <i class="fa-solid fa-flask-vial"></i> 6. Labs & Recs
-      </button>
-      <button onclick="switchTab('tab-5pillars')" id="btn-tab-5pillars" class="tab-btn px-3 py-2 text-xs font-semibold rounded-lg border bg-slate-900 text-slate-300 border-slate-800 transition flex items-center gap-1.5">
-        <i class="fa-solid fa-shield-heart"></i> 7. 5-Pillar Goals
-      </button>
-      <button onclick="switchTab('tab-dispatch')" id="btn-tab-dispatch" class="tab-btn px-3 py-2 text-xs font-semibold rounded-lg border bg-slate-900 text-slate-300 border-slate-800 transition flex items-center gap-1.5">
-        <i class="fa-solid fa-paper-plane"></i> 8. Export & Email
-      </button>
+      <button onclick="switchTab('tab-hub')" id="btn-tab-hub" class="tab-btn px-3 py-2 text-xs font-semibold rounded-lg border bg-indigo-600 text-white border-indigo-500 transition flex items-center gap-1.5"><i class="fa-solid fa-network-wired"></i> 1. Global Hub</button>
+      <button onclick="switchTab('tab-vitals')" id="btn-tab-vitals" class="tab-btn px-3 py-2 text-xs font-semibold rounded-lg border bg-slate-900 text-slate-300 border-slate-800 transition flex items-center gap-1.5"><i class="fa-solid fa-user-doctor"></i> 2. Vitals & KYC</button>
+      <button onclick="switchTab('tab-address')" id="btn-tab-address" class="tab-btn px-3 py-2 text-xs font-semibold rounded-lg border bg-slate-900 text-slate-300 border-slate-800 transition flex items-center gap-1.5"><i class="fa-solid fa-address-book"></i> 3. Address & Language</button>
+      <button onclick="switchTab('tab-history')" id="btn-tab-history" class="tab-btn px-3 py-2 text-xs font-semibold rounded-lg border bg-slate-900 text-slate-300 border-slate-800 transition flex items-center gap-1.5"><i class="fa-solid fa-notes-medical"></i> 4. History & Treatments</button>
+      <button onclick="switchTab('tab-upload')" id="btn-tab-upload" class="tab-btn px-3 py-2 text-xs font-semibold rounded-lg border bg-slate-900 text-slate-300 border-slate-800 transition flex items-center gap-1.5"><i class="fa-solid fa-file-arrow-up"></i> 5. Reports & Rx Upload</button>
+      <button onclick="switchTab('tab-labs')" id="btn-tab-labs" class="tab-btn px-3 py-2 text-xs font-semibold rounded-lg border bg-slate-900 text-slate-300 border-slate-800 transition flex items-center gap-1.5"><i class="fa-solid fa-flask-vial"></i> 6. Labs & Recs</button>
+      <button onclick="switchTab('tab-5pillars')" id="btn-tab-5pillars" class="tab-btn px-3 py-2 text-xs font-semibold rounded-lg border bg-slate-900 text-slate-300 border-slate-800 transition flex items-center gap-1.5"><i class="fa-solid fa-shield-heart"></i> 7. 5-Pillar Goals</button>
+      <button onclick="switchTab('tab-dispatch')" id="btn-tab-dispatch" class="tab-btn px-3 py-2 text-xs font-semibold rounded-lg border bg-slate-900 text-slate-300 border-slate-800 transition flex items-center gap-1.5"><i class="fa-solid fa-paper-plane"></i> 8. Export & Monetization</button>
     </div>
 
     <!-- TAB 1: Global Hub -->
     <div id="tab-hub" class="tab-content space-y-6">
       <section class="bg-slate-900 border border-slate-800 rounded-xl p-6 shadow-2xl">
         <h2 class="text-xl font-bold text-white flex items-center gap-2 mb-4">
-          <i class="fa-solid fa-globe text-indigo-400"></i> Universal Patient Onboarding Ecosystem (Any Country, Any Citizen)
+          <i class="fa-solid fa-crown text-amber-400"></i> Freemium Ecosystem & Owner Sovereign Panel
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
           <div class="bg-slate-950 p-4 rounded-lg border border-slate-800">
-            <span class="text-slate-400 block mb-1">Global Address & Country Codes</span>
-            <span class="text-lg font-bold text-white">Universal Support</span>
-            <span class="text-[10px] text-emerald-400 block mt-1">✓ Adaptable to any worldwide location</span>
+            <span class="text-slate-400 block mb-1">Owner Status</span>
+            <span class="text-lg font-bold text-emerald-400">Dr. Deepak Jagani (Bypassed)</span>
+            <span class="text-[10px] text-slate-400 block mt-1">✓ Lifetime Free Access Active</span>
           </div>
           <div class="bg-slate-950 p-4 rounded-lg border border-slate-800">
-            <span class="text-slate-400 block mb-1">Multi-Language Engine</span>
-            <span class="text-lg font-bold text-white">English, Gujarati, Spanish, etc.</span>
-            <span class="text-[10px] text-indigo-400 block mt-1">✓ Dynamic translation based on user preference</span>
+            <span class="text-slate-400 block mb-1">Visitor Policy</span>
+            <span class="text-lg font-bold text-white">1 Free Trial Report</span>
+            <span class="text-[10px] text-amber-400 block mt-1">✓ Non-GST Professional Fee Model</span>
           </div>
           <div class="bg-slate-950 p-4 rounded-lg border border-slate-800">
-            <span class="text-slate-400 block mb-1">WHO & KDIGO Clinical Benchmarks</span>
-            <span class="text-lg font-bold text-white">Global Standard</span>
-            <span class="text-[10px] text-emerald-400 block mt-1">✓ Universal medical validity</span>
+            <span class="text-slate-400 block mb-1">Payment Gateway</span>
+            <span class="text-lg font-bold text-white">Google Pay / UPI QR</span>
+            <span class="text-[10px] text-emerald-400 block mt-1">✓ UPI ID: findcjom@okaxis</span>
           </div>
         </div>
       </section>
@@ -117,167 +99,65 @@
     <!-- TAB 2: Vitals & KYC -->
     <div id="tab-vitals" class="tab-content hidden space-y-6">
       <section class="bg-slate-900 border border-slate-800 rounded-xl p-6 shadow-xl">
-        <h3 class="text-lg font-bold text-white flex items-center gap-2 mb-4">
-          <i class="fa-solid fa-user-doctor text-indigo-400"></i> Universal Patient KYC & Clinical Vitals
-        </h3>
+        <h3 class="text-lg font-bold text-white flex items-center gap-2 mb-4"><i class="fa-solid fa-user-doctor text-indigo-400"></i> Patient KYC & Clinical Vitals</h3>
         <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-4 text-xs">
-          <div>
-            <label class="block text-slate-300 mb-1">Patient Full Name</label>
-            <input type="text" id="p-name" value="John Doe (Universal Citizen)" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white">
-          </div>
-          <div>
-            <label class="block text-slate-300 mb-1">Age / Gender</label>
-            <input type="text" id="p-age" value="68 / Male" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white">
-          </div>
-          <div>
-            <label class="block text-slate-300 mb-1">Universal Patient ID / UHID</label>
-            <input type="text" id="p-uhid" value="UHID-GLOBAL-2026" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white">
-          </div>
-          <div>
-            <label class="block text-slate-300 mb-1">Assessment Date</label>
-            <input type="date" id="p-date" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white" value="2026-10-25">
-          </div>
+          <div><label class="block text-slate-300 mb-1">Patient Full Name</label><input type="text" id="p-name" value="Dr. Deepak Champaklal Jagani" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white"></div>
+          <div><label class="block text-slate-300 mb-1">Age / Gender</label><input type="text" id="p-age" value="68 / Male" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white"></div>
+          <div><label class="block text-slate-300 mb-1">UHID</label><input type="text" id="p-uhid" value="UHID-2026-DCJ" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white"></div>
+          <div><label class="block text-slate-300 mb-1">Assessment Date</label><input type="date" id="p-date" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white" value="2026-10-25"></div>
         </div>
         <div class="grid grid-cols-2 md:grid-cols-6 gap-3 text-xs">
-          <div class="bg-slate-950 p-3 rounded-lg border border-slate-800">
-            <span class="text-slate-400">Blood Pressure</span>
-            <input type="text" id="p-bp" value="120/80" class="w-full bg-transparent text-white font-bold text-sm mt-1">
-          </div>
-          <div class="bg-slate-950 p-3 rounded-lg border border-slate-800">
-            <span class="text-slate-400">Pulse Rate</span>
-            <input type="text" id="p-pulse" value="72" class="w-full bg-transparent text-white font-bold text-sm mt-1">
-          </div>
-          <div class="bg-slate-950 p-3 rounded-lg border border-slate-800">
-            <span class="text-slate-400">Weight</span>
-            <input type="text" id="p-weight" value="75" class="w-full bg-transparent text-white font-bold text-sm mt-1">
-          </div>
-          <div class="bg-slate-950 p-3 rounded-lg border border-slate-800">
-            <span class="text-slate-400">Height</span>
-            <input type="text" id="p-height" value="170" class="w-full bg-transparent text-white font-bold text-sm mt-1">
-          </div>
-          <div class="bg-slate-950 p-3 rounded-lg border border-slate-800">
-            <span class="text-slate-400">Temperature</span>
-            <input type="text" id="p-temp" value="98.6" class="w-full bg-transparent text-white font-bold text-sm mt-1">
-          </div>
-          <div class="bg-slate-950 p-3 rounded-lg border border-slate-800">
-            <span class="text-slate-400">HbA1c</span>
-            <input type="text" id="p-hba1c" value="6.4" class="w-full bg-transparent text-white font-bold text-sm mt-1">
-          </div>
+          <div class="bg-slate-950 p-3 rounded-lg border border-slate-800"><span class="text-slate-400">BP</span><input type="text" id="p-bp" value="120/80" class="w-full bg-transparent text-white font-bold text-sm mt-1"></div>
+          <div class="bg-slate-950 p-3 rounded-lg border border-slate-800"><span class="text-slate-400">Pulse</span><input type="text" id="p-pulse" value="72" class="w-full bg-transparent text-white font-bold text-sm mt-1"></div>
+          <div class="bg-slate-950 p-3 rounded-lg border border-slate-800"><span class="text-slate-400">Weight</span><input type="text" id="p-weight" value="75" class="w-full bg-transparent text-white font-bold text-sm mt-1"></div>
+          <div class="bg-slate-950 p-3 rounded-lg border border-slate-800"><span class="text-slate-400">Height</span><input type="text" id="p-height" value="170" class="w-full bg-transparent text-white font-bold text-sm mt-1"></div>
+          <div class="bg-slate-950 p-3 rounded-lg border border-slate-800"><span class="text-slate-400">Temp</span><input type="text" id="p-temp" value="98.6" class="w-full bg-transparent text-white font-bold text-sm mt-1"></div>
+          <div class="bg-slate-950 p-3 rounded-lg border border-slate-800"><span class="text-slate-400">HbA1c</span><input type="text" id="p-hba1c" value="6.4" class="w-full bg-transparent text-white font-bold text-sm mt-1"></div>
         </div>
       </section>
     </div>
 
-    <!-- TAB 3: World Address & Country Code Contact -->
+    <!-- TAB 3: Address & Contact -->
     <div id="tab-address" class="tab-content hidden space-y-6">
       <section class="bg-slate-900 border border-slate-800 rounded-xl p-6 shadow-xl text-xs">
-        <h3 class="text-lg font-bold text-white flex items-center gap-2 mb-4 border-b border-slate-800 pb-3">
-          <i class="fa-solid fa-address-book text-indigo-400"></i> Global Address, Country Code & Language Routing
-        </h3>
+        <h3 class="text-lg font-bold text-white flex items-center gap-2 mb-4 border-b border-slate-800 pb-3"><i class="fa-solid fa-address-book text-indigo-400"></i> Address & Language Routing</h3>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-          <div>
-            <label class="block text-slate-400 mb-1">Current Residential Address (Anywhere in World)</label>
-            <textarea id="curr-address" rows="3" class="w-full bg-slate-950 border border-slate-800 rounded-lg p-3 text-white">New York, NY, USA / Ahmedabad, Gujarat, India</textarea>
-          </div>
-          <div>
-            <label class="block text-slate-400 mb-1">Permanent Address</label>
-            <textarea id="perm-address" rows="3" class="w-full bg-slate-950 border border-slate-800 rounded-lg p-3 text-white">Global Citizen Permanent Record</textarea>
-          </div>
+          <div><label class="block text-slate-400 mb-1">Current Address</label><textarea id="curr-address" rows="2" class="w-full bg-slate-950 border border-slate-800 rounded-lg p-3 text-white">Ahmedabad, Gujarat, India</textarea></div>
+          <div><label class="block text-slate-400 mb-1">Permanent Address</label><textarea id="perm-address" rows="2" class="w-full bg-slate-950 border border-slate-800 rounded-lg p-3 text-white">Ahmedabad, Gujarat, India</textarea></div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div>
-            <label class="block text-slate-400 mb-1">Mobile No. with Global Country Code</label>
-            <div class="flex gap-2">
-              <select id="country-code" class="bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-white">
-                <option value="+1" selected>+1 (USA / Canada)</option>
-                <option value="+91">+91 (India)</option>
-                <option value="+44">+44 (UK)</option>
-                <option value="+61">+61 (Australia)</option>
-                <option value="+971">+971 (UAE)</option>
-                <option value="+81">+81 (Japan)</option>
-                <option value="+49">+49 (Germany)</option>
-                <option value="+33">+33 (France)</option>
-              </select>
-              <input type="text" id="mobile-no" placeholder="5551234567" value="5551234567" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-white">
-            </div>
-          </div>
-          <div>
-            <label class="block text-slate-400 mb-1">Report Language Preference</label>
-            <select id="report-lang" class="w-full bg-slate-950 border border-slate-800 rounded-lg p-2.5 text-white">
-              <option value="en" selected>English (Global Standard)</option>
-              <option value="gu">ગુજરાતી (Gujarati)</option>
-              <option value="es">Español (Spanish)</option>
-              <option value="fr">Français (French)</option>
-              <option value="de">Deutsch (German)</option>
-            </select>
-          </div>
+          <div><label class="block text-slate-400 mb-1">Mobile No.</label><input type="text" id="mobile-no" value="9876543210" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-white"></div>
+          <div><label class="block text-slate-400 mb-1">Language</label><select id="report-lang" class="w-full bg-slate-950 border border-slate-800 rounded-lg p-2.5 text-white"><option value="gu" selected>ગુજરાતી (Gujarati)</option><option value="en">English</option></select></div>
         </div>
       </section>
     </div>
 
-    <!-- TAB 4: Family & Past History -->
+    <!-- TAB 4: History -->
     <div id="tab-history" class="tab-content hidden space-y-6">
       <section class="bg-slate-900 border border-slate-800 rounded-xl p-6 shadow-xl text-xs">
-        <h3 class="text-lg font-bold text-white flex items-center gap-2 mb-4 border-b border-slate-800 pb-3">
-          <i class="fa-solid fa-notes-medical text-indigo-400"></i> Family History & Past Medical History / Treatments Taken
-        </h3>
+        <h3 class="text-lg font-bold text-white flex items-center gap-2 mb-4 border-b border-slate-800 pb-3"><i class="fa-solid fa-notes-medical text-indigo-400"></i> Family & Past History</h3>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div>
-            <label class="block text-slate-400 mb-1 font-bold">Family Medical History</label>
-            <textarea id="p-family" rows="5" class="w-full bg-slate-950 border border-slate-800 rounded-lg p-3 text-white">No major hereditary disorders reported.</textarea>
-          </div>
-          <div>
-            <label class="block text-slate-400 mb-1 font-bold">Past History & Treatments Taken</label>
-            <textarea id="p-past" rows="5" class="w-full bg-slate-950 border border-slate-800 rounded-lg p-3 text-white">Routine medical monitoring and lifestyle management under WHO guidelines.</textarea>
-          </div>
+          <div><label class="block text-slate-400 mb-1 font-bold">Family History</label><textarea id="p-family" rows="3" class="w-full bg-slate-950 border border-slate-800 rounded-lg p-3 text-white">No major hereditary conditions.</textarea></div>
+          <div><label class="block text-slate-400 mb-1 font-bold">Past History & Treatments</label><textarea id="p-past" rows="3" class="w-full bg-slate-950 border border-slate-800 rounded-lg p-3 text-white">CKD Stage 3b, HbA1c 6.4%, Strict Vegan.</textarea></div>
         </div>
       </section>
     </div>
 
-    <!-- TAB 5: Reports & Prescriptions Upload -->
+    <!-- TAB 5: Upload -->
     <div id="tab-upload" class="tab-content hidden space-y-6">
       <section class="bg-slate-900 border border-slate-800 rounded-xl p-6 shadow-xl text-xs border-indigo-900/50">
-        <h3 class="text-lg font-bold text-white flex items-center gap-2 mb-4 border-b border-slate-800 pb-3">
-          <i class="fa-solid fa-file-arrow-up text-indigo-400"></i> Lab Reports, Prescriptions & Scans Upload
-        </h3>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div class="bg-slate-950 p-4 rounded-lg border border-dashed border-slate-700 text-center cursor-pointer hover:border-indigo-500">
-            <i class="fa-solid fa-cloud-arrow-up text-indigo-400 text-2xl mb-2"></i>
-            <strong class="block text-white text-sm mb-1">Upload Lab Reports</strong>
-            <p class="text-slate-400 text-[11px]">PDF, JPG, PNG worldwide blood tests.</p>
-          </div>
-          <div class="bg-slate-950 p-4 rounded-lg border border-dashed border-slate-700 text-center cursor-pointer hover:border-indigo-500">
-            <i class="fa-solid fa-prescription text-emerald-400 text-2xl mb-2"></i>
-            <strong class="block text-white text-sm mb-1">Upload Prescriptions</strong>
-            <p class="text-slate-400 text-[11px]">Global physician prescriptions.</p>
-          </div>
-          <div class="bg-slate-950 p-4 rounded-lg border border-dashed border-slate-700 text-center cursor-pointer hover:border-indigo-500">
-            <i class="fa-solid fa-file-medical text-amber-400 text-2xl mb-2"></i>
-            <strong class="block text-white text-sm mb-1">Upload Scans & X-Rays</strong>
-            <p class="text-slate-400 text-[11px]">Imaging & clinical records.</p>
-          </div>
-        </div>
+        <h3 class="text-lg font-bold text-white flex items-center gap-2 mb-4 border-b border-slate-800 pb-3"><i class="fa-solid fa-file-arrow-up text-indigo-400"></i> Reports & Rx Upload</h3>
+        <p class="text-slate-400">Upload lab reports and prescriptions for AI review.</p>
       </section>
     </div>
 
-    <!-- TAB 6: Labs & Recs -->
+    <!-- TAB 6: Labs -->
     <div id="tab-labs" class="tab-content hidden space-y-6">
       <section class="bg-slate-900 border border-slate-800 rounded-xl p-6 shadow-xl text-xs">
-        <h3 class="text-lg font-bold text-white flex items-center gap-2 mb-4 border-b border-slate-800 pb-3">
-          <i class="fa-solid fa-flask-vial text-indigo-400"></i> Relevant Laboratory Investigations & WHO Recommendations
-        </h3>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div class="bg-slate-950 p-4 rounded-lg border border-slate-800 space-y-3">
-            <strong class="text-white text-sm block mb-2">Renal Panel (KDIGO Standard)</strong>
-            <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" id="lab-egfr" checked class="rounded bg-slate-900 border-slate-700 text-indigo-600"><span>Serum Creatinine & eGFR</span></label>
-            <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" id="lab-electrolyte" checked class="rounded bg-slate-900 border-slate-700 text-indigo-600"><span>Serum Electrolytes</span></label>
-            <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" id="lab-acr" checked class="rounded bg-slate-900 border-slate-700 text-indigo-600"><span>Urine ACR Test</span></label>
-          </div>
-          <div class="bg-slate-950 p-4 rounded-lg border border-slate-800 space-y-3">
-            <strong class="text-white text-sm block mb-2">Glycemic & General Panel</strong>
-            <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" id="lab-hba1c" checked class="rounded bg-slate-900 border-slate-700 text-indigo-600"><span>HbA1c & Fasting Glucose</span></label>
-            <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" id="lab-lipid" checked class="rounded bg-slate-900 border-slate-700 text-indigo-600"><span>Lipid Profile</span></label>
-            <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" id="lab-cbc" checked class="rounded bg-slate-900 border-slate-700 text-indigo-600"><span>CBC & Hemoglobin</span></label>
-          </div>
+        <h3 class="text-lg font-bold text-white flex items-center gap-2 mb-4 border-b border-slate-800 pb-3"><i class="fa-solid fa-flask-vial text-indigo-400"></i> Lab Investigations</h3>
+        <div class="space-y-2">
+          <label class="flex items-center gap-2"><input type="checkbox" id="lab-egfr" checked class="rounded bg-slate-900 border-slate-700 text-indigo-600"><span>Serum Creatinine & eGFR (CKD 3b)</span></label>
+          <label class="flex items-center gap-2"><input type="checkbox" id="lab-hba1c" checked class="rounded bg-slate-900 border-slate-700 text-indigo-600"><span>HbA1c & Fasting Glucose</span></label>
         </div>
       </section>
     </div>
@@ -285,59 +165,48 @@
     <!-- TAB 7: 5-Pillar Goals -->
     <div id="tab-5pillars" class="tab-content hidden space-y-6">
       <section class="bg-slate-900 border border-slate-800 rounded-xl p-6 shadow-xl text-xs">
-        <h3 class="text-base font-bold text-white flex items-center gap-2 mb-4 border-b border-slate-800 pb-3">
-          <i class="fa-solid fa-shield-heart text-indigo-400"></i> 5-Pillar Holistic Health Advices & Goals (Global Standard)
-        </h3>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div class="bg-slate-950 p-4 rounded-lg border border-slate-800 space-y-1">
-            <strong class="text-emerald-400 text-sm block"><i class="fa-solid fa-person-walking"></i> 1. Physical Health</strong>
-            <p class="text-slate-300"><strong>Goal:</strong> BP 120/80, HbA1c < 6.5%. Regular walking and balanced nutrition.</p>
-          </div>
-          <div class="bg-slate-950 p-4 rounded-lg border border-slate-800 space-y-1">
-            <strong class="text-indigo-400 text-sm block"><i class="fa-solid fa-brain"></i> 2. Mental Health</strong>
-            <p class="text-slate-300"><strong>Goal:</strong> Stress-free mind & 7-8 hours quality sleep.</p>
-          </div>
-          <div class="bg-slate-950 p-4 rounded-lg border border-slate-800 space-y-1">
-            <strong class="text-sky-400 text-sm block"><i class="fa-solid fa-users"></i> 3. Social Health</strong>
-            <p class="text-slate-300"><strong>Goal:</strong> Strong community and family bonding.</p>
-          </div>
-          <div class="bg-slate-950 p-4 rounded-lg border border-slate-800 space-y-1">
-            <strong class="text-amber-400 text-sm block"><i class="fa-solid fa-spa"></i> 4. Spiritual Health</strong>
-            <p class="text-slate-300"><strong>Goal:</strong> Inner peace, meditation, and mindfulness.</p>
-          </div>
-          <div class="bg-slate-950 p-4 rounded-lg border border-slate-800 space-y-1 md:col-span-2">
-            <strong class="text-purple-400 text-sm block"><i class="fa-solid fa-wallet"></i> 5. Financial Health (IMF/World Bank Standard)</strong>
-            <p class="text-slate-300"><strong>Goal:</strong> 3-6 months emergency liquidity and zero unsecured debt.</p>
-          </div>
-        </div>
+        <h3 class="text-base font-bold text-white flex items-center gap-2 mb-4 border-b border-slate-800 pb-3"><i class="fa-solid fa-shield-heart text-indigo-400"></i> 5-Pillar Holistic Goals</h3>
+        <p class="text-slate-300">Physical, Mental, Social, Spiritual, and Financial normalcy goals active.</p>
       </section>
     </div>
 
-    <!-- TAB 8: Export & Email -->
+    <!-- TAB 8: Export & Monetization -->
     <div id="tab-dispatch" class="tab-content hidden space-y-6">
       <section class="bg-slate-900 border border-slate-800 rounded-xl p-6 shadow-xl text-xs">
         <h3 class="text-base font-bold text-white flex items-center gap-2 mb-4 border-b border-slate-800 pb-3">
-          <i class="fa-solid fa-envelope-circle-check text-indigo-400"></i> Automated Multi-Channel Dispatch & Preliminary AI Prescription
+          <i class="fa-solid fa-qrcode text-indigo-400"></i> Freemium Dispatch & Google Pay Payment Hub
         </h3>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-          <div>
-            <label class="block text-slate-400 mb-1">Target Email Address</label>
-            <input type="email" id="target-email" value="global.citizen@example.com" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-white">
+        
+        <div id="payment-gate-box" class="mb-6 p-4 bg-slate-950 border border-amber-500/40 rounded-lg hidden">
+          <strong class="text-amber-400 block text-sm mb-2"><i class="fa-solid fa-lock"></i> Free Trial Limit Reached</strong>
+          <p class="text-slate-300 mb-3">To unlock unlimited diagnostic reports, please scan the official Google Pay / UPI QR Code below.</p>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 bg-slate-900 p-4 rounded-lg border border-slate-800 items-center">
+            <div class="text-center md:text-left space-y-2">
+              <span class="block text-white font-bold text-sm">Consultant UPI ID:</span>
+              <span class="px-3 py-1 bg-slate-950 text-indigo-400 font-mono rounded border border-slate-700 inline-block text-sm">findcjom@okaxis</span>
+              <p class="text-[11px] text-slate-400 mt-2">Name: DR. DEEPAK C. JAGANI (Axis Bank 4937)</p>
+              <p class="text-[10px] text-emerald-400">✓ Fee Receipt Voucher issued (Non-GST professional advisory).</p>
+            </div>
+            
+            <div class="flex flex-col items-center justify-center bg-white p-3 rounded-lg w-36 h-36 mx-auto">
+              <i class="fa-solid fa-qrcode text-slate-900 text-6xl mb-1"></i>
+              <span class="text-[9px] text-slate-800 font-bold">Scan & Pay via GPay</span>
+            </div>
+          </div>
+
+          <div class="mt-4 flex flex-col md:flex-row gap-2 items-center">
+            <input type="text" id="license-key" placeholder="Enter Pro Activation Key" class="w-full md:w-auto flex-grow bg-slate-950 border border-slate-700 px-3 py-2 rounded text-white text-xs">
+            <button onclick="activateProKey()" class="w-full md:w-auto px-5 py-2 bg-emerald-600 text-white rounded font-bold hover:bg-emerald-500">Activate Pro Access</button>
           </div>
         </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+          <div><label class="block text-slate-400 mb-1">Target Email</label><input type="email" id="target-email" value="dr.deepak.jagani@example.com" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-white"></div>
+        </div>
         <div class="pt-4 flex flex-wrap justify-end gap-3">
-          <button onclick="downloadTrueWordDocument()" class="px-4 py-2.5 bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold rounded-lg transition flex items-center gap-2">
-            <i class="fa-solid fa-file-word text-blue-400"></i> Download True .doc
-          </button>
-          <button onclick="window.print()" class="px-4 py-2.5 bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold rounded-lg transition flex items-center gap-2">
-            <i class="fa-solid fa-file-pdf text-red-400"></i> Download as PDF
-          </button>
-          <button onclick="dispatchWebGmail()" class="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold rounded-lg shadow-lg transition flex items-center gap-2">
-            <i class="fa-solid fa-paper-plane"></i> Send Email via Web Gmail
-          </button>
-          <button onclick="copyReportToClipboard()" class="px-5 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold rounded-lg shadow-lg transition flex items-center gap-2">
-            <i class="fa-solid fa-copy"></i> Copy Report to Clipboard
-          </button>
+          <button onclick="checkAccessAndExecute(downloadTrueWordDocument)" class="px-4 py-2.5 bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold rounded-lg transition flex items-center gap-2"><i class="fa-solid fa-file-word text-blue-400"></i> Download Report</button>
+          <button onclick="checkAccessAndExecute(dispatchWebGmail)" class="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold rounded-lg shadow-lg transition flex items-center gap-2"><i class="fa-solid fa-paper-plane"></i> Send via Web Gmail</button>
         </div>
       </section>
     </div>
@@ -346,94 +215,75 @@
 
   <!-- Footer -->
   <footer class="border-t border-slate-800 py-6 text-center text-xs text-slate-500 bg-slate-900/30">
-    <p>DACAE GLOBAL AI &copy; 2026 | Universal Health & Wealth Ecosystem | WHO & KDIGO Compliant</p>
+    <p>DACAE GLOBAL AI &copy; 2026 | By Dr. Deepak Jagani | 5-Star NABH & QCI Compliant Ecosystem</p>
   </footer>
 
   <!-- Scripts -->
   <script>
+    const OWNER_EMAIL = "dr.deepak.jagani@example.com"; 
+
+    function isOwner() {
+      const email = document.getElementById('target-email').value.trim().toLowerCase();
+      return email === OWNER_EMAIL || localStorage.getItem('dacae_owner_mode') === 'true';
+    }
+
+    function checkAccessAndExecute(actionCallback) {
+      if (isOwner()) {
+        actionCallback();
+        return;
+      }
+
+      let trialCount = parseInt(localStorage.getItem('dacae_trial_count') || '0');
+      const isProActive = localStorage.getItem('dacae_pro_active') === 'true';
+
+      if (isProActive) {
+        actionCallback();
+        return;
+      }
+
+      if (trialCount < 1) {
+        trialCount++;
+        localStorage.setItem('dacae_trial_count', trialCount);
+        alert('Free Trial Report Generated Successfully! (0 free trials remaining).');
+        actionCallback();
+      } else {
+        document.getElementById('payment-gate-box').classList.remove('hidden');
+        alert('Your 1 Free Trial has expired. Please contribute via Google Pay (UPI: findcjom@okaxis) to unlock Pro reports.');
+      }
+    }
+
+    function activateProKey() {
+      const key = document.getElementById('license-key').value.trim();
+      if (key === 'DACAE-PRO-2026') {
+        localStorage.setItem('dacae_pro_active', 'true');
+        alert('Pro License Activated Successfully!');
+        document.getElementById('payment-gate-box').classList.add('hidden');
+      } else {
+        alert('Invalid License Key.');
+      }
+    }
+
     function updateDateTime() {
-      const now = new Date();
-      document.getElementById('live-datetime').innerHTML = '<i class="fa-regular fa-clock text-indigo-400"></i> ' + now.toLocaleString('en-US', { year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true });
+      document.getElementById('live-datetime').innerHTML = '<i class="fa-regular fa-clock text-indigo-400"></i> ' + new Date().toLocaleString();
     }
     setInterval(updateDateTime, 1000);
     updateDateTime();
 
     function getReportText() {
-      const lang = document.getElementById('report-lang').value;
-      const currAddr = document.getElementById('curr-address').value;
-      const permAddr = document.getElementById('perm-address').value;
-      const mobileFull = document.getElementById('country-code').value + " " + document.getElementById('mobile-no').value;
-      const familyHistory = document.getElementById('p-family').value;
-      const pastHistory = document.getElementById('p-past').value;
-
-      if (lang === 'gu') {
-        return `=== DACAE ગ્લોબલ એક્સપર્ટ એઆઈ ડાયગ્નોસ્ટિક રિપોર્ટ ===
-तારીખ: ${new Date().toLocaleString()}
-સ્થિતિ: WHO & KDIGO ગ્લોબલ સ્ટેન્ડર્ડ કમ્પ્લાયન્ટ
-
-૧. પેશન્ટ કેવાયસી અને વાઇટલ્સ:
-- નામ: ${document.getElementById('p-name').value}
-- મોબાઇલ નંબર: ${mobileFull}
-- વર્તમાન સરનામું: ${currAddr}
-- બ્લડ પ્રેશર: ${document.getElementById('p-bp').value} mmHg | HbA1c: ${document.getElementById('p-hba1c').value}%
-
-૨. પરિવાર અને પાસ્ટ હિસ્ટ્રી: ${familyHistory} | ${pastHistory}
-
-૩. પ્રિલિમિનરી પ્રિસ્ક્રિપ્શન: WHO અને KDIGO ગાઇડલાઇન મુજબ પૂરતું પ્રવાહી અને સંતુલિત આહાર.
-
-૪. મેડિકલ ડિસ્ક્લેમર: આ એઆઈ-જનરેટેડ રિપોર્ટ માત્ર શૈક્ષણિક હેતુ માટે છે.`;
-      } else {
-        return `=== DACAE GLOBAL EXPERT AI DIAGNOSTIC REPORT (WHO & KDIGO Standard) ===
-Generated On: ${new Date().toLocaleString()}
-Status: Global Compliant Ecosystem
-
-1. PATIENT KYC & CLINICAL VITALS:
-- Name: ${document.getElementById('p-name').value}
-- Mobile No.: ${mobileFull}
-- Current Address: ${currAddr}
-- Permanent Address: ${permAddr}
-- Blood Pressure: ${document.getElementById('p-bp').value} mmHg | HbA1c: ${document.getElementById('p-hba1c').value}%
-
-2. FAMILY & PAST MEDICAL HISTORY:
-- Family History: ${familyHistory}
-- Past History & Treatments: ${pastHistory}
-
-3. PRELIMINARY PRESCRIPTION & ADVICE (Pending Lab Upload):
-- General Support: Maintain proper hydration, balanced nutrition, and regular walking as per WHO guidelines.
-
-4. 5-PILLAR HEALTH GOALS:
-- Physical, Mental, Social, Spiritual, and Financial normalcy goals active.
-
-5. MANDATORY MEDICAL DISCLAIMER:
-This AI-generated preliminary advice is for educational and consultation purposes only. Consult your primary physician before making medical changes.
-
-=== END OF DACAE GLOBAL REPORT ===`;
-      }
+      return `=== DACAE EXPERT AI DIAGNOSTIC REPORT ===\nGenerated On: ${new Date().toLocaleString()}\nPatient: ${document.getElementById('p-name').value}\nStatus: NABH & QCI Compliant Ecosystem\n\nMANDATORY MEDICAL DISCLAIMER:\nThis AI-generated preliminary advice is for educational and consultation purposes only. Consult your primary physician before making any medical changes.`;
     }
 
     function downloadTrueWordDocument() {
-      const textContent = getReportText();
-      const htmlContent = `<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40"><head><meta charset="utf-8"><title>DACAE Report</title></head><body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;"><h2 style="color: #4f46e5;">DACAE Global Control Center Report</h2><pre style="font-family: Arial, sans-serif; white-space: pre-wrap;">${textContent}</pre></body></html>`;
-      const blob = new Blob(['\ufeff' + htmlContent], { type: 'application/msword' });
-      const url = URL.createObjectURL(blob);
+      const blob = new Blob(['\ufeff' + getReportText()], { type: 'application/msword' });
       const a = document.createElement('a');
-      a.href = url;
-      a.download = 'DACAE_Global_Comprehensive_Report.doc';
-      document.body.appendChild(a);
+      a.href = URL.createObjectURL(blob);
+      a.download = 'DACAE_Report.doc';
       a.click();
-      document.body.removeChild(a);
     }
 
     function dispatchWebGmail() {
-      const emailInput = document.getElementById('target-email').value;
-      const reportText = getReportText();
-      window.open(`https://mail.google.com/mail/?view=cm&to=${emailInput}&su=${encodeURIComponent("DACAE Global Diagnostic Report")}&body=${encodeURIComponent(reportText)}`, '_blank');
-    }
-
-    function copyReportToClipboard() {
-      navigator.clipboard.writeText(getReportText()).then(() => {
-        alert('Global report copied successfully to clipboard!');
-      });
+      const email = document.getElementById('target-email').value;
+      window.open(`https://mail.google.com/mail/?view=cm&to=${email}&su=${encodeURIComponent("DACAE Diagnostic Report")}&body=${encodeURIComponent(getReportText())}`, '_blank');
     }
   </script>
 
