@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DACAE Global Control Center - Freemium SaaS Edition</title>
+  <title>DACAE Global Control Center - Client Diagnostic Suite</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script>
@@ -60,24 +60,23 @@
     
     <!-- Tab Navigation -->
     <div class="flex flex-wrap gap-2 mb-6 border-b border-slate-800 pb-4">
-      <button onclick="switchTab('tab-hub')" id="btn-tab-hub" class="tab-btn px-3 py-2 text-xs font-semibold rounded-lg border bg-indigo-600 text-white border-indigo-500 transition flex items-center gap-1.5"><i class="fa-solid fa-network-wired"></i> 1. Global Hub & Free Trial</button>
-      <button onclick="switchTab('tab-vitals')" id="btn-tab-vitals" class="tab-btn px-3 py-2 text-xs font-semibold rounded-lg border bg-slate-900 text-slate-300 border-slate-800 transition flex items-center gap-1.5"><i class="fa-solid fa-user-doctor"></i> 2. Vitals & KYC</button>
-      <button onclick="switchTab('tab-address')" id="btn-tab-address" class="tab-btn px-3 py-2 text-xs font-semibold rounded-lg border bg-slate-900 text-slate-300 border-slate-800 transition flex items-center gap-1.5"><i class="fa-solid fa-address-book"></i> 3. Address & Language</button>
-      <button onclick="switchTab('tab-history')" id="btn-tab-history" class="tab-btn px-3 py-2 text-xs font-semibold rounded-lg border bg-slate-900 text-slate-300 border-slate-800 transition flex items-center gap-1.5"><i class="fa-solid fa-notes-medical"></i> 4. History & Treatments</button>
-      <button onclick="switchTab('tab-upload')" id="btn-tab-upload" class="tab-btn px-3 py-2 text-xs font-semibold rounded-lg border bg-slate-900 text-slate-300 border-slate-800 transition flex items-center gap-1.5"><i class="fa-solid fa-file-arrow-up"></i> 5. Reports & Rx Upload</button>
+      <button onclick="switchTab('tab-hub')" id="btn-tab-hub" class="tab-btn px-3 py-2 text-xs font-semibold rounded-lg border bg-indigo-600 text-white border-indigo-500 transition flex items-center gap-1.5"><i class="fa-solid fa-network-wired"></i> 1. Hub & Free Trial</button>
+      <button onclick="switchTab('tab-vitals')" id="btn-tab-vitals" class="tab-btn px-3 py-2 text-xs font-semibold rounded-lg border bg-slate-900 text-slate-300 border-slate-800 transition flex items-center gap-1.5"><i class="fa-solid fa-user-doctor"></i> 2. Client Vitals</button>
+      <button onclick="switchTab('tab-problems')" id="btn-tab-problems" class="tab-btn px-3 py-2 text-xs font-semibold rounded-lg border bg-slate-900 text-slate-300 border-slate-800 transition flex items-center gap-1.5"><i class="fa-solid fa-stethoscope"></i> 3. Current Problems & Signs</button>
+      <button onclick="switchTab('tab-history')" id="btn-tab-history" class="tab-btn px-3 py-2 text-xs font-semibold rounded-lg border bg-slate-900 text-slate-300 border-slate-800 transition flex items-center gap-1.5"><i class="fa-solid fa-notes-medical"></i> 4. History & Lifestyle</button>
+      <button onclick="switchTab('tab-upload')" id="btn-tab-upload" class="tab-btn px-3 py-2 text-xs font-semibold rounded-lg border bg-slate-900 text-slate-300 border-slate-800 transition flex items-center gap-1.5"><i class="fa-solid fa-file-arrow-up"></i> 5. Report & Rx Uploads</button>
       <button onclick="switchTab('tab-labs')" id="btn-tab-labs" class="tab-btn px-3 py-2 text-xs font-semibold rounded-lg border bg-slate-900 text-slate-300 border-slate-800 transition flex items-center gap-1.5"><i class="fa-solid fa-flask-vial"></i> 6. Labs & Recs</button>
       <button onclick="switchTab('tab-5pillars')" id="btn-tab-5pillars" class="tab-btn px-3 py-2 text-xs font-semibold rounded-lg border bg-slate-900 text-slate-300 border-slate-800 transition flex items-center gap-1.5"><i class="fa-solid fa-shield-heart"></i> 7. 5-Pillar Goals</button>
-      <button onclick="switchTab('tab-about')" id="btn-tab-about" class="tab-btn px-3 py-2 text-xs font-semibold rounded-lg border bg-slate-900 text-slate-300 border-slate-800 transition flex items-center gap-1.5"><i class="fa-solid fa-circle-info"></i> 8. About, Help & Owner Portal</button>
+      <button onclick="switchTab('tab-about')" id="btn-tab-about" class="tab-btn px-3 py-2 text-xs font-semibold rounded-lg border bg-slate-900 text-slate-300 border-slate-800 transition flex items-center gap-1.5"><i class="fa-solid fa-circle-info"></i> 8. About & Owner Portal</button>
     </div>
 
-    <!-- TAB 1: Global Hub, Why First Choice & Free Trial Registration -->
+    <!-- TAB 1: Global Hub & Free Trial Registration -->
     <div id="tab-hub" class="tab-content space-y-6">
       <section class="bg-slate-900 border border-slate-800 rounded-xl p-6 shadow-2xl space-y-6">
         <h2 class="text-xl font-bold text-white flex items-center gap-2">
           <i class="fa-solid fa-star text-amber-400"></i> Why DACAE should be your First Choice & 1 Free Trial
         </h2>
 
-        <!-- Why First Choice Box -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
           <div class="bg-slate-950 p-4 rounded-lg border border-slate-800 space-y-2">
             <strong class="text-indigo-400 text-sm block"><i class="fa-solid fa-shield-heart"></i> 1. 5-Pillar Holistic Synergy</strong>
@@ -93,87 +92,164 @@
           </div>
         </div>
 
-        <!-- Free Trial Registration Box -->
         <div class="max-w-xl bg-slate-950 p-5 rounded-lg border border-indigo-500/40 space-y-3 text-xs">
           <strong class="text-white text-sm block"><i class="fa-solid fa-gift text-emerald-400"></i> Start Your 1 Free Trial Now</strong>
           <p class="text-slate-400">Enter your email and create a password to claim your 1 Free Comprehensive Diagnostic Report.</p>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-            <div>
-              <label class="block text-slate-300 mb-1">Your Email Address</label>
-              <input type="email" id="trial-email" placeholder="user@example.com" class="w-full bg-slate-900 border border-slate-700 p-2 rounded text-white">
-            </div>
-            <div>
-              <label class="block text-slate-300 mb-1">Create Password</label>
-              <input type="password" id="trial-pass" placeholder="••••••••" class="w-full bg-slate-900 border border-slate-700 p-2 rounded text-white">
-            </div>
+            <div><label class="block text-slate-300 mb-1">Your Email Address</label><input type="email" id="trial-email" placeholder="client@example.com" class="w-full bg-slate-900 border border-slate-700 p-2 rounded text-white"></div>
+            <div><label class="block text-slate-300 mb-1">Create Password</label><input type="password" id="trial-pass" placeholder="••••••••" class="w-full bg-slate-900 border border-slate-700 p-2 rounded text-white"></div>
           </div>
           <button onclick="claimFreeTrial()" class="px-5 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded">Claim 1 Free Trial & Unlock Dashboard</button>
         </div>
       </section>
     </div>
 
-    <!-- TAB 2: Vitals & KYC -->
+    <!-- TAB 2: Client Vitals & KYC -->
     <div id="tab-vitals" class="tab-content hidden space-y-6">
-      <section class="bg-slate-900 border border-slate-800 rounded-xl p-6 shadow-xl">
-        <h3 class="text-lg font-bold text-white flex items-center gap-2 mb-4"><i class="fa-solid fa-user-doctor text-indigo-400"></i> Patient KYC & Clinical Vitals</h3>
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-4 text-xs">
-          <div><label class="block text-slate-300 mb-1">Patient Full Name</label><input type="text" id="p-name" value="Dr. Deepak Champaklal Jagani" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white"></div>
-          <div><label class="block text-slate-300 mb-1">Age / Gender</label><input type="text" id="p-age" value="68 / Male" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white"></div>
-          <div><label class="block text-slate-300 mb-1">UHID</label><input type="text" id="p-uhid" value="UHID-2026-DCJ" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white"></div>
-          <div><label class="block text-slate-300 mb-1">Assessment Date</label><input type="date" id="p-date" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-sm text-white" value="2026-10-25"></div>
-        </div>
-        <div class="grid grid-cols-2 md:grid-cols-6 gap-3 text-xs">
-          <div class="bg-slate-950 p-3 rounded-lg border border-slate-800"><span class="text-slate-400">BP</span><input type="text" id="p-bp" value="120/80" class="w-full bg-transparent text-white font-bold text-sm mt-1"></div>
-          <div class="bg-slate-950 p-3 rounded-lg border border-slate-800"><span class="text-slate-400">Pulse</span><input type="text" id="p-pulse" value="72" class="w-full bg-transparent text-white font-bold text-sm mt-1"></div>
-          <div class="bg-slate-950 p-3 rounded-lg border border-slate-800"><span class="text-slate-400">Weight</span><input type="text" id="p-weight" value="75" class="w-full bg-transparent text-white font-bold text-sm mt-1"></div>
-          <div class="bg-slate-950 p-3 rounded-lg border border-slate-800"><span class="text-slate-400">Height</span><input type="text" id="p-height" value="170" class="w-full bg-transparent text-white font-bold text-sm mt-1"></div>
-          <div class="bg-slate-950 p-3 rounded-lg border border-slate-800"><span class="text-slate-400">Temp</span><input type="text" id="p-temp" value="98.6" class="w-full bg-transparent text-white font-bold text-sm mt-1"></div>
-          <div class="bg-slate-950 p-3 rounded-lg border border-slate-800"><span class="text-slate-400">HbA1c</span><input type="text" id="p-hba1c" value="6.4" class="w-full bg-transparent text-white font-bold text-sm mt-1"></div>
-        </div>
-      </section>
-    </div>
-
-    <!-- TAB 3: Address & Contact -->
-    <div id="tab-address" class="tab-content hidden space-y-6">
       <section class="bg-slate-900 border border-slate-800 rounded-xl p-6 shadow-xl text-xs">
-        <h3 class="text-lg font-bold text-white flex items-center gap-2 mb-4 border-b border-slate-800 pb-3"><i class="fa-solid fa-address-book text-indigo-400"></i> Address & Language Routing</h3>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-          <div><label class="block text-slate-400 mb-1">Current Address</label><textarea id="curr-address" rows="2" class="w-full bg-slate-950 border border-slate-800 rounded-lg p-3 text-white">Ahmedabad, Gujarat, India</textarea></div>
-          <div><label class="block text-slate-400 mb-1">Permanent Address</label><textarea id="perm-address" rows="2" class="w-full bg-slate-950 border border-slate-800 rounded-lg p-3 text-white">Ahmedabad, Gujarat, India</textarea></div>
+        <h3 class="text-lg font-bold text-white flex items-center gap-2 mb-4"><i class="fa-solid fa-user-doctor text-indigo-400"></i> Client KYC & Clinical Vitals</h3>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-4">
+          <div><label class="block text-slate-300 mb-1">Client Full Name</label><input type="text" id="p-name" value="Client Full Name" class="w-full bg-slate-950 border border-slate-800 rounded px-3 py-2 text-white"></div>
+          <div><label class="block text-slate-300 mb-1">Age / Gender</label><input type="text" id="p-age" value="45 / Male" class="w-full bg-slate-950 border border-slate-800 rounded px-3 py-2 text-white"></div>
+          <div><label class="block text-slate-300 mb-1">UHID / Client ID</label><input type="text" id="p-uhid" value="UHID-CLIENT-001" class="w-full bg-slate-950 border border-slate-800 rounded px-3 py-2 text-white"></div>
+          <div><label class="block text-slate-300 mb-1">Assessment Date</label><input type="date" id="p-date" class="w-full bg-slate-950 border border-slate-800 rounded px-3 py-2 text-white" value="2026-10-25"></div>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div><label class="block text-slate-400 mb-1">Mobile No.</label><input type="text" id="mobile-no" value="9876543210" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-white"></div>
-          <div><label class="block text-slate-400 mb-1">Language</label><select id="report-lang" class="w-full bg-slate-950 border border-slate-800 rounded-lg p-2.5 text-white"><option value="gu" selected>ગુજરાતી (Gujarati)</option><option value="en">English</option></select></div>
+        <div class="grid grid-cols-2 md:grid-cols-6 gap-3">
+          <div class="bg-slate-950 p-3 rounded border border-slate-800"><span class="text-slate-400">BP (mmHg)</span><input type="text" id="p-bp" value="120/80" class="w-full bg-transparent text-white font-bold mt-1"></div>
+          <div class="bg-slate-950 p-3 rounded border border-slate-800"><span class="text-slate-400">Pulse (bpm)</span><input type="text" id="p-pulse" value="72" class="w-full bg-transparent text-white font-bold mt-1"></div>
+          <div class="bg-slate-950 p-3 rounded border border-slate-800"><span class="text-slate-400">Weight (kg)</span><input type="text" id="p-weight" value="70" class="w-full bg-transparent text-white font-bold mt-1"></div>
+          <div class="bg-slate-950 p-3 rounded border border-slate-800"><span class="text-slate-400">Height (cm)</span><input type="text" id="p-height" value="170" class="w-full bg-transparent text-white font-bold mt-1"></div>
+          <div class="bg-slate-950 p-3 rounded border border-slate-800"><span class="text-slate-400">Temp (°F)</span><input type="text" id="p-temp" value="98.6" class="w-full bg-transparent text-white font-bold mt-1"></div>
+          <div class="bg-slate-950 p-3 rounded border border-slate-800"><span class="text-slate-400">HbA1c (%)</span><input type="text" id="p-hba1c" value="5.8" class="w-full bg-transparent text-white font-bold mt-1"></div>
         </div>
       </section>
     </div>
 
-    <!-- TAB 4: History -->
+    <!-- TAB 3: Current Problems & Clinical Signs (Dropdowns / Popdowns) -->
+    <div id="tab-problems" class="tab-content hidden space-y-6">
+      <section class="bg-slate-900 border border-slate-800 rounded-xl p-6 shadow-xl text-xs space-y-4">
+        <h3 class="text-lg font-bold text-white flex items-center gap-2 border-b border-slate-800 pb-3">
+          <i class="fa-solid fa-stethoscope text-indigo-400"></i> Client Current Problems & Clinical Signs (Popdowns)
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-slate-400 mb-1 font-bold">Select Primary Presenting Problem</label>
+            <select id="client-problem" class="w-full bg-slate-950 border border-slate-800 rounded p-3 text-white">
+              <option value="Fatigue & Lethargy">Fatigue & Lethargy (थાક અને અશક્તિ)</option>
+              <option value="Mild Hypertension">Mild Hypertension (હાઇ બ્લડ પ્રેશર)</option>
+              <option value="Glycemic Variation">Glycemic Variation (શુગર અસ્થિરતા)</option>
+              <option value="Joint & Muscular Pain">Joint & Muscular Pain (સાંધા અને સ્નાયુનો દુખાવો)</option>
+              <option value="Sleep Disturbance">Sleep Disturbance (ઊંઘની અનિયમિતતા)</option>
+              <option value="General Wellness Check">General Wellness Check (સામાન્ય આરોગ્ય તપાસ)</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-slate-400 mb-1 font-bold">Select Observed Clinical Signs</label>
+            <select id="client-signs" class="w-full bg-slate-950 border border-slate-800 rounded p-3 text-white">
+              <option value="No acute distress">No acute distress (કોઈ તીવ્ર તકલીફ નથી)</option>
+              <option value="Mild pedal edema">Mild pedal edema (પગમાં હકી સોજો)</option>
+              <option value="Elevated resting pulse">Elevated resting pulse (વધુપડતા ધબકારા)</option>
+              <option value="Dry skin / Pallor">Dry skin / Pallor (ત્વચામાં શુષ્કતા)</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <label class="block text-slate-400 mb-1 font-bold">Detailed Description / Symptoms Notes</label>
+          <textarea id="client-symptoms-note" rows="3" class="w-full bg-slate-950 border border-slate-800 rounded p-3 text-white" placeholder="Enter specific client complaints or observations..."></textarea>
+        </div>
+      </section>
+    </div>
+
+    <!-- TAB 4: History & Lifestyle -->
     <div id="tab-history" class="tab-content hidden space-y-6">
-      <section class="bg-slate-900 border border-slate-800 rounded-xl p-6 shadow-xl text-xs">
-        <h3 class="text-lg font-bold text-white flex items-center gap-2 mb-4 border-b border-slate-800 pb-3"><i class="fa-solid fa-notes-medical text-indigo-400"></i> Family & Past History</h3>
+      <section class="bg-slate-900 border border-slate-800 rounded-xl p-6 shadow-xl text-xs space-y-4">
+        <h3 class="text-lg font-bold text-white flex items-center gap-2 border-b border-slate-800 pb-3">
+          <i class="fa-solid fa-notes-medical text-indigo-400"></i> Client History, Treatments & Lifestyle Dropdowns
+        </h3>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div><label class="block text-slate-400 mb-1 font-bold">Family History</label><textarea id="p-family" rows="3" class="w-full bg-slate-950 border border-slate-800 rounded-lg p-3 text-white">No major hereditary conditions.</textarea></div>
-          <div><label class="block text-slate-400 mb-1 font-bold">Past History & Treatments</label><textarea id="p-past" rows="3" class="w-full bg-slate-950 border border-slate-800 rounded-lg p-3 text-white">CKD Stage 3b, HbA1c 6.4%, Strict Vegan.</textarea></div>
+          <div>
+            <label class="block text-slate-400 mb-1 font-bold">Family History (વારસાગત ઇતિહાસ)</label>
+            <textarea id="p-family" rows="3" class="w-full bg-slate-950 border border-slate-800 rounded p-3 text-white">No major hereditary disorders reported by client.</textarea>
+          </div>
+          <div>
+            <label class="block text-slate-400 mb-1 font-bold">Past History & Treatments Taken</label>
+            <textarea id="p-past" rows="3" class="w-full bg-slate-950 border border-slate-800 rounded p-3 text-white">None reported or routine wellness tracking.</textarea>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+          <div>
+            <label class="block text-slate-400 mb-1 font-bold">Dietary Habit</label>
+            <select id="client-diet" class="w-full bg-slate-950 border border-slate-800 rounded p-2.5 text-white">
+              <option value="Pure Vegan" selected>Pure Vegan (શુદ્ધ વેગન)</option>
+              <option value="Vegetarian">Vegetarian (શાકાહારી)</option>
+              <option value="Balanced Omnivore">Balanced Omnivore</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-slate-400 mb-1 font-bold">Physical Activity</label>
+            <select id="client-activity" class="w-full bg-slate-950 border border-slate-800 rounded p-2.5 text-white">
+              <option value="Moderate Walking">Moderate Walking (રોજ વૉકિંગ)</option>
+              <option value="Sedentary">Sedentary (બેઠાડુ)</option>
+              <option value="Active Exercise">Active Exercise (নিয়মিত વ્યાયામ)</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-slate-400 mb-1 font-bold">Sleep Pattern</label>
+            <select id="client-sleep" class="w-full bg-slate-950 border border-slate-800 rounded p-2.5 text-white">
+              <option value="7-8 Hours Sound">7-8 Hours Sound Sleep (૭-૮ કલાક ગાઢ ઊંઘ)</option>
+              <option value="Disturbed / Less">Disturbed / Less Sleep</option>
+            </select>
+          </div>
         </div>
       </section>
     </div>
 
-    <!-- TAB 5: Upload -->
+    <!-- TAB 5: Reports & Prescriptions Upload -->
     <div id="tab-upload" class="tab-content hidden space-y-6">
-      <section class="bg-slate-900 border border-slate-800 rounded-xl p-6 shadow-xl text-xs border-indigo-900/50">
-        <h3 class="text-lg font-bold text-white flex items-center gap-2 mb-4 border-b border-slate-800 pb-3"><i class="fa-solid fa-file-arrow-up text-indigo-400"></i> Reports & Rx Upload</h3>
-        <p class="text-slate-400">Upload lab reports and prescriptions for AI review.</p>
+      <section class="bg-slate-900 border border-slate-800 rounded-xl p-6 shadow-xl text-xs border-indigo-900/50 space-y-4">
+        <h3 class="text-lg font-bold text-white flex items-center gap-2 border-b border-slate-800 pb-3">
+          <i class="fa-solid fa-file-arrow-up text-indigo-400"></i> Client Lab Reports, Prescriptions & Scans Upload
+        </h3>
+        <p class="text-slate-400">Upload previous blood reports, medical prescriptions, and diagnostic scans for AI review:</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="bg-slate-950 p-4 rounded-lg border border-dashed border-slate-700 text-center cursor-pointer hover:border-indigo-500">
+            <i class="fa-solid fa-cloud-arrow-up text-indigo-400 text-2xl mb-2"></i>
+            <strong class="block text-white text-sm mb-1">Upload Lab Reports</strong>
+            <p class="text-slate-400 text-[11px]">PDF, JPG, PNG blood tests.</p>
+          </div>
+          <div class="bg-slate-950 p-4 rounded-lg border border-dashed border-slate-700 text-center cursor-pointer hover:border-indigo-500">
+            <i class="fa-solid fa-prescription text-emerald-400 text-2xl mb-2"></i>
+            <strong class="block text-white text-sm mb-1">Upload Prescriptions</strong>
+            <p class="text-slate-400 text-[11px]">Physician prescriptions & meds.</p>
+          </div>
+          <div class="bg-slate-950 p-4 rounded-lg border border-dashed border-slate-700 text-center cursor-pointer hover:border-indigo-500">
+            <i class="fa-solid fa-file-medical text-amber-400 text-2xl mb-2"></i>
+            <strong class="block text-white text-sm mb-1">Upload Scans & X-Rays</strong>
+            <p class="text-slate-400 text-[11px]">Sonography & imaging files.</p>
+          </div>
+        </div>
       </section>
     </div>
 
-    <!-- TAB 6: Labs -->
+    <!-- TAB 6: Labs & Recs -->
     <div id="tab-labs" class="tab-content hidden space-y-6">
       <section class="bg-slate-900 border border-slate-800 rounded-xl p-6 shadow-xl text-xs">
-        <h3 class="text-lg font-bold text-white flex items-center gap-2 mb-4 border-b border-slate-800 pb-3"><i class="fa-solid fa-flask-vial text-indigo-400"></i> Lab Investigations</h3>
-        <div class="space-y-2">
-          <label class="flex items-center gap-2"><input type="checkbox" id="lab-egfr" checked class="rounded bg-slate-900 border-slate-700 text-indigo-600"><span>Serum Creatinine & eGFR (CKD 3b)</span></label>
-          <label class="flex items-center gap-2"><input type="checkbox" id="lab-hba1c" checked class="rounded bg-slate-900 border-slate-700 text-indigo-600"><span>HbA1c & Fasting Glucose</span></label>
+        <h3 class="text-lg font-bold text-white flex items-center gap-2 mb-4 border-b border-slate-800 pb-3">
+          <i class="fa-solid fa-flask-vial text-indigo-400"></i> Relevant Laboratory Investigations & Recommendations
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="bg-slate-950 p-4 rounded-lg border border-slate-800 space-y-3">
+            <strong class="text-white text-sm block mb-2">Renal & Metabolic Panel</strong>
+            <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" id="lab-egfr" checked class="rounded bg-slate-900 border-slate-700 text-indigo-600"><span>Serum Creatinine & eGFR</span></label>
+            <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" id="lab-electrolyte" checked class="rounded bg-slate-900 border-slate-700 text-indigo-600"><span>Serum Electrolytes (Sodium, Potassium)</span></label>
+            <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" id="lab-acr" checked class="rounded bg-slate-900 border-slate-700 text-indigo-600"><span>Urine Albumin-to-Creatinine Ratio (ACR)</span></label>
+          </div>
+          <div class="bg-slate-950 p-4 rounded-lg border border-slate-800 space-y-3">
+            <strong class="text-white text-sm block mb-2">Glycemic & General Panel</strong>
+            <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" id="lab-hba1c" checked class="rounded bg-slate-900 border-slate-700 text-indigo-600"><span>HbA1c & Fasting Glucose</span></label>
+            <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" id="lab-lipid" checked class="rounded bg-slate-900 border-slate-700 text-indigo-600"><span>Lipid Profile</span></label>
+            <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" id="lab-cbc" checked class="rounded bg-slate-900 border-slate-700 text-indigo-600"><span>Complete Blood Count (CBC)</span></label>
+          </div>
         </div>
       </section>
     </div>
@@ -181,8 +257,31 @@
     <!-- TAB 7: 5-Pillar Goals -->
     <div id="tab-5pillars" class="tab-content hidden space-y-6">
       <section class="bg-slate-900 border border-slate-800 rounded-xl p-6 shadow-xl text-xs">
-        <h3 class="text-base font-bold text-white flex items-center gap-2 mb-4 border-b border-slate-800 pb-3"><i class="fa-solid fa-shield-heart text-indigo-400"></i> 5-Pillar Holistic Goals</h3>
-        <p class="text-slate-300">Physical, Mental, Social, Spiritual, and Financial normalcy goals active.</p>
+        <h3 class="text-base font-bold text-white flex items-center gap-2 mb-4 border-b border-slate-800 pb-3">
+          <i class="fa-solid fa-shield-heart text-indigo-400"></i> 5-Pillar Holistic Health Advices & Goals
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="bg-slate-950 p-4 rounded-lg border border-slate-800 space-y-1">
+            <strong class="text-emerald-400 text-sm block"><i class="fa-solid fa-person-walking"></i> 1. Physical Health</strong>
+            <p class="text-slate-300">Goal: BP 120/80, HbA1c < 6.5%. Regular walking & pure vegan nutrition.</p>
+          </div>
+          <div class="bg-slate-950 p-4 rounded-lg border border-slate-800 space-y-1">
+            <strong class="text-indigo-400 text-sm block"><i class="fa-solid fa-brain"></i> 2. Mental Health</strong>
+            <p class="text-slate-300">Goal: Stress-free mindset & 7-8 hours sound sleep.</p>
+          </div>
+          <div class="bg-slate-950 p-4 rounded-lg border border-slate-800 space-y-1">
+            <strong class="text-sky-400 text-sm block"><i class="fa-solid fa-users"></i> 3. Social Health</strong>
+            <p class="text-slate-300">Goal: Strong family bonding & positive social engagement.</p>
+          </div>
+          <div class="bg-slate-950 p-4 rounded-lg border border-slate-800 space-y-1">
+            <strong class="text-amber-400 text-sm block"><i class="fa-solid fa-spa"></i> 4. Spiritual Health</strong>
+            <p class="text-slate-300">Goal: Inner peace, daily meditation, and mindfulness.</p>
+          </div>
+          <div class="bg-slate-950 p-4 rounded-lg border border-slate-800 space-y-1 md:col-span-2">
+            <strong class="text-purple-400 text-sm block"><i class="fa-solid fa-wallet"></i> 5. Financial Health (RBI/IMF Standard)</strong>
+            <p class="text-slate-300">Goal: 3 to 6 months emergency reserve and debt-free status.</p>
+          </div>
+        </div>
       </section>
     </div>
 
@@ -198,14 +297,8 @@
           <strong class="text-white text-sm block"><i class="fa-solid fa-key text-amber-400"></i> Owner Secure Authentication (2FA Protected)</strong>
           <p class="text-slate-400">Sovereign owner login for lifetime free platform management (`findcjom@gmail.com`).</p>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-            <div>
-              <label class="block text-slate-300 mb-1">Owner Email</label>
-              <input type="email" id="owner-email-input" value="findcjom@gmail.com" class="w-full bg-slate-900 border border-slate-700 p-2 rounded text-white">
-            </div>
-            <div>
-              <label class="block text-slate-300 mb-1">Secure Password</label>
-              <input type="password" id="owner-pass-input" placeholder="Enter Owner Password" class="w-full bg-slate-900 border border-slate-700 p-2 rounded text-white">
-            </div>
+            <div><label class="block text-slate-300 mb-1">Owner Email</label><input type="email" id="owner-email-input" value="findcjom@gmail.com" class="w-full bg-slate-900 border border-slate-700 p-2 rounded text-white"></div>
+            <div><label class="block text-slate-300 mb-1">Secure Password</label><input type="password" id="owner-pass-input" placeholder="Enter Owner Password" class="w-full bg-slate-900 border border-slate-700 p-2 rounded text-white"></div>
           </div>
           <button onclick="authenticateOwner()" class="px-5 py-2 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded">Authenticate Owner Session</button>
         </div>
@@ -271,7 +364,7 @@
       localStorage.setItem('dacae_trial_claimed', 'true');
       document.getElementById('auth-indicator').className = "px-3 py-1 bg-emerald-950 text-emerald-400 text-xs font-semibold rounded-full border border-emerald-800 flex items-center gap-1.5";
       document.getElementById('auth-indicator').innerHTML = '<i class="fa-solid fa-gift"></i> Free Trial Claimed (' + email + ')';
-      alert('Free Trial Claimed Successfully! You can now access Vitals, Labs and Generate 1 Free Report.');
+      alert('Free Trial Claimed Successfully! You can now access Vitals, Current Problems, Uploads and Generate 1 Free Report.');
       switchTab('tab-vitals');
     }
 
@@ -344,20 +437,41 @@
     updateDateTime();
 
     function getReportText() {
-      return `=== DACAE EXPERT AI DIAGNOSTIC REPORT ===\nGenerated On: ${new Date().toLocaleString()}\nPatient: ${document.getElementById('p-name').value}\nStatus: NABH & QCI Compliant Ecosystem\n\nMANDATORY MEDICAL DISCLAIMER:\nThis AI-generated preliminary advice is for educational and consultation purposes only. Consult your primary physician before making any medical changes.`;
+      const primaryProb = document.getElementById('client-problem').value;
+      const clinicalSigns = document.getElementById('client-signs').value;
+      const symptomsNote = document.getElementById('client-symptoms-note').value;
+      const dietHabit = document.getElementById('client-diet').value;
+      const activityHabit = document.getElementById('client-activity').value;
+
+      return `=== DACAE EXPERT AI DIAGNOSTIC REPORT ===
+Generated On: ${new Date().toLocaleString()}
+Client Name: ${document.getElementById('p-name').value}
+Status: NABH & QCI Compliant Ecosystem
+
+1. PRESENTING PROBLEMS & SIGNS:
+- Primary Problem: ${primaryProb}
+- Clinical Signs: ${clinicalSigns}
+- Notes: ${symptomsNote || 'None'}
+
+2. LIFESTYLE & VITALS:
+- Diet: ${dietHabit} | Activity: ${activityHabit}
+- Blood Pressure: ${document.getElementById('p-bp').value} mmHg | HbA1c: ${document.getElementById('p-hba1c').value}%
+
+3. MANDATORY MEDICAL DISCLAIMER:
+This AI-generated preliminary advice is for educational and consultation purposes only. Consult your primary physician before making any medical changes.`;
     }
 
     function downloadTrueWordDocument() {
       const blob = new Blob(['\ufeff' + getReportText()], { type: 'application/msword' });
       const a = document.createElement('a');
       a.href = URL.createObjectURL(blob);
-      a.download = 'DACAE_Report.doc';
+      a.download = 'DACAE_Client_Report.doc';
       a.click();
     }
 
     function dispatchWebGmail() {
       const email = document.getElementById('target-email').value;
-      window.open(`https://mail.google.com/mail/?view=cm&to=${email}&su=${encodeURIComponent("DACAE Diagnostic Report")}&body=${encodeURIComponent(getReportText())}`, '_blank');
+      window.open(`https://mail.google.com/mail/?view=cm&to=${email}&su=${encodeURIComponent("DACAE Client Diagnostic Report")}&body=${encodeURIComponent(getReportText())}`, '_blank');
     }
   </script>
 
